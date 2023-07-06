@@ -111,7 +111,12 @@ algin 水平位置
   > 按钮的禁用 `disabled="disabled"`/`disabled="true"`/`disabled`
 - submit 提交按钮
 
-## HTML5新增元素
+## 🌑 HTML5新增元素
 
-- header 头部标签
+- 😃 header 头部标签
   - nav 导航标签
+- 💪 section 区间标签
+  - aside 侧导航标签
+  - article 文章标签
+  - button 按钮标签
+- 🦶 footer 底部标签

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="https://www.baidu.com">
+      <!-- 第一组 -->
+      <!--
+       1、分组标签  fieldset 自动生成边框
+        2、组名标签 legend  会显示在左上角的边框线上
+      -->
+      <!-- 新增的表单属性
+        1.required   必填项 （提交表单时候验证）
+        2.novalidate  表单或者表单域不需要验证   （提交表单时候验证）
+        3.maxlength   最大长度
+        4.minlength   最小长度  （提交表单时候验证）
+        5.autofocus   自动获取焦点
+      -->
+      <fieldset>
+        <legend>组名：第一组</legend>
+        <div>
+          <label for="user">name:</label>
+          <input type="text" id="user" required autofocus />
+        </div>
+        <div>
+          <label for="age">age:</label>
+          <input type="text" id="age" maxlength="6" />
+        </div>
+        <div>
+          <label for="password">password:</label>
+          <input type="password" id="password" minlength="3" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>组名：第二组</legend>
+        <div>
+          <label for="user">email:</label>
+          <input type="text" id="user" />
+        </div>
+        <div>
+          <label for="sex">sex:</label>
+          <input type="text" id="sex" />
+        </div>
+        <div>
+          <label for="password">password:</label>
+          <input type="password" id="password" />
+        </div>
+      </fieldset>
+      <input type="submit" />
+    </form>
+  </body>
+</html>

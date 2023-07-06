@@ -2,9 +2,14 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../作业"
 		}
 	],
-	"settings": {},
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "作业"
+	},
 	"launch": {
 		"configurations": [
 			{

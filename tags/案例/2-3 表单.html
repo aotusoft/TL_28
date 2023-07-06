@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表单</title>
+  </head>
+  <body>
+    <!-- 
+      一、表单：提交数据的
+      二、表单的组成部分：
+        1、表单标签
+          form
+          action:表单提交的地址
+          method:表单提交的方式
+        2、表单域
+          a.普通文本框  <input type="text">
+          b.标记标签  label    label的for属性值与input输入框的id值相同，单击label获取输入框的焦点
+          c.密码框  <input type="password">
+          d.单选框  <input type="radio">  只要单选框的name属性值保持一致才能实现单选效果
+          e.复选框 <input type="checkbox">
+          f.选择框 <select>---<option>
+          g.多行文本框 <textarea>
+          h.重置按钮 <input type="reset">
+          i.普通按钮 <input type="button">
+        3、提交按钮
+          <input type="submit">
+      三、表单中的属性
+        1、type:类型
+        2、value:按钮的文本值/输入框的文本值
+        3、name:名字
+        4、placeholder：提示信息
+        5、单选框/多选框的默认选中：
+            checked="checked"
+            checked="true"
+            checked
+        6、选择框的默认选中
+            selected="selected"
+            selected="true"
+            selected
+        7、cols:多行文本框的宽度
+        8、rows:多行文本框的高度
+        9、disabled:按钮的禁用
+            disabled = "disabled"
+            disabled = "true"
+            disabled
+   -->
+    <form action="http://www.baidu.com" method="get">
+      <!-- 账号 -->
+      <div>
+        <label for="user">账号：</label>
+        <input
+          type="text"
+          id="user"
+          value="张三"
+          name="user"
+          placeholder="请输入您的姓名/账号"
+        />
+      </div>
+      <!-- 密码 -->
+      <div>
+        <label for="pwd">密码：</label>
+        <input type="password" name="" id="pwd" placeholder="请输入您的密码" />
+      </div>
+      <!-- 性别 -->
+      <div>
+        <b>请选择您的性别：</b>
+        <input type="radio" name="sex" /><span>男生</span>
+        <input type="radio" name="sex" checked /><span>女生</span>
+      </div>
+      <!-- 爱好 -->
+      <div>
+        <strong>请选择您的爱好：</strong>
+        <input type="checkbox" /><span> 游泳</span>
+        <input type="checkbox" /><span> 篮球</span>
+        <input type="checkbox" checked="checked" /><span> 敲代码</span>
+        <input type="checkbox" /><span> 打游戏</span>
+        <input type="checkbox" checked="true" /><span> 逛街</span>
+        <input type="checkbox" checked /><span> 吃饭</span>
+      </div>
+      <!-- 家庭住址 -->
+      <div>
+        <em>请选择您的家庭住址：</em>
+        <select name="" id="">
+          <option value="2">秦皇岛</option>
+          <option value="1">石家庄</option>
+          <option value="3" selected>张家口</option>
+          <option value="4">承德</option>
+        </select>
+      </div>
+      <!-- 座右铭 -->
+      <div>
+        <p><u>我的座右铭</u></p>
+        <textarea name="" id="" cols="90" rows="10"> </textarea>
+      </div>
+      <!-- 重置 -->
+      <div>
+        <input type="reset" value="恢复出厂设置" disabled="true" />
+      </div>
+      <!-- 普通按钮 -->
+      <div>
+        <input type="button" value="我是普通按钮" />
+      </div>
+      <input type="submit" value="登录" />
+    </form>
+  </body>
+</html>

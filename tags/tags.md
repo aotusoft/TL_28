@@ -3,8 +3,19 @@
 ## 📑 Table
 
 `<table></table>`表格标签
+
 `<tr></tr>`行标签
+
 `<td></td>`单元格标签
+
+`<caption></caption>`表格标题标签
+
+`<thead></thead>`表头标签
+> 添加thead标签后 tr标签要替换成**th**
+
+`<tbody></tbody>` 表主体
+
+`<tfoot></tfoot>` 表尾
 
 eg:
 
@@ -33,9 +44,25 @@ eg:
 ### 属性
 
 border 边框
+
 cellspacing 外边框间距
+
 cellpadding 内边框间距
+
+width 宽度
+
+height 宽度
+
 algin 水平位置
-    - left 靠左
-    - center 居中
-    - right 靠右
+
+- left 靠左
+- center 居中
+- right 靠右
+
+### ⚠️ Attention
+
+> table标签中只能使用caption/thead/tbody/tfoot/th/tr标签
+> cption标签中只能在table中使用
+> td和th标签中可以使用**任意**标签
+
+### 合并单元格

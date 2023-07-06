@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表格结构</title>
+  </head>
+  <body>
+    <!-- 
+      一、表格结构：
+          表头：thead   td---th    字体加粗，文本内容水平居中
+          表格主体：tbody
+          表尾：tfoot  (后期移动再讲)
+          表格标题标签：caption
+      二、表格注意事项
+          1、table标签中只能放caption/thead/tbody/tfoot/tr
+          2、caption只能用于表格中
+          3、thead/tbody/tfoot只能包含tr
+          4、tr只能包含th/td
+          5、td/th包含任意的标签
+      三、合并单元格的步骤
+          1、先判断是跨行合并还是跨列合并
+          2、跨行合并用rowspan属性名，跨列合并用colspan属性名
+          3、将属性名写在第一个要合并的单元格上
+          4、将合并的行数或者列数当做属性值
+          5、将多页的单元格注释掉
+    -->
+    <table
+      border="1"
+      cellspacing="0"
+      cellpadding="10"
+      align="center"
+      width="800"
+    >
+      <!-- <h2>28期班级花名单</h2> -->
+      <caption>
+        28期班级花名单
+      </caption>
+      <thead>
+        <!-- 第一行 -->
+        <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>性别</th>
+          <th>班级</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 第二行 -->
+        <tr>
+          <td>1</td>
+          <td><i>天浩</i></td>
+          <td rowspan="2" align="center">男</td>
+          <td rowspan="5">28期</td>
+        </tr>
+        <!-- 第三行 -->
+        <tr>
+          <td>2</td>
+          <td><b>家辉</b></td>
+          <!-- <td>男</td> -->
+          <!-- <td>28期</td> -->
+        </tr>
+        <!-- 第四行 -->
+        <tr>
+          <td>3</td>
+          <td><div>春丽</div></td>
+          <td>女</td>
+          <!-- <td>28期</td> -->
+        </tr>
+        <!-- 第五行 -->
+        <tr>
+          <td>4</td>
+          <td>雅楠</td>
+          <td>女</td>
+          <!-- <td>28期</td> -->
+        </tr>
+        <!-- 第六行 -->
+        <tr>
+          <td colspan="2">5</td>
+          <!-- <td>佳茹</td> -->
+          <td>女</td>
+          <!-- <td>28期</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

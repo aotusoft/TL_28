@@ -71,3 +71,47 @@ algin 水平位置
 
 - rowspan 跨行合并
 - colspan 跨列合并
+
+## :newspaper: 表单
+
+用来提交数据
+
+### 🔰 form
+
+#### 属性
+
+- action 表单提交的地址
+- method 表单提交的方法
+
+### label 标签
+
+`lable`的属性值`for=""`与`input`的`id=""`绑定时,可通过点击label获得input的焦点
+
+### ✏️ input
+
+#### 属性
+
+- type 属性
+- value 值
+- placeholder 提示信息
+- name 名称
+
+#### type 表单域
+
+- text 文本框
+- password 密码框
+- radio 单选框
+  > 当name值相同时才会单选效果
+  单选框中的默认选中需要加入`checked="checked"`/`checked="true"`/`check`属性
+- checkbox 复选框
+- select-optin组合标签 下拉类别
+  > 默认选择 `selected="selected"`/`selected="true"`/`selected`
+- textarea 多行文本框
+- reset 重置按钮
+  > 按钮的禁用 `disabled="disabled"`/`disabled="true"`/`disabled`
+- submit 提交按钮
+
+## HTML5新增元素
+
+- header 头部标签
+  - nav 导航标签

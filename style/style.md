@@ -132,9 +132,9 @@ Cascading Style Sheets 层叠样式表，级联样式表
 
 按照给定的属性，选择所有匹配的元素
 
-**语法：**`attr]` `attr=value]` `attr~=value]` `attr|=value]` `attr^=value]` `attr$=value]` `attr*=value]`
+**语法：**`attr` `attr=value` `attr~=value` `attr|=value` `attr^=value` `attr$=value` `attr*=value`
 
-**例子：**`autoplay]` 选择所有具有 `autoplay` 属性的元素（不论这个属性的值是什么）
+**例子：**`autoplay` 选择所有具有 `autoplay` 属性的元素（不论这个属性的值是什么）
 
 ### 分组选择器（Grouping selector）
 
@@ -156,7 +156,7 @@ Cascading Style Sheets 层叠样式表，级联样式表
 
 **例子：**`div span` 匹配所有位于任意 `<div>` 元素之内的 `<span>` 元素
 
-直接子代组合器]
+直接子代组合器
 
 `>` 组合器选择前一个元素的直接子代的节点
 

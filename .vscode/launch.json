@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "vscode-edge-devtools.debug",
+            "request": "launch",
+            "name": "Launch Microsoft Edge and open the Edge DevTools",
+            "url": "http://localhost:80",
+            "runtimeExecutable": "D:\\Program Files\\RunningCheeseEdge\\msedge.exe",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "vscode-edge-devtools.debug",
+            "request": "attach",
+            "name": "Attach to Microsoft Edge and open the Edge DevTools",
+            "url": "http://localhost:80",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch in Microsoft Edge",
+            "type": "chrome",
+            "request": "launch",
+            "runtimeExecutable": "D:\\Program Files\\RunningCheeseEdge\\msedge.exe",
+            "url": "http://127.0.0.1/tags/form.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

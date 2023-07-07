@@ -95,9 +95,24 @@ algin 水平位置
   > 当name值相同时才会单选效果
   > 单选框中的默认选中需要加入`checked="checked"`/`checked="true"`/`checked`属性
 - checkbox 复选框
-- select-optin组合标签 下拉类别
+- select-option组合标签 下拉类别
   > 默认选择 `selected="selected"`/`selected="true"`/`selected`
 - textarea 多行文本框
+- H5新特性
+  - email
+    > 自动验证是否有@字符
+  - url
+    > 自动验证是否有http字符
+  - number
+    > 自动验证是否为数字
+  - search
+    > 右侧有清空按钮
+  - range
+    > 滑动范围
+  - ⏲️ time
+    > 可选择时间
+  - 📆 date
+    > 可选择日期
 - reset 重置按钮
   > 按钮的禁用 `disabled="disabled"`/`disabled="true"`/`disabled`
 - submit 提交按钮

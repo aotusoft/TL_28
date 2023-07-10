@@ -1,94 +1,118 @@
 # 🌈 CSS
 
-## 定义
+## ❄️ 定义
 
 Cascading Style Sheets 层叠样式表，级联样式表
 
-## 作用
+## ⛄️ 作用
 
 为了美化网页
 标签中的属性不能满足所有样式的需求
 标签中的属性会使页面变得臃肿
 为了实现结构与样式的相分离
 
-## 用法
+## 🌁 用法
 
 - 行内样式表(内联样式表)
-  > `<开始标签 style="css属性名A;css属性值A;css属性名B:css属性值B">`
-  >> 只能作用于单个的标签
-     没有实现结构与样式的相分离
+
+```html
+<开始标签 style="css属性名A;css属性值A;css属性名B:css属性值B">
+```
+  >
+  > 只能作用于单个的标签
+  > 没有实现结构与样式的相分离
+
 - 内部样式表
 
   ```html
-    <style>
-        选择器 {
-            css属性名A: css属性值A;
-            css属性名B: css属性值B;
-    </style>
-   ```
+  <style>
+      选择器 {
+        css属性名A: css属性值A;
+        css属性名B: css属性值B;
+  </style>
+  ```
 
-   > 作用于选择器相同的标签
-     部分实现了结构与样式的相分离
-
+  > 作用于选择器相同的标签
+  > 部分实现了结构与样式的相分离
+  >
 - 外部样式表
+
   > 在外部建立后缀名为css的文件
+  >
 
   ```html
-    <link rel= "stylesheet" href="./css/style.css" /> 
+  <link rel= "stylesheet" href="./css/style.css" /> 
   ```
 
   > 作用于整个站点所有页面
-    完全实现了结构与样式的相分离
+  > 完全实现了结构与样式的相分离
+  >
 
-## :art: 样式
+## 🎨 样式
 
-### :black_nib: 字体样式
+### ✒️ 字体样式
 
 - `font-size` 字体大小
+
   > 默认16px Chrome中最小设置12px
+  >
 - `font-family` 字形
+
   > 还可以使用unicode编码
+  >
 
   ```css
   font-family: \6977\4F53
   ```
-
 - `font-weight` 字重
+
   > 无单位
+  >
 - `font-style` 字体样式
+
   > 可用 `italic`/`oblique`倾斜
+  >
 - `text-indent` 首行缩进
+
   > 需要使用**em**作为单位
+  >
 - `text-decoration` 字体间距
+
   > underline 下划线
   > overline 上划线
   > line-through 删除线
+  >
 - `letter-spacing` 字体间距
 - `text-align` 水平位置
-  > 内容相对于当前元素得位置
-- `line-height` 高度位置
-  >属性值小于高度，垂直靠上
-  >属性值大于高度，垂直靠下
-  >属性值等于高度，垂直居中
 
-### :kimono: 外观样式
+  > 内容相对于当前元素得位置
+  >
+- `line-height` 高度位置
+
+  > 属性值小于高度，垂直靠上
+  > 属性值大于高度，垂直靠下
+  > 属性值等于高度，垂直居中
+  >
+
+### 👘 外观样式
 
 - `color` 字体颜色
   > 可用 英文名称/rbg()/HEX 形式表示
+  >
 - `height` 高度
 - `width` 宽度
 
-### :stars: 背景样式
+### 🌠 背景样式
 
-### 🥊 盒子模型
+### 📮 盒子模型
 
-### 浮动
+### 🐬 浮动
 
 ### 定位
 
 ### CSS3动画 过渡 转换
 
-## :sparkler: 选择器
+## 🎇 选择器
 
 **CSS 选择器**规定了 CSS 规则会被应用到哪些元素上
 
@@ -128,6 +152,22 @@ Cascading Style Sheets 层叠样式表，级联样式表
 
 **例子：**`#toc` 匹配 ID 为 "toc" 的元素
 
+#### 交集选择器
+
+按照给定的节点名称和 `class` 属性的值，选择匹配的元素
+
+**语法：**`elementname.classname`
+
+**例子：**`p.index` 匹配段落标签中含 `class` 属性中含有 "index" 类的元素
+
+#### 并集选择器
+
+按照给定的节点名称和 `class` 属性的值，选择匹配的元素
+
+**语法：**`elementname/#idname/.classname,elementname/#idname/.classname`
+
+**例子：**`p,.index,#id` 匹配标签中含p标签  `class` 属性中含有 "index" 类  `id` 属性中含有 "id" 的元素
+
 #### 属性选择器
 
 按照给定的属性，选择所有匹配的元素
@@ -150,7 +190,7 @@ Cascading Style Sheets 层叠样式表，级联样式表
 
 #### 后代组合器
 
-"` `"（空格）组合器选择前一个元素的后代节点
+""（空格）组合器选择前一个元素的后代节点
 
 **语法：**`A B`
 
@@ -197,3 +237,14 @@ Cascading Style Sheets 层叠样式表，级联样式表
 `::` 伪选择器用于表示无法用 HTML 语义表达的实体
 
 **例子：**`p::first-line` 匹配所有 `<p>`元素的第一行
+
+## 🐖 伪类
+
+- `:link` 链接未连接前
+- `:hover` 鼠标移入时
+  > 适用于所有标签
+  >
+- `:active` 鼠标点击时
+  > 适用于所有标签
+  >
+- `:visited` 链接连接后

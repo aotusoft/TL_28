@@ -359,6 +359,17 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 给添加外边距的图片 再加上 `vertical-align: top` 属性
 
+#### 精灵图
+
+减轻服务器压力
+
+将多张小图片拼接在一张大图上，通过背景的位置属性 `background-position`属性移动到指定的小图上
+
+在CSS中水平向右是正方向 垂直向下是正方向
+
+#### ICONFONT
+
+
 ## 🎇 选择器
 
 **CSS 选择器**规定了 CSS 规则会被应用到哪些元素上

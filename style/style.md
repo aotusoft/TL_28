@@ -323,12 +323,13 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 - 默认根据半角空格或连接符换行
 - `word-break:break-all` 在单词中换行
 
-文本显示省略号
+#### 文本显示省略号
+
 `white-space:nowarp`强制文本在同一行显示
 `overflow:hidden` 隐藏溢出元素
 `text-overflow:ellipsis` 文本显示省略号
 
-鼠标指针
+#### 鼠标指针
 
 `cursor`
 
@@ -337,7 +338,22 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 `cursor:text` 输入指针
 `cursor:move` 移动指针
 
+#### 轮廓
 
+`outline:0`
+
+#### 防止多行文本框拖动
+
+`resize:0`
+
+消除同行相邻行内块元素的默认间距
+
+- 将其转换为块元素 然后浮动
+- 父元素添加 `font-size:0`
+
+行内块元素右侧文本或行内元素相对于行内块元素垂直居中
+
+向行内块元素添加  `vertical-align:middle` 属性
 
 ## 🎇 选择器
 

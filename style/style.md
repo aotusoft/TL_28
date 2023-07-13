@@ -282,7 +282,62 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 相同:
 浮动 绝对 固定 都会脱离标准流 且不占位置
 
-### CSS3动画 过渡 转换
+### CSS高级
+
+#### 元素的显示与隐藏
+
+隐藏
+
+- `display:none`
+  > 没有删除元素 HTML结构仍然存在
+  > 不占位置
+  >
+- `visibility:hidden`
+  > 没有删除元素 HTML结构仍然存在
+  > 仍占位置
+  >
+- `opacity:0`
+
+显示
+
+- `display:block`
+  > 与 `display:none` 相对应
+  >
+- `visibility:visible`
+  > 与 `visibility:hidden` 相对应
+  >
+- `opacity:1`
+  > 与 `opacity:0` 相对应
+  >
+
+#### 溢出元素的显示与隐藏
+
+`overflow` 属性
+
+- `overflow:hidden` 隐藏溢出元素
+- `overflow:scroll` 设置滚动条
+- `overflow:auto` 自适应显示滚动条
+
+`word-break` 属性
+
+- 默认根据半角空格或连接符换行
+- `word-break:break-all` 在单词中换行
+
+文本显示省略号
+`white-space:nowarp`强制文本在同一行显示
+`overflow:hidden` 隐藏溢出元素
+`text-overflow:ellipsis` 文本显示省略号
+
+鼠标指针
+
+`cursor`
+
+`cursor:default` 默认指针
+`cursor:pointer` 指向指针
+`cursor:text` 输入指针
+`cursor:move` 移动指针
+
+
 
 ## 🎇 选择器
 

@@ -542,7 +542,10 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
   > 适用于所有标签
   >
 - `:visited` 链接连接后
-- 
+
+
+
+
 - `:first-child` 选中父元素的第一个子元素
 - `:last-child` 选中父元素的最后一个子元素
 - `:nth-child(n)` 选中父元素的第n个子元素
@@ -651,5 +654,16 @@ CSS中设置 `display`属性
 背景色剪切
 
 - `background-clip:border-box` 背景色默认覆盖边框 内边距 内容
-- `background-clip:padding-box`背景色覆盖内边距 内容
-- `background-clip:content-box`背景色覆盖内容
+- `background-clip:padding-box` 背景色覆盖内边距 内容
+- `background-clip:content-box` 背景色覆盖内容
+  
+背景图剪切
+
+- `background-origin:border-box` 背景图默认覆盖边框 内边距 内容
+- `background-origin:padding-box` 背景图覆盖内边距 内容
+- `background-origin:content-box` 背景图覆盖内容
+
+BFC
+Block Formatting Context 格式化上下文 一个独立的容器
+
+浮动

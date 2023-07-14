@@ -369,7 +369,6 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 #### ICONFONT
 
-
 ## 🎇 选择器
 
 **CSS 选择器**规定了 CSS 规则会被应用到哪些元素上
@@ -428,11 +427,37 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 #### 属性选择器
 
-按照给定的属性，选择所有匹配的元素
+按照给定的属性，选择所有匹配的元素 **（CSS3 新特性）**
 
 **语法：**`attr` `attr=value` `attr~=value` `attr|=value` `attr^=value` `attr$=value` `attr*=value`
 
 **例子：**`autoplay` 选择所有具有 `autoplay` 属性的元素（不论这个属性的值是什么）
+
+```html
+<style>
+  [type]{
+    background-color: red;
+  }
+  [type_a]{
+    background-color: red;
+  }
+  [type_a='p']{
+    background-color: aliceblue;
+  }
+  [type_a^='p']{
+    background-color: deepskyblue;
+  }
+  a[type_a^='p']{
+    background-color: deepskyblue;
+  }
+</style>
+<input type="text">
+<div type_a="div"></div>
+<p type_a="p"></p>
+<p type_a="p_1"></p>
+<p type_a="p_2"></p>
+<a type_a="p_2" herf="#"></a>
+```
 
 ### 分组选择器（Grouping selector）
 
@@ -488,7 +513,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 ### 伪选择器（Pseudo）
 
-`:` 伪选择器支持按照未被包含在文档树中的状态信息来选择元素
+`:` 伪选择器支持按照未被包含在文档树中的状态信息来选择元素 （CSS3 新特性）
 
 **例子：**`a:visited` 匹配所有曾被访问过的 `<a>`元素
 
@@ -575,3 +600,7 @@ CSS中设置 `display`属性
 | style | 1    | 0    | 0    | 0    |
 
 权重相同时 再对比
+
+
+
+## CSS3样式

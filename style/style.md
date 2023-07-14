@@ -643,3 +643,13 @@ CSS中设置 `display`属性
 - 属性值为50%时 为椭圆
 
 ### 怪异盒模型
+
+`box-sizing:bordr-box`
+
+### CSS3 背景
+
+背景色剪切
+
+- `background-clip:border-box` 背景色默认覆盖边框 内边距 内容
+- `background-clip:padding-box`背景色覆盖内边距 内容
+- `background-clip:content-box`背景色覆盖内容

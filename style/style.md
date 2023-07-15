@@ -678,13 +678,25 @@ Block Formatting Context 格式化上下文 一个独立的容器
 - 径向渐变
   > radial-gradient()
 
-- 图形变换
+### 转换
 
-  - 转换 transform: n
-  - 平移 translate（） x轴：右正左负 Y轴：上正下负 Z轴 外正里负
-  - 旋转 rotate()
-    >默认旋转中心为盒子正中心
-    > rotateX() 沿X轴旋转
-    > rotateY() 沿Y轴旋转
-  - skew() 扭转 X轴 左正右负 Y轴 上正下负
-  - scale() 缩放拉伸
+`transform: n`
+`transform-origin: 旋转中心`
+- 平移 translate（） X轴：右正左负 Y轴：上正下负 Z轴 外正里负
+- 旋转 rotate() 默认旋转中心为盒子正中心
+  > rotateX() 沿X轴旋转
+  > rotateY() 沿Y轴旋转
+
+- skew() 扭转(deg) X轴 左正右负 Y轴 上正下负
+  > skewX()
+  > skewY()
+
+- scale() 缩放拉伸
+  > scaleX() X轴缩放拉伸
+  > scaleY() Y轴缩放拉伸
+
+3D 透视图
+perspective:2000px
+transform 
+
+与translateZ()属性配合使用

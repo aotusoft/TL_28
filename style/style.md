@@ -666,7 +666,7 @@ Block Formatting Context 格式化上下文 一个独立的容器
 
 ### 渐变
 
-渐变分类
+分类
 
 - 线性渐变
   - `linear-gradient(第一个参数,第二个参数,...)` 默认向下
@@ -682,6 +682,7 @@ Block Formatting Context 格式化上下文 一个独立的容器
 
 `transform: n`
 `transform-origin: 旋转中心`
+
 - 平移 translate（） X轴：右正左负 Y轴：上正下负 Z轴 外正里负
 - 旋转 rotate() 默认旋转中心为盒子正中心
   > rotateX() 沿X轴旋转
@@ -695,8 +696,12 @@ Block Formatting Context 格式化上下文 一个独立的容器
   > scaleX() X轴缩放拉伸
   > scaleY() Y轴缩放拉伸
 
-3D 透视图
+### 3D 透视图
+/*让当前的元素变成三维效果*/
+/*设置3D透视度*/
+/*当为元素定义perspective 属性时，其子元素会获得透视效果，而不是元素本身。 */
 perspective:2000px
-transform 
+/*设置为3D转换*/
+`transform-style: preserve-3d`
 
 与translateZ()属性配合使用

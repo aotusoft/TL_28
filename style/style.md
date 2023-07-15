@@ -715,3 +715,45 @@ perspective:2000px
 
 - `transform: property duration timing-function delay,[...],...` 过渡时间延迟 `all` 
   > 选取所有CSS属性
+
+### 动画
+
+动画属性
+
+- 名称
+  > `animation-name: name`
+- 动画周期 单位秒
+  > `animation-duration: time`
+- 动画延迟 单位秒
+  > `animation-delay: time`
+- 动画类型
+  > `animation-time-function: type`
+- 动画次数
+  > `animation-iteration-count: time`
+  >> `infinite` 不限制次数
+- 动画次数
+  > `animation-play-state: status`
+  >> `pause` 暂停状态
+
+
+创建动画
+
+- `@keyframes name`
+- `from` `to`
+
+```css
+xxx{
+  animation-name: name;
+  animation-duration: time;
+}
+
+@keyframe name{
+  form{}
+  to{}
+  0%{}
+  25%{}
+  50%{}
+  75%{}
+  100%{}
+}
+```

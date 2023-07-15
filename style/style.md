@@ -64,6 +64,7 @@ Cascading Style Sheets 层叠样式表，级联样式表
   ```css
   font-family: \6977\4F53
   ```
+
 - `font-weight` 字重
 
   > 无单位
@@ -225,6 +226,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
     clear:both;
   }
   ```
+
 - 给父元素添加 `overflow: hideen`属性
 
   > 会让多余内容隐藏
@@ -332,7 +334,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 #### 文本显示省略号
 
-`white-space:nowarp`强制文本在同一行显示
+`white-space:nowrap`强制文本在同一行显示
 `overflow:hidden` 隐藏溢出元素
 `text-overflow:ellipsis` 文本显示省略号
 
@@ -542,10 +544,6 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
   > 适用于所有标签
   >
 - `:visited` 链接连接后
-
-
-
-
 - `:first-child` 选中父元素的第一个子元素
 - `:last-child` 选中父元素的最后一个子元素
 - `:nth-child(n)` 选中父元素的第n个子元素
@@ -656,7 +654,7 @@ CSS中设置 `display`属性
 - `background-clip:border-box` 背景色默认覆盖边框 内边距 内容
 - `background-clip:padding-box` 背景色覆盖内边距 内容
 - `background-clip:content-box` 背景色覆盖内容
-  
+
 背景图剪切
 
 - `background-origin:border-box` 背景图默认覆盖边框 内边距 内容
@@ -666,4 +664,27 @@ CSS中设置 `display`属性
 BFC
 Block Formatting Context 格式化上下文 一个独立的容器
 
-浮动
+### 渐变
+
+渐变分类
+
+- 线性渐变
+  - `linear-gradient(第一个参数,第二个参数,...)` 默认向下
+  - `linear-gradient(to top,第一个参数,第二个参数,...)` 向上
+  - `linear-gradient(to left,第一个参数,第二个参数,...)` 向左
+  - `linear-gradient(to left top,第一个参数,第二个参数,...)` 向左上
+  - `linear-gradient(0deg,第一个参数,第二个参数,...)` 角度
+
+- 径向渐变
+  > radial-gradient()
+
+- 图形变换
+
+  - 转换 transform: n
+  - 平移 translate（） x轴：右正左负 Y轴：上正下负 Z轴 外正里负
+  - 旋转 rotate()
+    >默认旋转中心为盒子正中心
+    > rotateX() 沿X轴旋转
+    > rotateY() 沿Y轴旋转
+  - skew() 扭转 X轴 左正右负 Y轴 上正下负
+  - scale() 缩放拉伸

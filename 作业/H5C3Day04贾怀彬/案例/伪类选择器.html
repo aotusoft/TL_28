@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器</title>
+    <style>
+      a:link {
+        color: blue;
+      }
+      a:visited {
+        color: blueviolet;
+      }
+      a:hover {
+        color: red;
+      }
+      a:active {
+        color: rgb(0, 255, 0);
+      }
+      li:hover {
+        color: red;
+      }
+      li:active {
+        color: rgb(2, 160, 108);
+      }
+      a {
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.baidu.com" class="link">百度一下</a>
+    <ul>
+      <li>1111</li>
+      <ol>
+        <li>2222</li>
+        <li>3333</li>
+      </ol>
+    </ul>
+  </body>
+</html>

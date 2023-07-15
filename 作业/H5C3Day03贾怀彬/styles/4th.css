@@ -1,0 +1,19 @@
+h1{
+    color: skyblue;
+    font-weight: 500;
+}
+nav{
+    font-family: '楷体';
+}
+.start{
+    color: #00ff00;
+    font-size: 40px;
+}
+.middle{
+    color: #FFAAAA;
+    font-size: 40px;
+    font-style: italic;
+}
+.end{
+    color: orange;
+}

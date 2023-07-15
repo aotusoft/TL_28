@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-size: 30px;
+      }
+      header {
+        color: aqua;
+      }
+      header {
+        color: blue;
+      }
+      .headerObj {
+        color: blueviolet;
+      }
+      .sec {
+        color: red;
+        letter-spacing: 10px;
+        text-align: center;
+      }
+      .box {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        层叠性
+          选择器相同的情况下后边的样式覆盖前面边
+          后面样式的优先级高于前面样式
+          就近原则
+        继承性
+          子元素会继承父元素的样式
+          宽高不能继承，是根据元素本身特性所决定的
+          元素本身的样式大于继承过来的样式
+          遵循新代就近继承
+        优先级
+          同一个元素中，通配符选择器<标签选择器<类选择器<id选择器<style行内样式<!important
+          复合选择器，对比权重
+          如果权重一样对比层叠性
+
+                 千位 百位 十位 个位
+          标签    0    0    0   1
+          类名    0    0    1    0
+          id      0    1    0   0
+          style   1    0   0     0z
+     -->
+    <header class="headerObj" id="headerObj">头部标签</header>
+    <section class="sec">
+      <div class="box">section div</div>
+      <span>123</span>
+    </section>
+  </body>
+</html>

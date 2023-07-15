@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>复合选择器</title>
+    <style>
+      p.text_2 {
+        color: #e01fd6;
+      }
+      p.text_1 {
+        color: #28ea6c;
+      }
+      .text_3,
+      .text_2 {
+        font-size: 20px;
+        font-style: italic;
+      }
+
+      /* 后代选择器 */
+      ul li {
+        color: #fffb00;
+      }
+      /* 子代选择器 */
+      ul > li {
+        color: #ff0000;
+      }
+      .text_2,
+      .text_4 {
+        color: #e01fd6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="text_3">我是头部区域的div标签</div>
+      <p class="text_2">我是头部区域的p标签</p>
+    </header>
+    <section>
+      <p class="text_1">我是section区域的p标签</p>
+      <article>我是文章标签</article>
+      <nav id="">我是导航列表标签</nav>
+      <aside class="">我是侧导航标签</aside>
+    </section>
+    <footer>
+      <ul>
+        <li class="text_4">我是ul的儿子第一个li</li>
+        <li>我是ul的儿子第二个li</li>
+        <ol>
+          <li>我是ul的孙子第一个li</li>
+        </ol>
+        <div>
+          <ol>
+            <li>我是ul的重孙子第一个li</li>
+            <aside>
+              <li>又是一个li</li>
+            </aside>
+          </ol>
+        </div>
+        <p>我是ul标签的第一个段落</p>
+      </ul>
+    </footer>
+  </body>
+</html>

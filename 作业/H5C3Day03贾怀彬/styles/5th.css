@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Product Sans";
+    src: url("../media/Product-Sans-Regular-2.ttf") format("ttf");
+    font-stretch: "normal";
+    font-weight: 400;
+  }
+span{
+    font-size: 80px;
+    font-family: 'Product Sans';
+}
+span:first-child{
+    color: #4285F4;
+}
+span:nth-child(2){
+    color: #EA4335;
+}
+span:nth-child(3){
+    color: #FBBC05;
+}
+span:nth-child(4){
+    color: #4285F4;
+}
+span:nth-child(5){
+    color: #34A853;
+}
+span:nth-child(6){
+    color: #EA4335;
+}

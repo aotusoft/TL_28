@@ -1,0 +1,31 @@
+header {
+    text-align: center;
+    font-size: 24px;
+}
+
+header>p {
+    font-size: 16px;
+}
+
+header>p>span {
+    color: #FF624F;
+}
+
+.people {
+    color: red;
+    text-decoration: underline;
+}
+
+header>p>a {
+    color: #c1c1c1;
+    font-weight: 600;
+}
+
+article {
+    text-indent: 2em;
+}
+
+.weibo {
+    text-decoration: none;
+    color: skyblue;
+}

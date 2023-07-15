@@ -1,0 +1,20 @@
+body {
+    color: #053687;
+}
+
+.weight {
+    font-weight: 700;
+}
+
+article {
+    text-indent: 2em;
+}
+
+p {
+    color: #9D000E;
+}
+
+header>p {
+    color: #00CC33;
+    text-align: center;
+}

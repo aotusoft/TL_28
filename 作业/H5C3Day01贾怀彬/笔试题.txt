@@ -1,0 +1,9 @@
+五大浏览器是？内核是？
+Firefox：GECOK
+Chrome：Webkit
+IE：Trident
+欧朋：Webkit
+safari：Webkit
+浏览器的内核是？作用是？
+渲染引擎：将网页中的内容展现在浏览器端
+js引擎：解析JavaScript的代码

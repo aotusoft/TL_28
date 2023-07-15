@@ -1,0 +1,5 @@
+问答题
+1、块状元素有哪些？其特征是？
+h1~h6 div p table form header section caption footer li thead tbody tr tfoot 独占一行 具备高度和宽度
+2、行内元素有哪些？其特征是？
+a span b strong i em u del input select button label select 不会独占一行 默认不具备高度和宽度

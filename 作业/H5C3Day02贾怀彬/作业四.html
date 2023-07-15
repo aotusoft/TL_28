@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>用户注册</legend>
+        <span>用户名：</span><input type="text">
+        <span>密码：</span><input type="password" name="" id="">
+        <div>备注：</div>
+        <textarea id="story" name="story" rows="5" cols="60"></textarea>
+        <div>
+            <div>
+                <span>性别：用户名</span>
+                <lable for="male">男性</lable><input type="radio" name="sex" id="male" checked>
+                <lable for="female">女性</lable><input type="radio" name="sex" id="female">
+            </div>
+            <span>学历：</span>
+            <select name="degree" id="">
+                <option value="本科">本科</option>
+            </select>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td rowspan="2">兴趣爱好：</td>
+                    <td>运动：<input type="checkbox" name="hobby"></td>
+                    <td>电影：<input type="checkbox" name="hobby"></td>
+                    <td>音乐：<input type="checkbox" name="hobby"></td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td>编程：<input type="checkbox" name="hobby"></td>
+                    <td>下厨：<input type="checkbox" name="hobby"></td>
+                    <td>旅行：<input type="checkbox" name="hobby"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="file" name="file" id=""></td>
+                    <td align="right"><button>注册</button></td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+</body>
+
+</html>

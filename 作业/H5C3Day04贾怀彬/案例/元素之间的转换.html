@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素之间的转换</title>
+    <style>
+      a {
+        display: inline-block;
+      }
+      img {
+        width: 500;
+        height: 500px;
+      }
+      div {
+        display: inline;
+      }
+      .span_2 {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 行转行内块 -->
+    <a href="http://www.baidu.com">
+      <img src="./img20.jpg" alt="" />
+    </a>
+    <!-- 块转行 -->
+    <div>我是dov</div>
+    <span>我是sapn</span>
+    <!-- 行转块 -->
+    <span class="span_2">我是span2</span>
+  </body>
+</html>

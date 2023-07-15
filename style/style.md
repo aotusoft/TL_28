@@ -708,12 +708,12 @@ perspective:2000px
 
 ### 过渡
 
-- `transform-property: xxx` 过渡的CSS属性
-- `transform-duration: xxx` 过渡所需要的时间单位秒
-- `transform-timing-function: xxx` 过渡时间曲线
-- `transform-delay: xxx` 过渡时间延迟
+- `transition-property: xxx` 过渡的CSS属性
+- `transition-duration: xxx` 过渡所需要的时间单位秒
+- `transition-timing-function: xxx` 过渡时间曲线
+- `transition-delay: xxx` 过渡时间延迟
 
-- `transform: property duration timing-function delay,[...],...` 过渡时间延迟 `all` 
+- `transition: property duration timing-function delay,[...],...` 过渡时间延迟 `all` 
   > 选取所有CSS属性
 
 ### 动画

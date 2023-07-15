@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .father {
+        margin: 300px;
+        width: 300px;
+        height: 300px;
+    }
+
+    img {
+        position: absolute;
+        width: 10%;
+        /* 设置变换属性 */
+        transition-property: all;
+        transition-duration: 1s;
+        /* 设置旋转中心 */
+        transform-origin: right top;
+    }
+    .father:hover>.poke6 {
+        transform:rotate(360deg);
+    }
+    .father:hover>.poke5 {
+        transform:rotate(300deg);
+    }
+    .father:hover>.poke4 {
+        transform:rotate(240deg);
+    }
+    .father:hover>.poke3 {
+        transform:rotate(180deg);
+    }
+    .father:hover>.poke2 {
+        transform:rotate(120deg);
+    }
+    .father:hover>.poke1 {
+        transform:rotate(60deg);
+    }
+</style>
+
+<body>
+    <div class="father">
+        <img src="./images/pk1.png" alt="" class="poke1" />
+        <img src="./images/pk2.png" alt="" class="poke2" />
+        <img src="./images/pk1.png" alt="" class="poke3" />
+        <img src="./images/pk2.png" alt="" class="poke4" />
+        <img src="./images/pk1.png" alt="" class="poke5" />
+        <img src="./images/pk2.png" alt="" class="poke6" />
+    </div>
+</body>
+
+</html>

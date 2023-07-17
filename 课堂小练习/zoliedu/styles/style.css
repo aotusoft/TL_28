@@ -1,0 +1,134 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+body {
+  background-color: #eaeaea;
+}
+header {
+  background-color: white;
+  border-bottom: 5px #c30101 solid;
+}
+.tips {
+  border-bottom: 1px #aaa solid;
+}
+.top {
+  display: inline-block;
+}
+.left {
+  margin-left: 50px;
+  margin-right: 250px;
+}
+.right {
+  margin-left: 250px;
+  margin-right: 50px;
+}
+nav,
+li {
+  display: inline-block;
+}
+.logo {
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 250px;
+}
+.banner > img {
+  width: 100%;
+}
+.common {
+  margin: 10px auto;
+  background-color: white;
+  width: 80%;
+}
+.introduce > div {
+  width: 25%;
+  display: inline-block;
+  padding: 10px 42px;
+  border-left: 1px #aaa solid;
+  border-right: 1px #aaa solid;
+}
+.info-img {
+  float: left;
+}
+.introduce > div > p {
+  font-size: 12px;
+  color: #777;
+}
+.introduce > div > span {
+  font-weight: 600;
+}
+.learn {
+  width: 80%;
+  height: 100%;
+  border: 1px #aaa solid;
+}
+.course {
+  width: 65%;
+  height: 100%;
+  /* height: 500px;   */
+  background-color: white;
+  display: inline-block;
+  vertical-align: top;
+}
+.title {
+  border-bottom: 1px #aaa solid;
+}
+.recommend {
+  display: inline-block;
+  padding: 5px 200px 5px 10px;
+}
+.more {
+  display: inline-block;
+  padding: 5px 5px 5px 200px;
+}
+.learn {
+  overflow: hidden;
+  border-bottom: 3px #aaa solid;
+}
+.content {
+  padding: 20px 10px;
+  border-bottom: 1px #aaa dashed;
+  overflow: hidden;
+}
+.content > img {
+  float: left;
+}
+.date {
+  display: flex;
+  justify-content: flex-end;
+}
+.test {
+  padding: 5px 0 5px 10px;
+}
+.mandarin {
+  width: fit-content;
+  /* height: 500px; */
+  margin-left: 20px;
+  background-color: white;
+  border: 1px #aaa solid;
+  display: inline-block;
+  vertical-align: top;
+}
+.column {
+  display: inline-block;
+}
+.column > img {
+  padding: 20px;
+}
+.column > p {
+  text-align: center;
+}
+.month {
+  width: 100%;
+}
+.qualification{
+    width: 33%;
+}
+.quiz{
+    width: 33%;
+}
+.entrance{
+    width: 33%;
+}

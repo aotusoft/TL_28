@@ -77,11 +77,11 @@ li {
 }
 .recommend {
   display: inline-block;
-  padding: 5px 200px 5px 10px;
+  padding: 5px 300px 5px 10px;
 }
 .more {
   display: inline-block;
-  padding: 5px 5px 5px 200px;
+  padding: 5px 5px 5px 100px;
 }
 .learn {
   overflow: hidden;
@@ -115,7 +115,7 @@ li {
   display: inline-block;
 }
 .column > img {
-  padding: 20px;
+  padding: 10px 20px;
 }
 .column > p {
   text-align: center;
@@ -123,12 +123,36 @@ li {
 .month {
   width: 100%;
 }
-.qualification{
-    width: 33%;
+.qualification {
+  vertical-align: top;
+  display: inline-block;
+  width: 33%;
 }
-.quiz{
-    width: 33%;
+.quiz {
+  vertical-align: top;
+  display: inline-block;
+  width: 33%;
 }
-.entrance{
-    width: 33%;
+.entrance {
+  vertical-align: top;
+  display: inline-block;
+  width: 33%;
+}
+.teacher-title {
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+}
+.article {
+  font-size: 16px;
+}
+.quiz-content{
+    background-color: #F00102;
+}
+.quiz-content>img{
+    padding: 7px 5px;
+    vertical-align:middle
+}
+.entrance-title{
+    color: white;
+    display: inline-block;
 }

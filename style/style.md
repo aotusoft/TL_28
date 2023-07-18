@@ -48,6 +48,26 @@ Cascading Style Sheets 层叠样式表，级联样式表
   > 完全实现了结构与样式的相分离
   >
 
+## 书写顺序
+
+位置属性
+
+同一个元素 定位与浮动不会同时使用 除非子绝父相
+
+margin > float > 定位
+
+尺寸属性
+
+width/height padding border
+
+外观样式
+
+background text-align line-height color text-decoration list-style border-radius text-indent letter-spacing
+
+字体样式
+
+font-family font-weight font-style font-size
+
 ## 🎨 样式
 
 ### ✒️ 字体样式
@@ -64,7 +84,6 @@ Cascading Style Sheets 层叠样式表，级联样式表
   ```css
   font-family: \6977\4F53
   ```
-
 - `font-weight` 字重
 
   > 无单位
@@ -226,7 +245,6 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
     clear:both;
   }
   ```
-
 - 给父元素添加 `overflow: hideen`属性
 
   > 会让多余内容隐藏
@@ -669,14 +687,16 @@ Block Formatting Context 格式化上下文 一个独立的容器
 分类
 
 - 线性渐变
+
   - `linear-gradient(第一个参数,第二个参数,...)` 默认向下
   - `linear-gradient(to top,第一个参数,第二个参数,...)` 向上
   - `linear-gradient(to left,第一个参数,第二个参数,...)` 向左
   - `linear-gradient(to left top,第一个参数,第二个参数,...)` 向左上
   - `linear-gradient(0deg,第一个参数,第二个参数,...)` 角度
-
 - 径向渐变
+
   > radial-gradient()
+  >
 
 ### 转换
 
@@ -685,18 +705,23 @@ Block Formatting Context 格式化上下文 一个独立的容器
 
 - 平移 translate（） X轴：右正左负 Y轴：上正下负 Z轴 外正里负
 - 旋转 rotate() 默认旋转中心为盒子正中心
+
   > rotateX() 沿X轴旋转
   > rotateY() 沿Y轴旋转
-
+  >
 - skew() 扭转(deg) X轴 左正右负 Y轴 上正下负
+
   > skewX()
   > skewY()
-
+  >
 - scale() 缩放拉伸
+
   > scaleX() X轴缩放拉伸
   > scaleY() Y轴缩放拉伸
+  >
 
 ### 3D 透视图
+
 /*让当前的元素变成三维效果*/
 /*设置3D透视度*/
 /*当为元素定义perspective 属性时，其子元素会获得透视效果，而不是元素本身。 */
@@ -712,9 +737,10 @@ perspective:2000px
 - `transition-duration: xxx` 过渡所需要的时间单位秒
 - `transition-timing-function: xxx` 过渡时间曲线
 - `transition-delay: xxx` 过渡时间延迟
+- `transition: property duration timing-function delay,[...],...` 过渡时间延迟 `all`
 
-- `transition: property duration timing-function delay,[...],...` 过渡时间延迟 `all` 
   > 选取所有CSS属性
+  >
 
 ### 动画
 
@@ -722,19 +748,28 @@ perspective:2000px
 
 - 名称
   > `animation-name: name`
+  >
 - 动画周期 单位秒
   > `animation-duration: time`
+  >
 - 动画延迟 单位秒
   > `animation-delay: time`
+  >
 - 动画类型
   > `animation-time-function: type`
+  >
 - 动画次数
   > `animation-iteration-count: time`
+  >
   >> `infinite` 不限制次数
+  >>
+  >
 - 动画次数
   > `animation-play-state: status`
+  >
   >> `pause` 暂停状态
-
+  >>
+  >
 
 创建动画
 

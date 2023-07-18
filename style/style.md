@@ -797,15 +797,29 @@ xxx{
 
 响应式布局是：一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。 **考试**
 
-优点 
+优点
 
 - 面对不同分辨率设备灵活行强
 - 解决多设备适应问题
 
 `meta` 标签 设置网站一些属性配置
 
-`name="viewport" content=width=device-width, initial`
+`name="viewport" content="width=device-width, initial-scale=1.0"`
 
-宽度为设备宽度
+宽度为设备宽度 视口和设备宽度初始缩放比例为1.0
 
 ### 视口Viewport
+
+### 多媒体查询
+
+```css
+/* 
+@media only 媒体类型 and (媒体功能) [and (媒体功能) ...] {
+} 
+*/
+@media only screen and (max-width:768px){
+  xxx {
+  
+  }
+}
+```

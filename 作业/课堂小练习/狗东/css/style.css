@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background: #f5f5f5;
   color: #666;
-  font-family: 'Microsoft YaHei';
+  font-family: "Microsoft YaHei";
   font-size: 12px;
 }
 .top {
@@ -21,12 +21,12 @@ body {
   overflow: hidden;
 }
 li,
-nav,
+.jd-info,
 .location {
   list-style: none;
   display: inline-block;
 }
-nav{
+.jd-info {
   float: right;
 }
 .spacer {
@@ -36,4 +36,41 @@ nav{
   padding: 0;
   background: #ccc;
   overflow: hidden;
+}
+.header > * {
+  border: 1px #ccc solid;
+}
+.logo {
+  width: 190px;
+  height: 120px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+}
+.logo > img {
+  width: 100%;
+}
+.search-block {
+  display: inline-block;
+}
+.search-area {
+  width: 550px;
+  height: 36px;
+  display: inline-block;
+}
+.search-area > input {
+  width: 448px;
+  height: 32px;
+  border: none;
+  border-radius: none;
+}
+.search-area > button {
+  height: 32px;
+  border: none;
+  border-radius: none;
+}
+.cart {
+  width: 132px;
+  height: 36px;
+  border: 1px #e3e4e5 solid;
+  display: inline-block;
 }

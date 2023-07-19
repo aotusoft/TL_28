@@ -823,3 +823,9 @@ xxx{
   }
 }
 ```
+
+## SEO 优化
+
+- 标题
+- `<meta name="keywords" content="xxx,xxx">` 关键字
+- `<meta name"description" content="xxx">` 描述

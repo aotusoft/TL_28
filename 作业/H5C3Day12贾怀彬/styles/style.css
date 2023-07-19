@@ -1,93 +1,109 @@
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid black;
-  border-left: 5px solid transparent;
+img{
+  user-select: none;
 }
-
 body {
   background-color: #eaeaea;
 }
+span,p{
+  text-align: left;
+}
 header {
-  border-bottom: 5px #c30101 solid;
   background-color: white;
-  white-space: nowrap;
+  border-bottom: 5px #c30101 solid;
 }
-.tips {
-  padding: 0 10%;
-  border-bottom: 1px #ccc solid;
+header > div:first-child {
+  margin: 5px 121px;
+  width: 1215px;
+  overflow: hidden;
 }
-.top {
-  display: inline-block;
+.top:nth-child(1) {
+  float: left;
 }
-.left {
-  margin-right: 250px;
-  margin-left: 50px;
+.top:nth-child(2) {
+  float: right;
 }
-.right {
-  margin-right: 50px;
-  margin-left: 250px;
+header > div:nth-child(1) {
+  width: 1215px;
 }
-nav,
-li {
-  display: inline-block;
-}
-nav>ul>li {
-  margin-left: 20px;
-}
-nav{
-  margin-right: 10%;
-  margin-left: 12%;
+header > div:nth-child(2) {
+  width: 1215px;
+  border-top: 1px #ccc solid;
+  position: relative;
 }
 .logo {
-  margin-top: 10px;
-  margin-right: 16%;
-  margin-bottom: 10px;
-  margin-left: 10%;
-  vertical-align: middle;
+  margin: 20px 121px;
+}
+nav,
+nav > ul > li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav {
+  position: absolute;
+  top: 30%;
+  left: 58%;
+}
+.banner {
+  border-bottom: 1px #c30101 solid;
 }
 .banner > img {
-  width: 100%;
+  width: 1519px;
 }
 .common {
-  margin: 10px auto;
-  margin-bottom: 40px;
-  width: 80%;
+  margin: 20px 121px;
+  width: 1215px;
   background-color: white;
-  white-space: nowrap;
 }
-.introduce{
-  white-space: nowrap;
+.introduce {
+  padding: 10px 0;
+  text-align: center;
 }
 .introduce > div {
+  vertical-align: middle;
   display: inline-block;
-  padding: 10px 4%;
+  overflow: hidden;
+}
+.statements,
+.encouragement,
+.national {
+  margin: 20px 10px;
   width: 25%;
-  border-right: 1px #ccc solid;
-  border-left: 1px #ccc solid;
-  white-space: normal;
+  text-align: left;
 }
 .info-img {
   float: left;
 }
+.split {
+  height: 50px;
+  border-left: 1px #ccc solid;
+}
 .introduce > div > p {
-  color: #ccc;
-  font-size: 12px;
+  color: #777;
+  font-size: 14px;
 }
 .introduce > div > span {
+  text-align: left;
   font-weight: 600;
 }
 .learn {
-  width: 80%;
+  margin: 20px 121px;
+  width: 1215px;
   height: 100%;
   overflow: hidden;
   white-space: nowrap;
+}
+.recommend {
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+}
+.more {
+  margin: 3px;
+  color: #777;
+  float: right;
 }
 .course {
   background-color: white;
@@ -102,73 +118,56 @@ nav{
   border-bottom: 1px #ccc solid;
 }
 
-.recommend {
-  display: inline-block;
-  padding: 5px 300px 5px 10px;
-}
-.more {
-  display: inline-block;
-  color: #777;
-}
 .content {
   overflow: hidden;
   padding: 20px 10px;
   border-bottom: 1px #ccc dashed;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .content > img {
   float: left;
+}
+.content > p,
+.content > span {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .date {
   display: flex;
   justify-content: flex-end;
 }
+.mandarin {
+  background-color: white;
+  /* padding-bottom: 50px; */
+  width: 29%;
+  border: 1px #ccc solid;
+  float: right;
+  vertical-align: top;
+}
 .test {
   padding: 5px 0 5px 10px;
 }
-.mandarin {
-  display: inline-block;
-  margin-left: 20px;
-  padding-bottom: 50px;
-  width: fit-content;
-  /* height: 500px; */
-  border: 1px #ccc solid;
-  background-color: white;
-  vertical-align: top;
-}
 .column {
+  width: fit-content;
   display: inline-block;
 }
 .column > img {
+  width: 70%;
   padding: 10px 20px;
 }
 .column > p {
+  margin-bottom: 20px;
   text-align: center;
 }
 .month {
   width: 100%;
 }
-.qualification {
-  display: inline-block;
-  width: 33%;
-  vertical-align: top;
-}
+.qualification,
 .quiz {
-  display: inline-block;
   width: 33%;
-  vertical-align: top;
-}
-.entrance {
   display: inline-block;
-  width: 33%;
   vertical-align: top;
-  white-space: normal;
-}
-.teacher-title {
-  display: inline-block;
-  padding: 5px 0 5px 10px;
 }
 .article {
   padding-top: 15px;
@@ -177,7 +176,7 @@ nav{
   border-bottom: 1px #ccc dashed;
   font-size: 16px;
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
 }
 .quiz-content {
   background-image: linear-gradient(#f00102, #d70101);
@@ -190,32 +189,45 @@ nav{
   display: inline-block;
   color: white;
 }
-footer {
-  background-color: #2b2b2b;
+.entrance {
+  margin: 5px;
+  width: 31%;
+  border: 1px #ccc solid;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+.message{
+  position: absolute;
 }
 footer {
-  padding-right: 10%;
-  padding-left: 10%;
+  background-color: #2b2b2b;
+  text-align: center;
+  width: 1519px;
+  /* padding-right: 10%; */
+  /* padding-left: 10%; */
   border-top: 3px #c30101 solid;
 }
 footer > * {
   color: rgba(255, 255, 255, 0.581);
 }
 footer > div {
-  display: inline-block;
   padding-top: 40px;
-  width: 32%;
+  width: 388px;
   height: fit-content;
   min-height: 200px;
+  display: inline-block;
+  text-align: left;
   vertical-align: top;
 }
 .bigger {
-  width: 33%;
+  width: 401px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 li {
   margin: 3px 0;
+  display: inline-block;
 }
 .bigger > ul:nth-child(2) {
   color: white;

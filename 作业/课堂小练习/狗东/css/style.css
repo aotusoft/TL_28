@@ -4,16 +4,15 @@
 }
 @font-face {
   font-family: "fontAwesome";
-  src: url("../fontAwesome/webfonts/fa-solid-900.woff2") format("woff2");
+  src: url("../fontAwesome/webfonts/fa-regular-400.woff2") format("woff2");
 }
-.fass{
-  font-family: 'fontAwesome';
+.fass {
+  font-family: "fontAwesome" "微软雅黑";
 }
 body {
   -webkit-font-smoothing: antialiased;
   background: #f5f5f5;
   color: #666;
-  font-family: "Microsoft YaHei";
   font-size: 12px;
 }
 a {
@@ -79,6 +78,9 @@ li,
 .keyword {
   margin-left: 25px;
 }
+.keyword{
+  margin-top: 10px;
+}
 .search-area {
   height: 36px;
   border: 2px solid #e2231a;
@@ -95,7 +97,7 @@ li,
 .search-area > input:focus {
   outline: none;
 }
-.camera{
+.camera {
   position: absolute;
   right: 90px;
   top: 11px;
@@ -148,4 +150,121 @@ li,
   color: #333;
   margin: 0 11px;
   display: inline-block;
+}
+.sell {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 480px;
+  width: 1190px;
+}
+.sell > div {
+  height: 480px;
+  /* border: 1px #aaa solid; */
+  display: inline-block;
+}
+.sort {
+  width: 190px;
+  background-color: white;
+  vertical-align: top;
+}
+aside > ul {
+  padding: 10px;
+  height: 450px;
+  color: #636363;
+  margin-top: 10px;
+}
+aside > ul > li {
+  font-size: 14px;
+  color: #333;
+  height: 25px;
+  line-height: 25px;
+}
+.banner {
+  width: 590px;
+  vertical-align: top;
+}
+.banner > img {
+  width: 100%;
+}
+.ad {
+  vertical-align: top;
+  width: 190px;
+}
+.ad > img {
+  width: 100%;
+}
+.ad > img:nth-child(2) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login {
+  width: 190px;
+}
+.user {
+  height: 102px;
+  background: #fff;
+  text-align: center;
+}
+.user > div {
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+.user > button {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 12px;
+}
+.user > button:nth-child(2) {
+  color: #fff;
+  background: #e1251b !important;
+}
+.user > button:nth-child(3) {
+  background: #363634;
+  color: #e5d790;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.avatar > img {
+  width: 100%;
+  border-radius: 20px;
+}
+.login {
+  background-color: white;
+}
+.login-info {
+  display: inline-block;
+}
+.news {
+  padding: 10px 5px;
+}
+.news-title{
+  overflow: hidden;
+}
+.news-title > span:nth-child(1) {
+  font-weight: 600;
+  font-size: 16px;
+}
+.news-title > span:nth-child(2) {
+  margin-top: 1px;
+  float: right;
+}
+.news > p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.link {
+  width: 60px;
+  height: 55px;
+  text-align: center;
+  display: inline-block;
+}
+.link > img {
+  width: 28px;
+  height: 28px;
+  display: block;
 }

@@ -84,6 +84,7 @@ font-family font-weight font-style font-size
   ```css
   font-family: \6977\4F53
   ```
+
 - `font-weight` 字重
 
   > 无单位
@@ -245,6 +246,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
     clear:both;
   }
   ```
+
 - 给父元素添加 `overflow: hideen`属性
 
   > 会让多余内容隐藏
@@ -724,7 +726,7 @@ Block Formatting Context 格式化上下文 一个独立的容器
 
 /*让当前的元素变成三维效果*/
 /*设置3D透视度*/
-/*当为元素定义perspective 属性时，其子元素会获得透视效果，而不是元素本身。 */
+/*当为元素定义perspective 属性时，其子元素会获得透视效果，而不是元素本身。*/
 perspective:2000px
 /*设置为3D转换*/
 `transform-style: preserve-3d`
@@ -793,7 +795,7 @@ xxx{
 }
 ```
 
-## 响应式Web布局
+## 🗺️ 响应式Web布局
 
 响应式布局是：一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。 **考试**
 
@@ -829,3 +831,46 @@ xxx{
 - 标题
 - `<meta name="keywords" content="xxx,xxx">` 关键字
 - `<meta name"description" content="xxx">` 描述
+
+## 📄 Flex 布局
+
+### 主轴
+
+默认情况下 水平方向为主轴
+
+### 交叉轴
+
+永远垂直于主轴 默认情况下 垂直方向为主轴
+
+### 🍷 容器
+
+- `display:flex` 规定当前容器为弹性容器
+- `flex-direction` 规定当前主轴的方向
+  > `row` 水平向右 **默认值**
+  > `row-reverse` 水平向右
+  > `column` 垂直向下
+  > `column-reverse` 垂直向上
+  >> 主轴方向决定项目的排列位置
+- `justify-content` 当前主轴方向上项目的对齐方式
+  > `flex-start` 对齐与开始项目
+  > `flex-end` 对齐与末尾项目
+  > `center` 对齐与中间项目
+  >> 会有沿主轴方向居中效果
+  > `space-between` 分散对齐于容器主轴起点与终点 两端无间隙
+  > `space-around` 分散对齐于容器主轴起点与终点
+  >> 两端有间隙 两端间隙为其他间隙的½
+  > `space-evenly` 分散对齐于容器主轴起点与终点
+  >> 两端有间隙 间隙相等
+
+### 🔨 项目
+
+
+
+
+
+
+
+
+
+
+

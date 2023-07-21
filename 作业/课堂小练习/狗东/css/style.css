@@ -250,12 +250,7 @@ aside > ul > li {
   margin: 15px auto;
   width: 90%;
   height: 1px;
-  background-image: linear-gradient(
-    to right,
-    #eee,
-    #aaa,
-    #eee
-  );
+  background-image: linear-gradient(to right, #eee, #aaa, #eee);
 }
 .news {
   padding: 0 5px;

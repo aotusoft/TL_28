@@ -810,7 +810,7 @@ xxx{
 
 宽度为设备宽度 视口和设备宽度初始缩放比例为1.0
 
-### 视口Viewport
+### 👀 视口Viewport
 
 ### 多媒体查询
 
@@ -844,33 +844,62 @@ xxx{
 
 ### 🍷 容器
 
-- `display:flex` 规定当前容器为弹性容器
-- `flex-direction` 规定当前主轴的方向
-  > `row` 水平向右 **默认值**
-  > `row-reverse` 水平向右
-  > `column` 垂直向下
-  > `column-reverse` 垂直向上
-  >> 主轴方向决定项目的排列位置
-- `justify-content` 当前主轴方向上项目的对齐方式
-  > `flex-start` 对齐与开始项目
-  > `flex-end` 对齐与末尾项目
-  > `center` 对齐与中间项目
-  >> 会有沿主轴方向居中效果
-  > `space-between` 分散对齐于容器主轴起点与终点 两端无间隙
-  > `space-around` 分散对齐于容器主轴起点与终点
-  >> 两端有间隙 两端间隙为其他间隙的½
-  > `space-evenly` 分散对齐于容器主轴起点与终点
-  >> 两端有间隙 间隙相等
+#### `display:flex`
+
+`display:flex` 规定当前容器为弹性容器
+
+#### `flex-direction`
+
+`flex-direction` 规定当前主轴的方向
+
+- `row` 水平向右 **默认值**
+- `row-reverse` 水平向右
+- `column` 垂直向下
+- `column-reverse` 垂直向上
+- 主轴方向决定项目的排列位置
+
+#### `justify-content`
+
+`justify-content` 规定当前主轴方向上项目的对齐方式
+
+- `flex-start` 对齐于主轴起点
+- `flex-end` 对齐于主轴终点
+- `center` 对齐于主轴中心
+  > 会有沿主轴方向居中效果
+- `space-between` 分散对齐于容器主轴起点与终点 两端无间隙
+- `space-around` 分散对齐于容器主轴起点与终点
+  > 两端有间隙 两端间隙为其他间隙的 $ \frac {1} {2} $
+- `space-evenly` 分散对齐于容器主轴起点与终点
+  > 两端有间隙 间隙相等
+
+#### `align-items`
+
+`align-items` 规定交叉轴方向上项目的对齐方式
+
+- `flex-start` 对齐于交叉轴起点
+- `flex-end` 对齐于交叉轴终点
+- `center` 对齐于交叉轴中心
+- `baseline` 项目的第一行文字的基线对齐
+- `stretch` 如果项目未设置高度或设为auto 将占满整个容器的高度 **默认值**
+- `space-between` 分散对齐于容器主轴起点与终点 两端无间隙
+- `space-around` 分散对齐于容器主轴起点与终点
+  > 两端有间隙 两端间隙为其他间隙的 $ \frac {1} {2} $
+- `space-evenly` 分散对齐于容器主轴起点与终点
+  > 两端有间隙 间隙相等
+
+#### `flex-wrap`
+
+`flex-wrap` 是否强制换行
+
+- `nowrap` 不换行 默认
+- `wrap` 换行
 
 ### 🔨 项目
 
+#### `order`
 
+`order` 值越大位置越靠后
 
+#### `align-self`
 
-
-
-
-
-
-
-
+单个项目在交叉轴方向的对齐方式

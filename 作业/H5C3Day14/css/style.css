@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 10px 20px;
+  /* iPhone X */
+  width: 373px;
+  height: 810px;
+}
+
+i {
+  color: #ff5151;
+  font-size: 28px;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div {
+  margin: 10px auto;
+}
+nav {
+  padding: 20px 0;
+  border-top: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
+}
+.little-title {
+  display: flex;
+  justify-content: space-between;
+}
+.little-title > div {
+  display: flex;
+  justify-content: space-between;
+}
+.sort {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+p {
+  font-size: 20px;
+}
+section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px #ccc solid;
+}
+section > div {
+  font-size: 18px;
+}
+.info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.job {
+  font-size: 26px;
+  font-weight: 600;
+}
+.salary {
+  color: red;
+}
+section > .info:nth-child(2),
+button {
+  color: #555;
+}
+.button {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ccc;
+  font-size: 18px;
+  border: none;
+  border-radius: 0;
+}

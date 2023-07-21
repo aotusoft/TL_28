@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex 布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 800px;
+      height: 700px;
+      border: 20px solid #b7ff00;
+
+      display: flex;
+
+      flex-direction: row;
+      /* flex-direction: row-reverse; */
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+
+      justify-content: flex-start;
+      /* justify-content: flex-end; */
+      /* justify-content: center; */
+      /* justify-content: space-between; */
+      /* justify-content: space-around; */
+      /* justify-content: space-evenly; */
+
+      align-items: flex-start;
+      /* align-items: flex-end; */
+      align-items: center;
+      /* align-items: baseline; */
+
+      flex-wrap: nowrap;
+      /* flex-wrap: wrap; */
+
+      /* align-content: flex-start; */
+      /* align-content: flex-end; */
+      /* align-content: center; */
+      /* align-content: space-between; */
+      /* align-content: space-around; */
+      /* align-content: space-evenly; */
+    }
+
+    .child {
+      color: white;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      font-size: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="child" style="background-color: pink">1</div>
+    <div class="child" style="background-color: #ababf6; align-self: flex-end">2</div>
+    <div class="child" style="background-color: #ffff8b; order: 1">3</div>
+    <div class="child" style="background-color: #ff8484">4</div>
+    <div class="child" style="background-color: #ffbaff; order: 3">5</div>
+    <div class="child" style="background-color: gold">6</div>
+    <div class="child" style="background-color: #ac97ff">7</div>
+    <div class="child" style="background-color: #ffe1a5; order: 6">8</div>
+  </div>
+</body>
+
+</html>

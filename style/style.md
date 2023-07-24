@@ -84,7 +84,6 @@ font-family font-weight font-style font-size
   ```css
   font-family: \6977\4F53
   ```
-
 - `font-weight` 字重
 
   > 无单位
@@ -246,7 +245,6 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
     clear:both;
   }
   ```
-
 - 给父元素添加 `overflow: hideen`属性
 
   > 会让多余内容隐藏
@@ -866,11 +864,14 @@ xxx{
 - `flex-end` 对齐于主轴终点
 - `center` 对齐于主轴中心
   > 会有沿主轴方向居中效果
+  >
 - `space-between` 分散对齐于容器主轴起点与终点 两端无间隙
 - `space-around` 分散对齐于容器主轴起点与终点
   > 两端有间隙 两端间隙为其他间隙的 $ \frac {1} {2} $
+  >
 - `space-evenly` 分散对齐于容器主轴起点与终点
   > 两端有间隙 间隙相等
+  >
 
 #### `align-items`
 
@@ -884,8 +885,10 @@ xxx{
 - `space-between` 分散对齐于容器主轴起点与终点 两端无间隙
 - `space-around` 分散对齐于容器主轴起点与终点
   > 两端有间隙 两端间隙为其他间隙的 $ \frac {1} {2} $
+  >
 - `space-evenly` 分散对齐于容器主轴起点与终点
   > 两端有间隙 间隙相等
+  >
 
 #### `flex-wrap`
 
@@ -903,3 +906,23 @@ xxx{
 #### `align-self`
 
 单个项目在交叉轴方向的对齐方式
+
+## 大小单位
+
+### px 像素
+
+绝对单位 不受其他元素影响
+
+### em 字符
+
+相对单位 相对于父元素倍数
+
+#### rem
+
+ 相对单位 相对于根元素的大小
+
+#### vh vw 视口单位
+
+vmin 选取vw和vh中最小的
+
+vmax 选取vw和vh中最大的

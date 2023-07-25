@@ -201,7 +201,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 解决影响
 
-- 父元素中设置overflow:hidden
+- 父元素中设置 `overflow:hidden`
 - 添加上边框
 - 添加内边框
 
@@ -373,7 +373,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 `resize:0`
 
-消除同行相邻行内块元素的默认间距
+#### 消除同行相邻行内块元素的默认间距
 
 - 将其转换为块元素 然后浮动
 - 父元素添加 `font-size:0`
@@ -500,7 +500,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 #### 后代组合器
 
-""（空格）组合器选择前一个元素的后代节点
+" "（空格）组合器选择前一个元素的后代节点
 
 **语法：**`A B`
 
@@ -565,7 +565,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 - `:first-child` 选中父元素的第一个子元素
 - `:last-child` 选中父元素的最后一个子元素
 - `:nth-child(n)` 选中父元素的第n个子元素
-- `:nth-of-type(n)` 选中父元素的第n个子元素
+- `:nth-of-type(n)` 选中第n个同级兄弟元素
 
 ## 伪元素
 
@@ -631,8 +631,6 @@ CSS中设置 `display`属性
 ### 优先级
 
 在同一元素中  通配符选择器<标签选择器<类选择器<ID选择器<内部元素样式<!important
-
-特殊
 
 #### 复合选择器对比权重
 
@@ -783,7 +781,7 @@ xxx{
 }
 
 @keyframe name{
-  form{}
+  from{}
   to{}
   0%{}
   25%{}

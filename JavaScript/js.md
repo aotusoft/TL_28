@@ -98,17 +98,17 @@
 - set
 - map
 
-判断方式 type_of 返回值
+判断方式 `type_of` 返回值
 
 ### number 数字
 
 可代表 八进制 十进制 十六进制 科学计数法
-最大值 Number.MAX_VALUE 最小值 Number.MIN_VALUE
-正无穷 Infinity 负无穷 -Infinity
+最大值 `Number.MAX_VALUE` 最小值 `Number.MIN_VALUE`
+正无穷 `Infinity` 负无穷 `-Infinity`
 
 #### NaN 非数值
 
-NaN 数字类型
+`NaN` 数字类型
 
 与任何值都不相等 包括他自己
 
@@ -127,9 +127,51 @@ NaN 数字类型
 
 使用 `isNaN()` 判断时仍会发生隐式转换
 
+### null 空型
+
+使用 `typeof` 判断 `null` 时出现 `object` 为bug
+
+### undefined 未定义
+
+变量只定义未赋值时
+会被隐式转换为0
+
+## 数据转换
+
+### 转换为 string
+
+number/boolean --> toString() --> string
+null/undefind --> String() --> string
+
+### 转换为 boolean
+
+number/string/null/undefind --> Boolean() --> boolean
+
+`0` 和 `NaN` 转换为 `false`
+`""` 转换为 `false`
+`null` 和 `undefined` 转换为 `false`
+
+### 转换为 number
+
+`Number()`  `parseInt()`   `parseFloat()`
+
+undefind --> Number()/parseInt()/parseFloat() --> number (NaN)
+
+null --> Number() --> number (0)
+null --> parseInt()/parseFloat() --> number (NaN)
+
+boolean (true) --> Number() --> number (1)
+boolean (fasle) --> Number() --> number (0)
+boolean (true/fasle) --> parseInt()/parseFloat() --> number (NaN)
+
+string (""/"xxx") --> parseInt()/parseFloat() --> number (NaN)
+string ("12x"/"12.45") --> parseInt() --> number (12)
+string ("12.45") --> parseFloat() --> number (12.45)
+string ("0xf") --> Number() --> number (15)
+
 ## 位置
 
-内部script标签
+内部 `script` 标签
 外部js文件
 在标签内
 在浏览器控制台输入

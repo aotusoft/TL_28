@@ -50,15 +50,13 @@
   > Bowser Object Model 浏览器对象模型
   >
 
-## 语法
+## 变量
 
-### 变量
-
-#### 定义
+### 定义
 
 变量：计算机内存中存储数据的标识符
 
-#### 声明
+### 声明
 
 `var 变量名;`
 声明并赋值
@@ -67,7 +65,7 @@
 `var a=xxx,b=xxx,c=xxx;`
 `a=xxx` 不推荐
 
-#### 规则规范
+### 规则规范
 
 规范
 
@@ -81,7 +79,55 @@
 
 ### 字面量
 
-### 位置
+## 数据类型
+
+基本数据类型
+
+- number 数字
+- string 字符串
+- boolean 布尔
+- null 空型
+- undefined 未定义
+- symbol 唯一值
+
+引用数据类型
+
+- array 数组
+- function 函数
+- object 对象
+- set
+- map
+
+判断方式 type_of 返回值
+
+### number 数字
+
+可代表 八进制 十进制 十六进制 科学计数法
+最大值 Number.MAX_VALUE 最小值 Number.MIN_VALUE
+正无穷 Infinity 负无穷 -Infinity
+
+#### NaN 非数值
+
+NaN 数字类型
+
+与任何值都不相等 包括他自己
+
+`isNaN()` 判断是否为非数值
+
+### string 字符串
+
+`length` 长度
+空字符串 字符串的长度为0
+字符串的拼接
+使用 `var a = '12.34'` 判断 `isNaN(a)` 时 `a` 发生隐式转换
+
+隐式转换 不用人工干预的情况下进行的转换
+
+### boolean 布尔
+
+使用 `isNaN()` 判断时仍会发生隐式转换
+
+## 位置
 
 内部script标签
 外部js文件

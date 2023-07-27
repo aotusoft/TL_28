@@ -50,6 +50,13 @@
   > Bowser Object Model 浏览器对象模型
   >
 
+## 位置
+
+内部 `script` 标签
+外部js文件
+在标签内
+在浏览器控制台输入
+
 ## 变量
 
 ### 定义
@@ -58,12 +65,12 @@
 
 ### 声明
 
-`var 变量名;`
+`var/const 变量名;`
 声明并赋值
 `var 变量名 = xxx;`
 `var a,b,c;`
 `var a=xxx,b=xxx,c=xxx;`
-`a=xxx` 不推荐
+`a=xxx;` 不推荐
 
 ### 规则规范
 
@@ -150,6 +157,7 @@ number/string/null/undefind --> Boolean() --> boolean
 `0` 和 `NaN` 转换为 `false`
 `""` 转换为 `false`
 `null` 和 `undefined` 转换为 `false`
+`" "`
 
 ### 转换为 number
 
@@ -169,11 +177,34 @@ string ("12x"/"12.45") --> parseInt() --> number (12)
 string ("12.45") --> parseFloat() --> number (12.45)
 string ("0xf") --> Number() --> number (15)
 
-## 位置
+## 运算
 
-内部 `script` 标签
-外部js文件
-在标签内
-在浏览器控制台输入
+### 算数运算
+
+`+ - * / %`
+
+toFixed(n)` 保留n位小数 返回字符串类型
+
+### 一元运算
+
+前置++  先运算再赋值
+
+后置++ 先赋值再运算
+<!-- abcdefghijklnmopqrstuvwxyz -->
+### 逻辑运算
+
+`&&  ||`
+
+### 关系运算
+
+`< > <= >= != == === !==`
+`==` 只比较数值 不比较类型
+`===` 恒等于
+
+### 赋值运算
+
+### 优先级
+
+### 转换
 
 ## 🌠 高级

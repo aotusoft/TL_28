@@ -10,7 +10,7 @@
 动态类型语言：在运行时才确定数据类型
 基于对象语言：非面向对象，而是具有某些面向对象的特征
 
-## 作用
+## ☕ 作用
 
 - 网页动画效果
 - 前后端交互
@@ -36,28 +36,25 @@
 - JavaScript 是运行在客户端的编程语言
 - Java 是运行在服务端的编程语言
 
-## 组成部分
+## 🧩 组成部分
 
 考试
 
 - ECMAScript
   > 规定 Javascript 的语法 简称**ES**
-  >
 - DOM
   > Document Object Model 文档对象模型
-  >
 - BOM
   > Bowser Object Model 浏览器对象模型
-  >
 
-## 位置
+## 📍 位置
 
 内部 `script` 标签
 外部js文件
 在标签内
 在浏览器控制台输入
 
-## 变量
+## 🔑 变量
 
 ### 定义
 
@@ -86,9 +83,9 @@
 
 ### 字面量
 
-## 数据类型
+## 🍡 数据类型
 
-基本数据类型
+### 💪 基本数据类型
 
 - number 数字
 - string 字符串
@@ -97,23 +94,13 @@
 - undefined 未定义
 - symbol 唯一值
 
-引用数据类型
-
-- array 数组
-- function 函数
-- object 对象
-- set
-- map
-
-判断方式 `type_of` 返回值
-
-### number 数字
+#### number 数字
 
 可代表 八进制 十进制 十六进制 科学计数法
 最大值 `Number.MAX_VALUE` 最小值 `Number.MIN_VALUE`
 正无穷 `Infinity` 负无穷 `-Infinity`
 
-#### NaN 非数值
+##### NaN 非数值
 
 `NaN` 数字类型
 
@@ -121,7 +108,7 @@
 
 `isNaN()` 判断是否为非数值
 
-### string 字符串
+#### string 字符串
 
 `length` 长度
 空字符串 字符串的长度为0
@@ -130,20 +117,30 @@
 
 隐式转换 不用人工干预的情况下进行的转换
 
-### boolean 布尔
+#### boolean 布尔
 
 使用 `isNaN()` 判断时仍会发生隐式转换
 
-### null 空型
+#### null 空型
 
 使用 `typeof` 判断 `null` 时出现 `object` 为bug
 
-### undefined 未定义
+#### undefined 未定义
 
 变量只定义未赋值时
 会被隐式转换为0
 
-## 数据转换
+### 🦵 引用数据类型
+
+- array 数组
+- function 函数
+- object 对象
+- set
+- map
+
+**判断方式 `type_of` 返回值**
+
+## ♻️ 数据转换
 
 ### 转换为 string
 
@@ -177,7 +174,7 @@ string ("12x"/"12.45") --> parseInt() --> number (12)
 string ("12.45") --> parseFloat() --> number (12.45)
 string ("0xf") --> Number() --> number (15)
 
-## 运算
+## ➕ 运算
 
 ### 算数运算
 
@@ -193,15 +190,18 @@ toFixed(n)` 保留n位小数 返回字符串类型
 
 ### 逻辑运算
 
-`&&  ||`
+`&&` `||` `!`
 
 ### 关系运算
 
 `<` `>` `<=` `>=` `!=` `==` `===` `!==`
+
 `==` 只比较数值 不比较类型
 `===` 恒等于
 
 ### 赋值运算
+
+`=` `+=` `-=`
 
 ### 优先级
 
@@ -214,10 +214,10 @@ toFixed(n)` 保留n位小数 返回字符串类型
 - 相等运算符：`==`、`!=`、`===`、`!==`。
 - 逻辑与运算符：`&&`。
 - 逻辑或运算符：`||`。
-- 条件（三元）运算符：`?` `:`。
+- 三目运算符：`?` `:`。
 - 赋值运算符：`=` `+=` `-=` 等。
 
-## 流程控制
+## 💱 流程控制
 
 ### 顺序结构
 
@@ -230,10 +230,10 @@ toFixed(n)` 保留n位小数 返回字符串类型
 `if-else`
 
 ```javascript
-if () {
-
+if (key) {
+  xxx;
 } else {
-
+  xxx;
 }
 ```
 
@@ -244,11 +244,11 @@ if () {
 ```javascript
 switch (key)
   case value:
-    xxx
+    xxx;
     break;
 
   default:
-    xxx
+    xxx;
     break;
 ```
 
@@ -257,11 +257,29 @@ switch (key)
 
 ### 循环结构
 
-`while`  `do-while`
+`while`
 
 ```javascript
-for () {
+while (xxx) {
+  xxx;
+}
+```
 
+`do-while`
+
+```javascript
+do {
+  xxx;
+} while (xxx);
+```
+
+先执行 后判断
+
+`for`
+
+```javascript
+for (xxx) {
+  xxx;
 }
 ```
 

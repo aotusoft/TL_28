@@ -191,17 +191,13 @@ toFixed(n)` 保留n位小数 返回字符串类型
 
 后置++ 先赋值再运算
 
-<!-- ABCDEFGHIJKLNMOPQRSTUVWXYZ -->
-
-<!-- abcdefghijklnmopqrstuvwxyz -->
-
 ### 逻辑运算
 
 `&&  ||`
 
 ### 关系运算
 
-`< > <= >= != == === !==`
+`<` `>` `<=` `>=` `!=` `==` `===` `!==`
 `==` 只比较数值 不比较类型
 `===` 恒等于
 
@@ -231,6 +227,8 @@ toFixed(n)` 保留n位小数 返回字符串类型
 
 根据不同的情况执行对应的代码
 
+`if-else`
+
 ```javascript
 if () {
 
@@ -241,11 +239,25 @@ if () {
 
 三目运算符
 
-`switch case`
+`switch-case`
+
+```javascript
+switch (key)
+  case value:
+    xxx
+    break;
+
+  default:
+    xxx
+    break;
+```
+
+`key` 变量
+`value` 变量值
 
 ### 循环结构
 
-`while`  `do while`
+`while`  `do-while`
 
 ```javascript
 for () {

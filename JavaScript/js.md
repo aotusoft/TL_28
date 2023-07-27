@@ -190,7 +190,9 @@ toFixed(n)` 保留n位小数 返回字符串类型
 前置++  先运算再赋值
 
 后置++ 先赋值再运算
+
 <!-- abcdefghijklnmopqrstuvwxyz -->
+
 ### 逻辑运算
 
 `&&  ||`
@@ -205,6 +207,40 @@ toFixed(n)` 保留n位小数 返回字符串类型
 
 ### 优先级
 
-### 转换
+## 流程控制
+
+### 顺序结构
+
+从上到下执行的代码
+
+### 分支结构
+
+根据不同的情况执行对应的代码
+
+```javascript
+if () {
+
+} else {
+
+}
+```
+
+三目运算符
+`switch case`
+
+### 循环结构
+
+while do while
+
+```javascript
+for () {
+
+}
+```
+
+window.prompt(xxx,yyy) xxx 提示信息 yyy 默认值
+返回值为字符串
+
+
 
 ## 🌠 高级

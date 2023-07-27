@@ -145,12 +145,11 @@
 ### 转换为 string
 
 number/boolean --> toString() --> string
-null/undefind --> String() --> string
+null/undefined --> String() --> string
 
 ### 转换为 boolean
 
-number/string/null/undefind --> Boolean() --> boolean
-
+number/string/null/undefined --> Boolean() --> boolean
 `0` 和 `NaN` 转换为 `false`
 `""` 转换为 `false`
 `null` 和 `undefined` 转换为 `false`
@@ -160,7 +159,7 @@ number/string/null/undefind --> Boolean() --> boolean
 
 `Number()`  `parseInt()`   `parseFloat()`
 
-undefind --> Number()/parseInt()/parseFloat() --> number (NaN)
+undefined --> Number()/parseInt()/parseFloat() --> number (NaN)
 
 null --> Number() --> number (0)
 null --> parseInt()/parseFloat() --> number (NaN)
@@ -242,7 +241,7 @@ if (key) {
 `switch-case`
 
 ```javascript
-switch (key)
+switch (key) {
   case value:
     xxx;
     break;
@@ -250,6 +249,7 @@ switch (key)
   default:
     xxx;
     break;
+}
 ```
 
 `key` 变量
@@ -278,11 +278,24 @@ do {
 `for`
 
 ```javascript
-for (xxx) {
+for (xxx;yyy;zzz) {
   xxx;
 }
 ```
 
+```javascript
+for (var i = 1, j = 1; i < 9, j < 6; i++, j++) {
+    console.log(i)
+}
+
+// for 循环同时判断两个表达式时 一最后一个判断为准
+for (var i = 1, j = 1; j < 6, i < 9; i++, j++) {
+    console.log(i)
+}
+
+```
+
+`document.write(xxx)` 在dom中显示内容
 `window.prompt(xxx,yyy)`  `xxx` 提示信息 `yyy` 默认值
 返回值为字符串
 

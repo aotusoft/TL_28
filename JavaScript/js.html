@@ -13,24 +13,37 @@
 </head>
 
 <body>
-    <p id="x">10</p>
-    <p id="y">20</p>
-    <!-- <button id="get">1</button> -->
-    <p id="resultX"></p>
-    <p id="resultY"></p>
+
 </body>
 <script>
-    var a;
-
-    a = 10;
     // window 浏览器对象 window对象下的属性和方法能直接掉window
     // console 控制台对象 浏览器对象的属性
     // log() 打印方法
-    // window.console.log(a)
-    var x = NaN;
-    var y = x;
-    // alert(x == y)
-    isNaN()
+    window.console.log()
+
+    // for 循环同时判断两个表达式时 一最后一个判断为准
+    for (var i = 1, j = 1; i < 9, j < 6; i++, j++) {
+        console.log(i)
+    }
+
+    for (let i = 1; i < 6; i++) {
+        for (let j = 1; j < 12; j++) {
+            document.write("♣")
+        }
+        document.writeln("</br>")
+    }
+
+    document.writeln("</br>")
+    document.writeln("</br>")
+    document.writeln("</br>")
+    document.writeln("</br>")
+
+    for (let i = 1; i < 12; i++) {
+        for (let j = 1; j < i; j++) {
+            document.write("♣")
+        }
+        document.writeln("</br>")
+    }
 </script>
 
 </html>

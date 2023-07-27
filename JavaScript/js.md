@@ -166,8 +166,8 @@ null --> Number() --> number (0)
 null --> parseInt()/parseFloat() --> number (NaN)
 
 boolean (true) --> Number() --> number (1)
-boolean (fasle) --> Number() --> number (0)
-boolean (true/fasle) --> parseInt()/parseFloat() --> number (NaN)
+boolean (false) --> Number() --> number (0)
+boolean (true/false) --> parseInt()/parseFloat() --> number (NaN)
 
 string (""/"xxx") --> parseInt()/parseFloat() --> number (NaN)
 string ("12x"/"12.45") --> parseInt() --> number (12)

@@ -42,13 +42,10 @@
 
 - ECMAScript
   > 规定 Javascript 的语法 简称**ES**
-  >
 - DOM
   > Document Object Model 文档对象模型
-  >
 - BOM
   > Bowser Object Model 浏览器对象模型
-  >
 
 ## 📍 位置
 
@@ -142,13 +139,46 @@
 - map
 
 ### 数组
+
 数组中元素的添加和删除
+
 #### 栈操作
+
 在栈顶操作数据 **先进后出**
+
 - 添加  `push()`
 - 删除  `pop()`
+
 #### 队列操作
 
+## 🪑 函数
+
+把具有特定功能的代码封装在一起
+
+### 定义
+
+- 函数声明
+
+```javascript
+function 函数名(参数) {
+
+}
+```
+
+- 函数表达式
+
+```javascript
+ var 函数名 = function (参数) {
+    
+}
+```
+返回值
+
+函数调用的结果就是函数的返回值
+
+
+
+- 构造函数创建
 
 **判断方式 `type_of` 返回值**
 
@@ -242,9 +272,9 @@ string ("0xf") --> Number() --> number (15)
 
 ```javascript
 if (key) {
-  xxx;
+    xxx;
 } else {
-  xxx;
+    xxx;
 }
 ```
 
@@ -254,12 +284,12 @@ if (key) {
 
 ```javascript
 switch (key) {
-  case value:
-    xxx;
-    break;
-  default:
-    xxx;
-    break;
+    case value:
+        xxx;
+        break;
+    default:
+        xxx;
+        break;
 }
 ```
 
@@ -272,7 +302,7 @@ switch (key) {
 
 ```javascript
 while (xxx) {
-  xxx;
+    xxx;
 }
 ```
 
@@ -280,7 +310,7 @@ while (xxx) {
 
 ```javascript
 do {
-  xxx;
+    xxx;
 } while (xxx);
 ```
 
@@ -289,8 +319,8 @@ do {
 `for`
 
 ```javascript
-for (xxx;yyy;zzz) {
-  xxx;
+for (xxx; yyy; zzz) {
+    xxx;
 }
 ```
 

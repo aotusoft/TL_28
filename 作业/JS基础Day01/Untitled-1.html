@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log(isNaN(NaN)) // NaN是NaN
+    // true
+    console.log(isNaN(10)) // 10为数值
+    // false
+    console.log(isNaN("11"))
+    // "11" 隐式转换为11，11为数值
+    // false
+    console.log(isNaN("NaN")) // 由于 "NaN" 无法转换为有效的数字 结果为NaN
+    // false
+    console.log(isNaN("12.35a")) // 隐式转换为 NaN
+    // true
+    console.log(isNaN(12.35)) // 12.35为数值
+    // false
+    console.log(isNaN("blue"))  // 由于 "blue" 无法转换为有效的数字 结果为NaN
+    //true
+    console.log(isNaN(true)) //true隐式转换为数值
+    //false
+    console.log(isNaN(undefined)) //undefined 无法转换为有效的数字 结果为NaN
+    //true
+    console.log(isNaN(null)) //null 基本数据类型 转换为0
+    //false
+    console.log(isNaN("false")) //由于 "false" 无法转换为有效的数字 结果为NaN
+    //true
+
+    // 3、A 变量不能由数字开头 连字符 关键字命名
+
+// 7、
+// parseInt(Number("12.88"))+parseFloat("53.36abc")+Number(Boolean(null)); 
+                //  12      +            53.36     +               0      = 65.36
+</script>
+
+</html>

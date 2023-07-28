@@ -42,10 +42,13 @@
 
 - ECMAScript
   > 规定 Javascript 的语法 简称**ES**
+  >
 - DOM
   > Document Object Model 文档对象模型
+  >
 - BOM
   > Bowser Object Model 浏览器对象模型
+  >
 
 ## 📍 位置
 
@@ -179,13 +182,13 @@ string ("0xf") --> Number() --> number (15)
 
 `+ - * / %`
 
-toFixed(n)` 保留n位小数 返回字符串类型
+`toFixed(n)` 保留n位小数 返回字符串类型
 
 ### 一元运算
 
-前置++  先运算再赋值
+前置++ `++i` 先运算再赋值
 
-后置++ 先赋值再运算
+后置++ `i++` 先赋值再运算
 
 ### 逻辑运算
 
@@ -200,7 +203,7 @@ toFixed(n)` 保留n位小数 返回字符串类型
 
 ### 赋值运算
 
-`=` `+=` `-=`
+`=` `+=` `-=` `/=` `*=`
 
 ### 优先级
 
@@ -245,7 +248,6 @@ switch (key) {
   case value:
     xxx;
     break;
-
   default:
     xxx;
     break;
@@ -298,5 +300,7 @@ for (var i = 1, j = 1; j < 6, i < 9; i++, j++) {
 `document.write(xxx)` 在dom中显示内容
 `window.prompt(xxx,yyy)`  `xxx` 提示信息 `yyy` 默认值
 返回值为字符串
+
+### continue和break区别
 
 ## 🌠 高级

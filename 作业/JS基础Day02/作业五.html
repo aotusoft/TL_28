@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let totalCash = 10000;
+    for (let i = 1; i < 6; i++) {
+        console.log("i的值 " + i);
+        totalCash = totalCash * 0.003 + totalCash;
+    }
+    document.write("五年后本金一共是" + totalCash.toFixed(2));
+</script>
+</html>

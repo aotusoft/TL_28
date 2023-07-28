@@ -21,7 +21,16 @@
     // log() 打印方法
     window.console.log()
 
- console.log(Math.PI)
+    function a(args) {
+        var product = 0;
+        if (args === 1 || args === 0) {
+            return 1;
+        } else {
+            for (let i = 1; i <= args; i++) {
+                product *= i;
+            }
+        }
+    }
 </script>
 
 </html>

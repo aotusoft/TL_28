@@ -138,6 +138,8 @@
 - set
 - map
 
+引用类型的`typeof`返回值为`object` _除 `function` 外_
+
 ### 数组
 
 数组中元素的添加和删除
@@ -178,6 +180,33 @@ function 函数名(参数) {
 如果函数没有使用 `return` 语句，那么函数有默认的 `undefined` 返回值
 `return` 语句之后的代码将不再执行
 
+函数覆盖
+
+函数名相同 较后的覆盖较前的
+
+函数表达式优先级高于声明式函数
+
+函数内置对象
+任何一个函数都包含一个内置对象 `arguments` _不包括内置函数_
+
+作用：操作参数 参数是该对象数组的元素
+`arguments.length` 实参个数
+`arguments.callee.length` 形参个数
+
+匿名函数
+
+```javascript
+(
+    function () {
+      
+    }
+)()
+```
+_后面的括号是调用_
+
+
+
+
 
 - 构造函数创建
 
@@ -187,14 +216,17 @@ function 函数名(参数) {
 
 ### 转换为 string
 
-number/boolean --> toString() --> string
-null/undefined --> String() --> string
+- number/boolean --> toString() --> string
+- null/undefined --> String() --> string
 
 ### 转换为 boolean
 
 number/string/null/undefined --> Boolean() --> boolean
+
 `0` 和 `NaN` 转换为 `false`
+
 `""` 转换为 `false`
+
 `null` 和 `undefined` 转换为 `false`
 `" "`
 
@@ -202,19 +234,20 @@ number/string/null/undefined --> Boolean() --> boolean
 
 `Number()`  `parseInt()`   `parseFloat()`
 
-undefined --> Number()/parseInt()/parseFloat() --> number (NaN)
+- undefined --> Number()/parseInt()/parseFloat() --> number (NaN)
+- null --> Number() --> number (0)
+- null --> parseInt()/parseFloat() --> number (NaN)
 
-null --> Number() --> number (0)
-null --> parseInt()/parseFloat() --> number (NaN)
 
-boolean (true) --> Number() --> number (1)
-boolean (false) --> Number() --> number (0)
-boolean (true/false) --> parseInt()/parseFloat() --> number (NaN)
+- boolean (true) --> Number() --> number (1)
+- boolean (false) --> Number() --> number (0)
+- boolean (true/false) --> parseInt()/parseFloat() --> number (NaN)
 
-string (""/"xxx") --> parseInt()/parseFloat() --> number (NaN)
-string ("12x"/"12.45") --> parseInt() --> number (12)
-string ("12.45") --> parseFloat() --> number (12.45)
-string ("0xf") --> Number() --> number (15)
+
+- string (""/"xxx") --> parseInt()/parseFloat() --> number (NaN)
+- string ("12x"/"12.45") --> parseInt() --> number (12)
+- string ("12.45") --> parseFloat() --> number (12.45)
+- string ("0xf") --> Number() --> number (15)
 
 ## ➕ 运算
 
@@ -338,7 +371,9 @@ for (var i = 1, j = 1; j < 6, i < 9; i++, j++) {
 ```
 
 `document.write(xxx)` 在dom中显示内容
+
 `window.prompt(xxx,yyy)`  `xxx` 提示信息 `yyy` 默认值
+
 返回值为字符串
 
 ### continue和break区别

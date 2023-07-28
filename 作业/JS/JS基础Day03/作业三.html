@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function factorial(number) {
+        let result = 1;
+        for (let i = 1; i <= number; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    function factorialSum(limit) {
+        let sum = 0;
+        for (let i = 1; i <= limit; i++) {
+            sum += factorial(i);
+        }
+        return sum;
+    }
+    let number = window.prompt();
+    document.write(factorialSum(number));
+</script>
+</html>

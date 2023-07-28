@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    /*
+    * 首先获取元素
+    * 将获取到的元素遍历并与其他元素比较
+    * 如果不同 继续
+    * 如果相同 则剔除它
+    * 然后进行下一次循环 直到数组结束
+    */
+
+    function del(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] === arr[j]) {
+                    arr.splice(j, 1)
+                }
+            }
+        }
+        return arr;
+    }
+    var arr = [2, 3, 5, 4, 3, 2, 6, 8, 5, 4, 6, 2];
+    document.write(del(arr))
+</script>
+</html>

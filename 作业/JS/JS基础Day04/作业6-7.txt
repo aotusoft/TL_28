@@ -1,0 +1,29 @@
+作业6
+下列程序中alert按顺序分别弹出：（ ），（ ），（）
+var a = 10;
+function test() {
+    var a;
+    a = 100;
+    alert(a);
+    alert(this.a);
+    alert(a);
+}
+test();
+
+弹出 100 10 100
+
+作业7
+(function(){
+    console.log(a)
+    var a=5;
+    function a(){}
+    console.log(a)
+    function b(){}
+    b=6
+    console.log(b)
+    var c=d=b
+})()
+console.log(d)
+
+输出 function a(){} 5 6 6
+

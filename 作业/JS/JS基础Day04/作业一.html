@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var computer = {
+        color: "white",
+        weight: 1,
+        brand: "honor",
+        model: "MagicBook 2019",
+        watchVideo: function () {
+        },
+        listenMusic: function () {
+        },
+        gaming: function () {
+        },
+        coding: function () {
+        }
+    }
+    computer = new Object();
+    computer.color = "white";
+    computer.weight = 1;
+    computer.brand = "honor";
+    computer.model = "MagicBook 2019";
+    computer.watchVideo = function () {
+    };
+    computer.listenMusic = function () {
+    };
+    computer.gaming = function () {
+    };
+    computer.coding = function () {
+    }
+
+    function Computer(color,weight,brand,model,watchVideo,listenMusic,gaming,coding) {
+        this.color = color;
+        this.weight = weight;
+        this.brand = brand;
+        this.model = model;
+        this.watchVideo = watchVideo;
+        this.listenMusic = listenMusic;
+        this.gaming = gaming;
+        this.coding = coding
+    }
+    Computer("white",1,"honor","MagicBook 2019",function () {},function () {},function () {})
+</script>
+</html>

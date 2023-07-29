@@ -1,0 +1,19 @@
+2、
+var name = "喜洋洋";
+  function Car(name, width) {
+    this.name = name;
+    this.width = width;
+    function fn1() {
+      console.log(this.name);
+    }
+    fn1();
+  }
+  var car = new Car("法拉利", 100);
+3、
+var person = new Object();
+  var name = "小张";
+  person.name = "小王";
+  person.getName = function () {
+    console.log(name);
+  }
+  person.getName();

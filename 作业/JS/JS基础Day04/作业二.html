@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var button = {
+        width: "100px",
+        heigt: "100px",
+        background_color: "blue",
+        active: function () {
+            console.log("按钮有鼠标移入的行为");
+        },
+    };
+    console.log(button);
+    button.active();
+
+    var button = new Object();
+    button.width = "100";
+    button.heigt = "100";
+    button.background_color = "BLUE";
+    button.active = function () {
+        console.log("按钮有鼠标移入的行为");
+    };
+    console.log(button);
+    button.active();
+
+    function createButton(width, heigt, background_color) {
+        var button = new Object();
+        button.width = width;
+        button.heigt = heigt;
+        button.background_color = background_color;
+        button.active = function (a) {
+            console.log(++a);
+            console.log("按钮有鼠标移入的行为");
+        };
+        return button;
+    }
+
+    var button1 = createButton("aaa", "bbb", "ccc");
+    console.log(button1);
+    button1.active(1);
+
+    function Button(width, height, background_color, active) {
+        this.height = height;
+        this.background_color = background_color;
+        this.width = width;
+        this.active = active;
+    }
+
+    var button2 = new Button("AAA", "AAA", "ccc", function () {
+        console.log("函数");
+    });
+    console.log(button2);
+    button2.active();
+</script>
+</html>

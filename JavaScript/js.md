@@ -542,7 +542,8 @@ for (x in 对象名){
 ### 内置对象
 
 - 数学对象 `Math`
-- 日期对象 `Date`
+- 日期对象 `Date` 
+  > **特殊 构造函数** 需要实例化
 - 数组对象 `Array`
 - 字符串对象 `String`
 
@@ -568,5 +569,19 @@ min-max之间的随机数
 function getRand(min, max) {
   var number = Math.floor(Math.random() * (max - min) + min);
   return number;
+  Date
 }
 ```
+
+#### 🗓️ 日期对象
+
+- `new Date().getTime()` 获取时间戳
+- `new Date().valueOf()` 获取时间戳
+- `new Date().getFullYear()` 获取年份 `XXXX`
+- `new Date().getMonth()` 获取月份 需要+1 索引从零开始 `xx`
+- `new Date().getDate()` 获取天份 `xx`
+- `new Date().getDay()` 获取星期 `xx`
+- `new Date().getHours()` 获取小时 `XX`
+- `new Date().getMinutes()` 获取分钟 `XX`
+- `new Date().getSeconds()` 获取秒钟 `xx`
+- 

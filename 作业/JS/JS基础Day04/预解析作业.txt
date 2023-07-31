@@ -13,7 +13,12 @@ function f1() {
  }
 
 
-
+9
+9
+9
+9
+9
+ReferenceError: a is not defined
 
 
 

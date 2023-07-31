@@ -9,7 +9,9 @@ var name = "喜洋洋";
     fn1();
   }
   var car = new Car("法拉利", 100);
-3、
+
+控制台输出 喜洋洋
+
 var person = new Object();
   var name = "小张";
   person.name = "小王";
@@ -17,3 +19,7 @@ var person = new Object();
     console.log(name);
   }
   person.getName();
+
+
+在函数内部并没有定义局部变量 name 。
+控制台输出 小张

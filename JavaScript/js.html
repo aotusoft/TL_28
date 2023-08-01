@@ -27,10 +27,18 @@
         }
     }
     a.a();
+    alert(a) //1. undefined
+    var a = 0
+    // a = 2
+    alert(a) //2. 0
+    function fn() {
+        alert(a) //3. 0:不带var没有提升,函数内没有a,沿着作用域链向上找,找到全局里的a
+        a = 1 //赋值
+        alert(a) //4. 1
+    }
 
-    var string = String("abcdefga");
-    document.write(string.split("cd"))
-    document.write("</br>")
+    fn()
+    alert(a)//1
 
 </script>
 </html>

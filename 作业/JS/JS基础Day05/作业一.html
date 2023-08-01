@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数学对象</title>
+  </head>
+  <body></body>
+  <script>
+    console.log(Math.PI);
+    console.log(Math.random());
+    console.log(Math.floor(Math.random()));
+    console.log(Math.ceil(Math.random()));
+    console.log(Math.round(4.59999));
+    console.log(Math.max(10, 20, 300, 50));
+    console.log(Math.min(10, 20, 300, 50));
+    console.log(Math.sin(Math.PI / 6));
+    console.log(Math.cos(Math.PI / 6));
+    console.log(Math.pow(10, 2));
+    console.log(Math.sqrt(100));
+    //区间随机数
+    function intervalRondom(min, max) {
+      return Math.floor(Math.random() * (max - min) + min);
+    }
+    console.log(intervalRondom(5, 10));
+  </script>
+</html>

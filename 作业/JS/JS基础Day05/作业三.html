@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //数组对象的创建是构造函数，实例化new个对象
+    var arr = new Array(10, 20, 30, 40, 50, 60, 40, 70, 10);
+    //判断变量类型是否为数组
+    /*  console.log(arr instanceof Array);
+    console.log(Array.isArray(arr));
+    console.log(arr); */
+    //队头元素的插入和添加
+    /*  arr.shift();
+    console.log(arr);
+    arr.unshift("10");
+    console.log(arr); */
+    //数组反转
+    /*  arr.reverse();
+    console.log(arr); */
+    //操作数组
+    //concat参数为数组就连接两个数组，不是就添加为元素
+    /*   var a = new Array(1, 2, 3);
+    console.log(arr.concat(a)); */
+    //截取数组
+    /* console.log(arr.slice(1));
+    console.log(arr);
+    console.log(arr.splice(2, 3));
+    console.log(arr); */
+    //位置方法
+    /*  console.log(arr.indexOf(40));
+    console.log(arr.lastIndexOf(40)); */
+    //迭代方法（循环）
+    /* var code = "";
+    arr.forEach((element) => {
+      code += element + ",";
+    });
+    console.log(code.substring(0, code.length - 1)); //code.substring(0, code.length - 1)去除字符串最后一个字符
+     */
+    /* var some_1 = arr.some(function (a, b) {
+      return (a = 20);
+    });
+    console.log(some_1);
+    var arr1 = new Array(1, 1, 1, 1, 1, 1);
+    var some_2 = arr1.every(function (a, b) {
+      return (a = 1);
+    });
+    console.log(some_2);
+    var some_3 = arr1.map(function (a, b) {
+      return Math.PI + a;
+    });
+    console.log(some_3);
+
+    var some_4 = arr.filter(function (value, index) {
+      return value < 30;
+    });
+
+    console.log(some_4); */
+  </script>
+</html>

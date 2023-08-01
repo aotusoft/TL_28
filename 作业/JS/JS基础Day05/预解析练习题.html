@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //预解析题
+    alert(a); //1. undefined
+    var a = 0;
+    alert(a); //2. 0
+    function fn() {
+      alert(a); //3. undefined
+      var a = 1;
+      alert(a); //4. 1
+    }
+    fn();
+    alert(a);
+  </script>
+</html>

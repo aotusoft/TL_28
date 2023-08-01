@@ -456,6 +456,7 @@ a = 0;
 生命周期 浏览器打开时开始 浏览器关闭时结束
 
 全局变量为 `window` 对象下的属性 全局函数都是 `window` 对象下的方法
+
 可以直接使用 `windows.` 调用
 
 考试
@@ -597,12 +598,12 @@ object 类型
 
 判断方法
 
-- `instanceof Array`
-  > 变量 instanceof Array
+- `xxx instanceof Array`
+  > `变量 instanceof Array`
 - `isArray(变量/值)`
   > `Array.isArray()`
 
-方法
+##### 方法
 
 队列操作在表头 先进先出
 **与栈操作 顺序相反**
@@ -616,15 +617,16 @@ object 类型
 - `concat()` 拼接元素
   > 拼接返回为新数组
 - `slice(start,end)` 截取元素
-  > 从索引 `start` 开始(包括) 到 `end` 结束(不包括) 返回新数组
+  > 从索引 `start` 开始(包括) 到 `end` 结束(不包括) 返回新数组 不改变旧数组
 - `split(start,length)` 截取元素
-  > 从索引 `start` 开始(包括) 截取 `length` 个长度 返回新数组 且且改变旧数组
-- `indexOf` 位置方法
+  > 从索引 `start` 开始(包括) 截取 `length` 个长度 返回新数组 且改变旧数组
+- `indexOf()` 位置方法
   > 获取第一个匹配元素的索引值 未匹配到则返回 `-1`
-- `lastIndexOf` 位置方法
+- `lastIndexOf()` 位置方法
   > 获取最后一个匹配元素的索引值 未匹配到则返回 `-1`
 
-迭代
+###### 迭代
+
 `forEach()` 遍历元素
 
 ```javascript
@@ -634,13 +636,13 @@ arr.forEach(function (value, index) {
 })
 ```
 
-`some()`
- 返回值为布尔类型 如果有元素满足条件返回true 都不满足条件返回false
+- `some()`
+ 返回值为布尔类型 如果有元素满足条件返回 `true` 都不满足条件返回 `false`
 
-`every()`
+- `every()`
 全部元素满足条件返回 `true` 有元素不满足条件返回 `false`
 
-`map()`
+- `map()`
 返回一个数组 一般用于数学计算
 
 ```javascript
@@ -649,5 +651,5 @@ array.map(function (value, index) {
 })
 ```
 
-`filter()`
- 过滤不符合要求元素
+- `filter()`
+返回一个数组 过滤不符合要求元素

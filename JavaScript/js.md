@@ -653,3 +653,30 @@ array.map(function (value, index) {
 
 - `filter()`
 返回一个数组 过滤不符合要求元素
+
+#### 🧵 String 对象
+
+```javascript
+var str = "xxx";
+str = "yyy"
+```
+
+此方式修改变量里的值会导致重新开辟内存空间 **字符串本身的不可逆性**
+
+可通过构造函数方法创建
+
+方法
+
+- `charAt(n)` 获取单个字符
+  > 与 `xxx[n]` 相同
+- `concat()` 拼接字符串
+- `substring(start,end)` 截取字符串 
+  > 与 `slice()` 相同 考试
+- `substr(start,length)` 截取字符串
+- `indexOf()` 获取位置
+- `lastIndexOf()` 获取位置
+- `trim()` 删除字符串两端空格
+- `search()` 检索字符串中子字符串的位置 返回子字符串的初始位置
+- `replace(old,new)` 替换字符串中子字符串的位置
+- `replace(old,new)` 替换字符串中子字符串的位置
+ > `replaceAll(old,new)` 替换字符串中子字符串的位置

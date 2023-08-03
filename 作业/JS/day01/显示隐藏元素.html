@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div {
+        width: 300px;
+        height: 300px;
+        background-color: #fff4b9;
+        border: 5px solid #bbe4ff;
+    }
+</style>
+<body>
+<section>
+    <button id="controller" onclick="f()">隐藏</button>
+    <div id="block"></div>
+</section>
+</body>
+<script !src="">
+    let flag = true;
+    let controller = document.getElementById("controller");
+
+    function f() {
+        if (flag) {
+            document.getElementById("block").style.display = "none";
+            controller.innerText = "显示";
+            flag = false;
+        } else {
+            document.getElementById("block").style.display = "block";
+            controller.innerText = "隐藏";
+            flag = true;
+        }
+    }
+</script>
+</html>

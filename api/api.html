@@ -7,6 +7,7 @@
 <body>
 <header id="header" class="header"></header>
 <header name="header" class="header"></header>
+<button id="btn"></button>
 
 <h1 onclick="(function () {console.log(this)})()">a</h1>
 
@@ -21,9 +22,11 @@
     document.getElementsByTagName("header");
     document.getElementsByName("header");
 
+    let element = document.getElementById("btn");
 
-    function () {
-        console.log(this)
+    element.onclick = function () {
+
     }
+
 </script>
 </html>

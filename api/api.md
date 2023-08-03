@@ -55,7 +55,7 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 
 - 事件源
   > 触发的元素或浏览器
--  事件类型
+- 事件类型
   > 事件触发的方式(鼠标事件 键盘事件 浏览器事件)
 - 事件处理程序
   > 事件触发后指向的代码 通常是函数
@@ -81,7 +81,27 @@ document.getElementById("btn").onclick = function () {
 行内元素
 外部js文件
 
-
 在事件函数中 this 指向当前事件源
 
 表单元素
+
+非表单元素
+
+设置宽高
+
+`xxx.height=yyy`
+`xxx.width=yyy`
+
+设置行内属性
+
+`xxx.style.yyy=zzz`
+
+带有连字符的CSS属性需要去掉连字符并大写第二个首字母
+
+添加类名
+`xxx.className= '类名' ` 会覆盖原有的类名
+
+操作文本节点
+ `innerText` 会覆盖其他内容
+操作所有节点
+ `innerHTML`

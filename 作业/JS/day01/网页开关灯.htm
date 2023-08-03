@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<section>
+    <button id="controller" onclick="f()">巴啦啦小魔仙全身变</button>
+</section>
+</body>
+<script !src="">
+    let flag = true;
+    let controller = document.getElementById("controller");
+
+    function f() {
+        if (flag) {
+            document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+            flag = false;
+        } else {
+            document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+            flag = true;
+        }
+    }
+</script>
+</html>

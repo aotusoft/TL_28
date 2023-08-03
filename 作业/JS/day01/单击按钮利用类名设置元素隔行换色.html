@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .a{
+        color: #ffbdbd;
+    }
+</style>
+<body>
+<section>
+    <ul>
+        <li class="colored">1</li>
+        <li>2</li>
+        <li class="colored">3</li>
+        <li>4</li>
+        <li class="colored">5</li>
+        <li>6</li>
+        <li class="colored">7</li>
+    </ul>
+    <button id="controller" onclick="f()">内鬼现身</button>
+</section>
+</body>
+<script !src="">
+    let flag = true;
+    let controller = document.getElementById("controller");
+
+    function f() {
+        if (flag) {
+            // document.getElementsByClassName("colored")[0].style.backgroundColor = "#ffbdbd";
+            let coloredTags = document.getElementsByClassName("colored");
+            for (const coloredTag of coloredTags) {
+                coloredTag.style.color = "#ffbdbd"
+                controller.innerText = "隐藏内鬼";
+            }
+            flag = false;
+        } else {
+            let coloredTags = document.getElementsByClassName("colored");
+            for (const coloredTag of coloredTags) {
+                coloredTag.style.color = "black"
+                controller.innerText = "内鬼现身";
+            }
+            flag = true;
+        }
+    }
+</script>
+</html>

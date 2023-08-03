@@ -8,10 +8,10 @@
 
 </body>
 <script>
-    let string = String("abavvasdffgggggnnnggghhjjkkgfdsssssssss3444343zzzz");
+    let string = String("abavvasdffgggggnnnggghhjjkkgfdsssssssss3444343zzzzzzzzzz");
     let strObj = {};
     for (let i = 0; i < string.length; i++) {
-        if (strObj[string[i]] !== undefined) {
+        if (strObj[string[i]]) {
             strObj[string[i]] = strObj[string[i]] += 1
         } else {
             strObj[string[i]] = 1

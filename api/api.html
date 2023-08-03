@@ -6,15 +6,24 @@
 </head>
 <body>
 <header id="header" class="header"></header>
-<header class="header"></header>
+<header name="header" class="header"></header>
+
+<h1 onclick="(function () {console.log(this)})()">a</h1>
 
 </body>
 <script>
     let elementsByClassName = document.getElementsByClassName("header");
     console.log(elementsByClassName)
     document.querySelectorAll(".header");
-    document.querySelector(".header")
-    document.getElementsByClassName("header")
-    document.getElementById("header")
+    document.querySelector(".header");
+    document.getElementsByClassName("header");
+    document.getElementById("header");
+    document.getElementsByTagName("header");
+    document.getElementsByName("header");
+
+
+    function () {
+        console.log(this)
+    }
 </script>
 </html>

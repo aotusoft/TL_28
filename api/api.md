@@ -71,6 +71,8 @@ document.getElementById("btn").onclick = function () {
 
 ```
 
+事件源
+
 - 鼠标单击事件
   > `onclick()`
 - 浏览器加载完成事件

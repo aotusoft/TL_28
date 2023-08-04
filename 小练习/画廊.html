@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #list {
+            overflow: hidden;
+        }
+
+        #list > li {
+            float: left;
+        }
+
+        #bigImg {
+            width: 700px;
+            height: 400px;
+        }
+
+        #title {
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h4>美女画廊</h4>
+<ul id="list">
+    <li>
+        <img src="./images/1-small.jpg" alt="./images/1.jpg" title="美女A"/>
+    </li>
+    <li>
+        <img src="./images/2-small.jpg" alt="./images/2.jpg" title="美女B"/>
+    </li>
+    <li>
+        <img src="./images/3-small.jpg" alt="./images/3.jpg" title="美女C"/>
+    </li>
+    <li>
+        <img src="./images/4-small.jpg" alt="./images/4.jpg" title="美女D"/>
+    </li>
+</ul>
+<div>
+    <img src="./images/1.jpg" alt="" id="bigImg"/>
+</div>
+<p id="title">美女A</p>
+</body>
+<script !src="">
+    // 1、获取元素
+    var bigImg = document.getElementById('bigImg') //大图
+    var title = document.querySelector('#title') //小图的标题
+    let imgs = document.getElementById("list").getElementsByTagName("img");
+    for (let i = 0; i < imgs.length; i++) {
+        imgs[i].onclick = function () {
+            title.innerText = this.title;
+
+            bigImg.src = this.alt
+        }
+
+    }
+
+</script>
+</html>

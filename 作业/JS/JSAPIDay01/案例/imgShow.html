@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图片显示-放大-隐藏</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">显示图片</button>
+    <button id="btn2">放大图片</button>
+    <button id="btn3">隐藏图片</button>
+    <div class="imgBox"><img src="" alt="消失的她" id="img" /></div>
+  </body>
+  <script>
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    var btn3 = document.getElementById("btn3");
+    var img = document.getElementById("img");
+  </script>
+  <script>
+    btn1.onclick = function () {
+      img.src = "./assert/disappearedShe.webp";
+    };
+  </script>
+  <script>
+    btn2.onclick = function () {
+      img.width = "1000";
+      img.height = "500";
+    };
+  </script>
+  <script>
+    btn3.onclick = function () {
+      img.style.display = "none";
+    };
+  </script>
+</html>

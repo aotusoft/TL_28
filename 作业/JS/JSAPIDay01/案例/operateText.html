@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>操作文本</title>
+    <style>
+      #box1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">改变文本内容</button>
+    <div id="box1">我是div</div>
+  </body>
+  <script>
+    var btn1 = document.getElementById("btn1");
+    var box1 = document.getElementById("box1");
+    var origin = box1.innerText;
+    var flag = 0;
+    btn1.onclick = function () {
+      if (flag == 0) {
+        box1.innerText = "哈哈啊哈";
+        flag = 1;
+      } else {
+        box1.innerText = origin;
+        flag = 0;
+      }
+    };
+  </script>
+</html>

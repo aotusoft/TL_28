@@ -1,0 +1,9 @@
+问答题：
+1、<img id="d1">
+var d1 = document.getElementById("d1");
+d1.style.width与d1.width的区别?
+	d1.style.width修改style标签内的width属性
+	d1.width直接修改行内元素的width属性
+
+2、js事件的三要素是？
+	事件源 事件类型 事件处理程序

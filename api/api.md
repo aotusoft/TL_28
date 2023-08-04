@@ -1,23 +1,23 @@
-# API
+# 🏘️ API
 
-## 定义
+## ✏️ 定义
 
 Application Programming Interface 应用程序编程接口 是一些内置的函数
 
-## 类型
+## 🍎 类型
 
 - 数据类API
   > `getMonth()/reverse()`
-- BOMAPI 
-- > `alert()/prompt()/log()`
+- BOMAPI
+  > `alert()/prompt()/log()`
 - DOMAPI
   > `write()`
 
-## DOM 对象
+## 📝 DOM 对象
 
 节点 元素 方法
 
-### 结构树
+### 🏗️ 结构树
 
 - 文档(Document)
   > 一个网页可看作一个文档
@@ -28,11 +28,18 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 - 节点
   > 网页中全部的内容均为节点(Document Element Attribute Comment)
 
-### 操作
+### 📍 位置
+
+- 内部 `script` 标签
+- 行内元素
+- 外部js文件
+**在事件函数中 this 指向当前事件源**
+
+### 🛠️ 操作
 
   操作DOM就是操作DOM中的节点
-  
-#### 获取
+
+#### 🔰 获取
 
 - 通过ID **单元素**
   > `document.getElementById()`
@@ -45,7 +52,7 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 - 通过 `querySelectorAll()` **多元素**
   > 指定选择器的所有元素
 
-### 事件
+### 🎿 事件
 
 异步操作
 
@@ -60,7 +67,8 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 - 事件处理程序
   > 事件触发后指向的代码 通常是函数
 
-#### 语法
+#### 📖 语法
+
 `事件源.事件类型 = 事件处理程序`
 
 ```javascript
@@ -82,7 +90,6 @@ document.getElementById("btn").onclick = function () {
 - `onmouseup()` 鼠标抬起事件
 - `onmouseenter()` 鼠标进入事件
 - `onmouseleave()` 鼠标离开事件
-
 **移入移出和进入进出区别**
 
 `mouseenter()` 或 `onmouseleave()` 不会冒泡 父元素不会被子元素的状态影响
@@ -95,10 +102,8 @@ document.getElementById("btn").onclick = function () {
 
 - `onfocus()` 获取焦点
 - `onblur()` 失去焦点
-
 - `onkeydown()` 键盘按下事件
 - `onkeyup()` 键盘抬起事件
-
 - `onload()` 浏览器加载完成事件
 - `onscroll()` 浏览器滚动事件
 
@@ -112,17 +117,15 @@ document.getElementById("btn").onclick = function () {
 
 任何事件都有内置 `event` 对象
 
-`target` 当前事件源信息
-`type` 事件类型
+- `target` 当前事件源信息
+- `type` 事件类型
 
-`client`
+`client` `page`
+均为事件触发点距离左上角的像素值
 
-`page`
-
-都是事件触发点距离左上角的像素值 
 `clientX` 和 `clientY` 不包含滚动条卷去的像素值
 
-##### 解绑
+##### 解绑事件
 
 `事件源.removeEventListener(事件类型,事件处理程序)`
 
@@ -132,36 +135,47 @@ document.getElementById("btn").onclick = function () {
 
 #### 阻止默认事件
 
-`对象.preventDefault()`  
+`对象.preventDefault()`
 
 考试
 
-### 位置
-内部`script` 标签
-行内元素
-外部js文件
+#### 属性
 
-在事件函数中 this 指向当前事件源
+`对象.getAttribute(元素属性)` 获取元素属性的属性值
 
-表单元素
+`对象.setAttribute(元素属性)` 设置元素属性的属性值
 
-非表单元素
+`对象.removeAttribute(元素属性)` 移除元素属性和属性值
 
-设置宽高
+##### 修改元素样式
+
+- 对象.style
+- 对象.className
+- 对象.setAttribute("style",yyy)
+- 对象.setAttribute("class",yyy)
+- 对象.setProperties(CSS属性,CSS属性值)
+
+考试
+
+### 非表单元素
+
+#### 设置宽高
 
 `xxx.height=yyy`
 `xxx.width=yyy`
 
-设置行内属性
+#### 设置行内属性
 
-`xxx.style.yyy=zzz`
+`xxx.style.yyy=zzz` 带有连字符的CSS属性需要去掉连字符并大写第二个首字母
 
-带有连字符的CSS属性需要去掉连字符并大写第二个首字母
+#### 添加类名
 
-添加类名
-`xxx.className= '类名' ` 会覆盖原有的类名
+`xxx.className= '类名'` 会覆盖原有的类名
 
-操作文本节点
+#### 操作文本节点
+
  `innerText` 会覆盖其他内容
-操作所有节点
+
+#### 操作所有节点
+
  `innerHTML`

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>创建盒子</title>
+</head>
+<body>
+<button id="controller" onclick="f()">巴啦啦小魔仙全身变</button>
+</body>
+<script>
+    let body = document.body;
+    let controller = document.getElementById("controller");
+    body.style.backgroundColor = "pink";
+    controller.style.color = "green";
+
+    function f() {
+        if (body.style.backgroundColor === "pink") {
+            body.style.backgroundColor = "black"
+            controller.style.color = "white";
+        } else {
+            body.style.backgroundColor = "pink"
+            controller.style.color = "green";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>画廊</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      div > img {
+        width: 200px;
+        height: 300px;
+      }
+      #bigImg {
+        width: 400px;
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./assert/mn01.webp" alt="" title="美女一" />
+      <img src="./assert/mv02.webp" alt="" title="美女二" />
+      <img src="./assert/mn03.webp" alt="" title="美女三" />
+      <img src="./assert/mn04.webp" alt="" title="美女四" />
+    </div>
+    <img src="./assert/mn01.webp" alt="" id="bigImg" />
+    <button id="btn">美女</button>
+  </body>
+  <script>
+    var imgs = document.querySelectorAll("div>img");
+    var bigimg = document.getElementById("bigImg");
+    var button = document.getElementById("btn");
+    for (i = 0; i < imgs.length; i++) {
+      var check = function () {
+        button.innerText = this.title;
+        bigimg.src = this.getAttribute("src");
+      };
+      imgs[i].addEventListener("click", check);
+    }
+  </script>
+</html>

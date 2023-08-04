@@ -90,6 +90,7 @@ document.getElementById("btn").onclick = function () {
 - `onmouseup()` 鼠标抬起事件
 - `onmouseenter()` 鼠标进入事件
 - `onmouseleave()` 鼠标离开事件
+
 **移入移出和进入进出区别**
 
 `mouseenter()` 或 `onmouseleave()` 不会冒泡 父元素不会被子元素的状态影响

@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <style>
-    .a{
+    .a {
         color: #ffbdbd;
     }
 </style>
@@ -43,6 +43,13 @@
                 controller.innerText = "内鬼现身";
             }
             flag = true;
+        }
+
+        let lis = document.getElementsByTagName("ul").document.getElementsByTagName("li");
+
+
+        for (let i = 0; i < lis.length; i += 2) {
+            lis.style.color = "#ffbdbd"
         }
     }
 </script>

@@ -73,10 +73,31 @@ document.getElementById("btn").onclick = function () {
 
 事件源
 
-- 鼠标单击事件
-  > `onclick()`
-- 浏览器加载完成事件
-  > `onload()`
+- `onclick()` 鼠标单击事件
+- `ondbclick()` 鼠标双击事件
+- `onmouseover()` 鼠标移入事件
+- `onmouseout()` 鼠标移出事件
+- `onmousedown()` 鼠标按下事件
+- `onmouseup()` 鼠标抬起事件
+- `onmouseup()` 鼠标抬起事件
+- `onmouseenter()` 鼠标进入事件
+- `onmouseleave()` 鼠标离开事件
+
+移入移出和进入进出区别
+
+`mouseenter`不会冒泡 它不会被它本身的子元素的状态影响到
+
+`mouseover`就会被它的子元素影响到,在触发子元素的时候,`mouseover`会冒泡触发它的父元素
+
+
+- `onfocus()` 获取焦点
+- `onblur()` 失去焦点
+
+- `onkeydown()` 键盘按下事件
+- `onkeyup()` 键盘抬起事件
+
+- `onload()` 浏览器加载完成事件
+- `onscroll()` 浏览器滚动事件
 
 位置
 内部`script` 标签

@@ -60,7 +60,7 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 - 事件处理程序
   > 事件触发后指向的代码 通常是函数
 
-语法
+#### 语法
 `事件源.事件类型 = 事件处理程序`
 
 ```javascript
@@ -71,7 +71,7 @@ document.getElementById("btn").onclick = function () {
 
 ```
 
-事件源
+#### 事件源
 
 - `onclick()` 鼠标单击事件
 - `ondbclick()` 鼠标双击事件
@@ -83,12 +83,15 @@ document.getElementById("btn").onclick = function () {
 - `onmouseenter()` 鼠标进入事件
 - `onmouseleave()` 鼠标离开事件
 
-移入移出和进入进出区别
+**移入移出和进入进出区别**
 
-`mouseenter`不会冒泡 它不会被它本身的子元素的状态影响到
+`mouseenter()` 或 `onmouseleave()` 不会冒泡 父元素不会被子元素的状态影响
 
-`mouseover`就会被它的子元素影响到,在触发子元素的时候,`mouseover`会冒泡触发它的父元素
+`mouseover()` 或 `onmouseout()` 会被子元素影响 在触发子元素时会冒泡触发它的父元素
 
+在子元素中设置 `stopPropagation()` 阻止冒泡行为 或者设置父元素事件解绑
+
+考试
 
 - `onfocus()` 获取焦点
 - `onblur()` 失去焦点
@@ -99,7 +102,41 @@ document.getElementById("btn").onclick = function () {
 - `onload()` 浏览器加载完成事件
 - `onscroll()` 浏览器滚动事件
 
-位置
+##### 解绑事件
+
+`事件源.事件类型 = null`
+
+#### 监听事件
+
+`事件源.addEventListener(事件类型,事件处理程序)`
+
+任何事件都有内置 `event` 对象
+
+`target` 当前事件源信息
+`type` 事件类型
+
+`client`
+
+`page`
+
+都是事件触发点距离左上角的像素值 
+`clientX` 和 `clientY` 不包含滚动条卷去的像素值
+
+##### 解绑
+
+`事件源.removeEventListener(事件类型,事件处理程序)`
+
+#### 键盘事件
+
+`keycode`
+
+#### 阻止默认事件
+
+`对象.preventDefault()`  
+
+考试
+
+### 位置
 内部`script` 标签
 行内元素
 外部js文件

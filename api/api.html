@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<header id="header" class="header"></header>
+<header id="header" class="header">abcdefg</header>
 <header name="header" class="header"></header>
 <button id="btn"></button>
 
@@ -14,16 +14,11 @@
 </body>
 <script>
     let elementsByClassName = document.getElementsByClassName("header");
-    console.log(elementsByClassName)
-    document.querySelectorAll(".header");
-    document.querySelector(".header");
-    document.getElementsByClassName("header");
-    document.getElementById("header");
-    document.getElementsByTagName("header");
-    document.getElementsByName("header");
 
-    let element = document.getElementById("btn");
+    let element = document.querySelectorAll(".header");
+    document.write(element.firstChild === element.innerText)
+    console.log(element)
 
-
+    document.write(typeof element)
 </script>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #box {
+        width: 300px;
+        height: 300px;
+        border: 3px skyblue solid;
+        overflow: auto;
+    }
+</style>
+<body>
+<button>添加</button>
+<div id="box"></div>
+</body>
+<script>
+    let btn = document.getElementsByTagName("button")[0];
+    let box = document.getElementById("box");
+    let list = ['乾坤大挪移', '易经', '葵花宝典', '辟邪剑谱', '吸星大法', '太极拳',];
+    btn.addEventListener("click", function () {
+        let ulE = document.createElement("ul");
+        box.appendChild(ulE);
+        list.forEach(function (value, index, array) {
+            let liE = document.createElement("li");
+            liE.innerText = value;
+            ulE.appendChild(liE);
+
+            liE.setAttribute('class', 'li' + (index + 1))
+
+            liE.onmouseenter = function () {
+                this.style.setProperty('color', 'orange')
+            }
+            liE.onmouseout = function () {
+                this.style.setProperty('color', 'black')
+            }
+
+            // 方法二选一
+            liE.onclick = function () {
+                this.style.setProperty('display', 'none')
+            }
+            ulE.addEventListener('click', function () {
+                // console.log(1)
+                ulE.removeChild(this)
+            })
+        })
+        this.disabled = true;
+        this.innerText = '禁用';
+    })
+</script>
+</html>

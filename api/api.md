@@ -244,3 +244,20 @@ html的父节点parentNode是document节点的节点名称，html的父元素节
 - `对象.nextSibling()` 下一个节点
   > 文本节点
 - `对象.nextElementSibling()` 下一个元素节点
+
+创建元素
+
+- `document.write()`
+  > 只能向 `body` 中添加元素
+- `innerHTML = xxx`
+  > 会覆盖原有元素
+- `document.createElement()`
+
+```javascript
+var element = document.createElement("aside");
+var body = document.body;
+body.appendChild(element);
+element.innerText = "xxx";
+```
+
+`父元素.removeChild()` 删除子元素

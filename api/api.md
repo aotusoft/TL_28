@@ -8,10 +8,13 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 
 - 数据类API
   > `getMonth()/reverse()`
+  >
 - BOMAPI
   > `alert()/prompt()/log()`
+  >
 - DOMAPI
   > `write()`
+  >
 
 ## 📝 DOM 对象
 
@@ -21,19 +24,23 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 
 - 文档(Document)
   > 一个网页可看作一个文档
+  >
 - 元素(Element)
   > 标签
+  >
 - 属性(Attribute)
   > 元素的属性(class/id/type)
+  >
 - 节点
   > 网页中全部的内容均为节点(Document Element Attribute Comment)
+  >
 
 ### 📍 位置
 
 - 内部 `script` 标签
 - 行内元素
 - 外部js文件
-**在事件函数中 this 指向当前事件源**
+  **在事件函数中 this 指向当前事件源**
 
 ### 🛠️ 操作
 
@@ -43,14 +50,18 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 
 - 通过ID **单元素**
   > `document.getElementById()`
+  >
 - 通过类名 **多元素**
   > `document.getElementsByClass()`
+  >
 - 通过元素名 **多元素**
 - 通过 `name` 属性名 **多元素**
 - 通过 `querySelector()` **单元素**
   > 指定选择器的第一个元素
+  >
 - 通过 `querySelectorAll()` **多元素**
   > 指定选择器的所有元素
+  >
 
 ### 🎿 事件
 
@@ -62,10 +73,13 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 
 - 事件源
   > 触发的元素或浏览器
+  >
 - 事件类型
   > 事件触发的方式(鼠标事件 键盘事件 浏览器事件)
+  >
 - 事件处理程序
   > 事件触发后指向的代码 通常是函数
+  >
 
 #### 📖 语法
 
@@ -76,7 +90,6 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 document.getElementById("btn").onclick = function () {
   
 }
-
 ```
 
 #### 事件源
@@ -90,6 +103,8 @@ document.getElementById("btn").onclick = function () {
 - `onmouseup()` 鼠标抬起事件
 - `onmouseenter()` 鼠标进入事件
 - `onmouseleave()` 鼠标离开事件
+- `onfocus()` 获取焦点
+- `onblur()` 失去焦点
 
 **移入移出和进入进出区别**
 
@@ -101,8 +116,6 @@ document.getElementById("btn").onclick = function () {
 
 考试
 
-- `onfocus()` 获取焦点
-- `onblur()` 失去焦点
 - `onkeydown()` 键盘按下事件
 - `onkeyup()` 键盘抬起事件
 - `onload()` 浏览器加载完成事件
@@ -171,7 +184,7 @@ document.getElementById("btn").onclick = function () {
 
 #### 添加类名
 
-`xxx.className= '类名'` 会覆盖原有的类名
+`xxx.className= '类名'` 会覆盖原有类名
 
 #### 操作文本节点
 
@@ -180,3 +193,25 @@ document.getElementById("btn").onclick = function () {
 #### 操作所有节点
 
  `innerHTML`
+
+## 节点特征
+
+- nodeType 节点类型
+- nodeName 节点名称
+- nodeValue 节点值
+
+`getAttributeNode()` 获取元素指定属性名的属性节点
+
+`firstChild` 获取元素的文本节点
+
+> 元素的第一个子节点为文本节点
+
+firstChild 文本节点
+
+innerText 文本内容
+
+|          | 元素节点   | 属性节点       | 文本节点 | document  |
+| -------- | ---------- | -------------- | -------- | --------- |
+| 节点类型 | 1          | 2              | 3        | 9         |
+| 节点名称 | 大写标签名 | 属性名         | #text    | #document |
+| 节点值   | null       | 属性名的属性值 | 文本内容 | null      |

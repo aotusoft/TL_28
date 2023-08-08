@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #box {
+        width: 600px;
+        height: 600px;
+        border: 3px skyblue solid;
+    }
+
+    table {
+        border-spacing: 0px;
+    }
+
+    td {
+        padding: 10px 100px;
+        border: 1px black solid;
+    }
+</style>
+<body>
+<button>添加</button>
+<div id="box"></div>
+</body>
+<script>
+
+
+    let btn = document.getElementsByTagName("button")[0];
+    let box = document.getElementById("box");
+    let tableE = document.createElement("table");
+    box.appendChild(tableE);
+
+
+    let i = 1;
+
+
+    function abc() {
+        console.log("e" + num)
+        let op = document.querySelectorAll(".e" + num);
+        console.log(op)
+        for (const opElement of op) {
+            opElement.remove()
+        }
+    }
+
+    btn.onclick = function () {
+
+
+        let trE = document.createElement("tr");
+        tableE.appendChild(trE);
+        let tdENumber = document.createElement("td");
+        let tdEButton = document.createElement("td");
+        trE.appendChild(tdENumber)
+        trE.appendChild(tdEButton)
+
+
+        tdENumber.innerHTML = "<span class=\"e" + i + "\">" + i + "</span>"
+        tdEButton.innerHTML = "<button onclick='abc()' class=\"btn e" + +i + "\">" + "删除" + "</button>"
+        num = i;
+        i++;
+
+
+        // 方法二选一
+        // liE.onclick = function () {
+        //     this.style.setProperty('display', 'none')
+        // }
+        // ulE.addEventListener('click', function () {
+        //     // console.log(1)
+        //     ulE.removeChild(this)
+        // })
+
+    }
+</script>
+</html>

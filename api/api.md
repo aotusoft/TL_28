@@ -22,18 +22,16 @@ Application Programming Interface 应用程序编程接口 是一些内置的函
 
 ### 🏗️ 结构树
 
+顶级对象 `document`
+
 - 文档(Document)
   > 一个网页可看作一个文档
-  >
 - 元素(Element)
   > 标签
-  >
 - 属性(Attribute)
   > 元素的属性(class/id/type)
-  >
 - 节点
   > 网页中全部的内容均为节点(Document Element Attribute Comment)
-  >
 
 ### 📍 位置
 
@@ -261,3 +259,23 @@ element.innerText = "xxx";
 ```
 
 `父元素.removeChild()` 删除子元素
+
+## BOM 对象
+
+### 结构树
+
+顶级对象 `window`
+
+属性 console 全局变量 history location
+
+alert() prompt()
+
+onload
+
+## window 对象
+
+- `location.hash` 地址栏#后内容
+- `location.host` 主机名及端口号
+- `reload()` 重载
+- `history.forward()` 前进
+- `history.back()` 后退

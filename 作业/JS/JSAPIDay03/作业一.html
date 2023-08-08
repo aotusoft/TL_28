@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #box {
+        width: 600px;
+        height: 600px;
+        border: 3px skyblue solid;
+    }
+    table{
+        border-spacing: 0px;
+    }
+    td {
+        padding: 10px 100px;
+        border: 1px black solid;
+    }
+</style>
+<body>
+<button>添加表格</button>
+<div id="box"></div>
+</body>
+<script>
+    let btn = document.getElementsByTagName("button")[0];
+    let box = document.getElementById("box");
+    let domainList = ["百度", "谷歌", "优酷", "淘宝", "爱奇艺", "蘑菇街"];
+    let linkList = ["www.baidu.com", "www.google.com.hk", "www.youku.com", "www.taobao.com", "www.iqiyi.com", "www.mogu.com"];
+    btn.addEventListener("click", function () {
+        let tableE = document.createElement("table");
+        box.appendChild(tableE);
+        
+        for (let i = 0; i < domainList.length; i++) {
+            let trE = document.createElement("tr");
+            tableE.appendChild(trE);
+            let tdEDomain = document.createElement("td");
+            let tdELink = document.createElement("td");
+            trE.appendChild(tdEDomain)
+            trE.appendChild(tdELink)
+            tdEDomain.innerText = domainList[i]
+            tdELink.innerHTML = "<a href=\"https://" + linkList[i] + "\">" + domainList[i] + "</a>"
+            console.log(domainList[i])
+        }
+
+        // 方法二选一
+        // liE.onclick = function () {
+        //     this.style.setProperty('display', 'none')
+        // }
+        // ulE.addEventListener('click', function () {
+        //     // console.log(1)
+        //     ulE.removeChild(this)
+        // })
+
+        this.disabled = true;
+        this.innerText = '禁用';
+    })
+</script>
+</html>

@@ -279,3 +279,55 @@ onload
 - `reload()` 重载
 - `history.forward()` 前进
 - `history.back()` 后退
+
+## offset
+
+### offsetWidth/offsetHeight
+
+`offsetWidth` 包含
+
+- width 
+- border-left 和 border-right
+- padding-left 和 padding-right
+
+`offsetHeight` 包含
+
+- height
+- border-top/border-bottom
+- padding-top/padding-bottom
+
+### offsetLeft/offsetTop
+
+父元素不存在定位 相对于左/上侧浏览器距离
+父元素存在定位 相对于左/上侧父元素距离
+
+## client
+
+### clientWidth/clientHeight
+
+`clientWidth` 包含
+
+- width
+- padding-left 和 padding-right
+
+`clientHeight` 包含
+
+- height
+- padding-top 和 padding-bottom
+
+### clientLeft/clientTop
+
+border-left / border-top
+
+## scroll
+
+### scrollWidth/scrollHeight
+
+- width/height
+- 滚动条卷去的宽度/高度
+
+### scrollLeft/scrollTop
+
+只有在滚动事件下才能获取 值可被设置
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #box {
+        margin: 50px auto;
+        width: 600px;
+        height: 400px;
+        border: 4px solid lightgoldenrodyellow;
+        overflow: hidden;
+    }
+
+    #parent {
+        width: 400%;
+        height: fit-content;
+    }
+
+    #parent > div {
+        width: 600px;
+        height: 400px;
+        display: inline-block;
+    }
+
+    #parent > div:first-child {
+        background-color: #b3d7ff;
+    }
+
+    #parent > div:nth-child(2) {
+        background-color: #ff9797;
+    }
+
+    #parent > div:nth-child(3) {
+        background-color: #b3fffb;
+    }
+
+    #parent > div:last-child {
+        background-color: #c1ffb3;
+    }
+</style>
+<body>
+<div id="box">
+    <div id="parent">
+        <div></div><div></div><div></div><div></div>
+    </div>
+</div>
+</body>
+<script>
+    let box = document.getElementById("box");
+    let parent = document.querySelector("#parent");
+    let element = document.querySelector("#parent>div");
+
+    let num = 0;
+
+    function slowMove(start, end) {
+        let step = 0 //次数
+        let maxStep = 10 //
+        let everyStep = (end - start) / maxStep //60
+        let timer = setInterval(function () {
+            step++
+            if (step <= maxStep) {
+                box.scrollLeft = box.scrollLeft + everyStep
+            } else {
+                clearInterval(timer)
+            }
+        }, 10)
+    }
+
+    function mover() {
+        if (num === 4) {
+            num = 0;
+        }
+        // box.scrollLeft = element.clientWidth*num;
+        slowMove(box.scrollLeft, element.clientWidth * num)
+        console.log(num);
+
+        num++;
+    }
+
+    setInterval(mover, 2000)
+</script>
+</html>

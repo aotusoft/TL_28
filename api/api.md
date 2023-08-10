@@ -98,7 +98,7 @@ document.getElementById("btn").onclick = function () {
 - `onmouseout()` 鼠标移出事件
 - `onmousedown()` 鼠标按下事件
 - `onmouseup()` 鼠标抬起事件
-- `onmouseup()` 鼠标抬起事件
+- `onmousemove()` 鼠标移动事件
 - `onmouseenter()` 鼠标进入事件
 - `onmouseleave()` 鼠标离开事件
 - `onfocus()` 获取焦点
@@ -161,11 +161,12 @@ document.getElementById("btn").onclick = function () {
 
 ##### 修改元素样式
 
-- 对象.style
-- 对象.className
+- 对象.style.样式
+- 对象.className = "xxx"
 - 对象.setAttribute("style",yyy)
 - 对象.setAttribute("class",yyy)
-- 对象.setProperties(CSS属性,CSS属性值)
+- 对象.setProperty(CSS属性,CSS属性值)
+- 对象.style.cssText = "CSS属性:CSS属性值"
 
 考试
 

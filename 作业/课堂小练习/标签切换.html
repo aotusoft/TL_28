@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #tab {
+        width: fit-content;
+    }
+
+    #tab > div {
+        padding: 0 60px;
+        width: 80px;
+        height: 30px;
+        background-color: #27A8DF;
+        color: rgba(255, 255, 255, 0.54);
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    #content {
+        width: fit-content;
+    }
+
+    #content > div {
+        margin: 10px;
+        padding: 180px;
+        width: 240px;
+        height: 50px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    #content > div:first-child {
+        background-color: tomato;
+    }
+
+    #content > div:nth-child(2) {
+        background-color: orchid;
+    }
+
+    #content > div:last-child {
+        background-color: orangered;
+    }
+</style>
+<body>
+<div id="tab">
+    <div>One</div><div>Two</div><div>Three</div>
+</div>
+<div id="content">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+<script>
+    let tabs = document.querySelectorAll("#tab>div");
+    let contents = document.querySelectorAll("#content>div");
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].onclick = function () {
+            for (var j = 0; j < tabs.length; j++) {
+                console.log(j)
+                if (this === tabs[j]) {
+                    this.style.backgroundColor = '#0F7CBF'
+                    contents[j].style.display = 'block'
+                } else {
+                    tabs[j].style.backgroundColor = '#27A8DF'
+                    contents[j].style.display = 'none'
+                }
+            }
+        }
+    }
+</script>
+</html>

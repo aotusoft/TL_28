@@ -1,4 +1,5 @@
 /*样式二*/
+
 /* 控制下雪 */
 function snowFall(snow) {
     /* 可配置属性 */
@@ -7,13 +8,16 @@ function snowFall(snow) {
     this.flakeSize = snow.flakeSize || 10;  /* 雪花形状 */
     this.fallSpeed = snow.fallSpeed || 1;   /* 坠落速度 */
 }
+
 /* 兼容写法 */
 requestAnimationFrame = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.msRequestAnimationFrame ||
     window.oRequestAnimationFrame ||
-    function (callback) { setTimeout(callback, 1000 / 60); };
+    function (callback) {
+        setTimeout(callback, 1000 / 60);
+    };
 
 cancelAnimationFrame = window.cancelAnimationFrame ||
     window.mozCancelAnimationFrame ||
@@ -29,6 +33,7 @@ snowFall.prototype.start = function () {
     /* 画雪 */
     drawSnow.apply(this)
 }
+
 /* 创建画布 */
 function snowCanvas() {
     /* 添加Dom结点 */
@@ -46,6 +51,7 @@ function snowCanvas() {
         /* snowcanvas.height = window.innerHeight */
     }
 }
+
 /* 雪运动对象 */
 function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) {
     this.x = Math.floor(Math.random() * canvasWidth);   /* x坐标 */
@@ -59,6 +65,7 @@ function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) {
     this.stepSize = Math.random() / 30;                 /* 步长 */
     this.step = 0                                       /* 步数 */
 }
+
 flakeMove.prototype.update = function () {
     var x = this.x,
         y = this.y;
@@ -98,6 +105,7 @@ flakeMove.prototype.render = function (ctx) {
     ctx.fill();
     ctx.restore();
 };
+
 /* 创建雪花-定义形状 */
 function createFlakes() {
     var maxFlake = this.maxFlake,
@@ -107,6 +115,7 @@ function createFlakes() {
         flakes.push(new flakeMove(canvas.width, canvas.height, this.flakeSize, this.fallSpeed))
     }
 }
+
 /* 画雪 */
 function drawSnow() {
     var maxFlake = this.maxFlake,
@@ -123,7 +132,8 @@ function drawSnow() {
         drawSnow.apply(that);
     });
 }
+
 /* 调用及控制方法 */
-var snow = new snowFall({ maxFlake: 60 });
+var snow = new snowFall({maxFlake: 60});
 snow.start();
 

@@ -362,7 +362,8 @@ progress {
     left: 22px;
     bottom: 58px;
 }
-.percentage{
+
+.percentage {
     width: 76px;
     height: 20px;
     line-height: 20px;
@@ -389,10 +390,12 @@ progress::-webkit-progress-value {
     width: 203px !important;
     display: block;
 }
-.books>div>span{
+
+.books > div > span {
     font-size: 16px;
     color: crimson;
 }
+
 .column {
     width: 100%;
     border-bottom: 1px solid #e5e5e5;
@@ -417,4 +420,142 @@ progress::-webkit-progress-value {
 
 .column > div:nth-child(4) {
     background: #ffbdbd;
+}
+
+.e-book {
+    width: 1200px;
+    display: flex;
+}
+
+.ebook-title {
+    width: 910px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ebook-content {
+    display: flex;
+}
+
+.book-ebook {
+    margin: 0 !important;
+}
+
+.book-sort {
+    margin: 0 !important;
+}
+
+.book-sort > button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
+.book-sort > button:hover {
+    background: white;
+    font-weight: 500;
+    border: 2px solid black;
+    border-bottom: none;
+}
+
+.big-books {
+    width: 240px;
+    /*display: flex;*/
+}
+
+.big-books > div:nth-child(1) {
+    height: 320px;
+    overflow: hidden;
+}
+
+.big-books > div:nth-child(1) {
+    height: 320px;
+}
+
+.big-books > ul > li {
+    width: 80px;
+    height: 28px;
+    display: inline-block;
+}
+
+.book-center {
+    width: 668px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-center > div:nth-child(1) {
+    margin: 0 !important;
+}
+
+.ebooks {
+    margin: 0 !important;
+    width: 166px;
+    height: 227px;
+    font-size: 12px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+}
+
+.ranking {
+    width: 278px;
+    height: 497px;
+}
+
+.ranking-btn > button {
+    height: 46px;
+    width: 139px;
+    border: 1px solid #e6e6e6;
+}
+
+.ranking-btn > button:hover {
+    background: white;
+    border-bottom: none;
+}
+
+.newest {
+    width: 100%;
+    height: 90%;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+}
+.footer-content{
+    width: 1200px;
+}
+.introduce{
+    width: 200px;
+}
+.introduce > div {
+    /*display: inline-block;*/
+
+}
+
+.quality {
+    width: 138px;
+    height: 52px;
+    background-image: url(../images/footer_bg.png);
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+.speed {
+    width: 138px;
+    height: 52px;
+    background-image: url(../images/footer_bg.png);
+    background-position: 0 -103px;
+    cursor: pointer;
+}
+
+.rest {
+    width: 138px;
+    height: 52px;
+    background-image: url(../images/footer_bg.png);
+    background-position: 0 -156px;
+    cursor: pointer;
+}
+
+.help {
+    display: flex;
 }

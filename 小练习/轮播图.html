@@ -59,9 +59,11 @@
 
     let num = 0;
 
+    // 实现缓慢轮播。。600像素慢慢地消耗完，需要时间，假设10次走完600px。每一次60px
+
     function slowMove(start, end) {
         let step = 0 //次数
-        let maxStep = 10 //
+        let maxStep = 10
         let everyStep = (end - start) / maxStep //60
         let timer = setInterval(function () {
             step++

@@ -152,6 +152,10 @@ header {
 }
 
 section {
+    margin: 30px auto;
+}
+
+.ad {
     width: 1200px;
     display: flex;
 }
@@ -192,6 +196,8 @@ aside {
     width: 198px;
     height: 160px;
     background-color: #fff4b9;
+    box-sizing: content-box;
+    border: 1px solid white;
 }
 
 .notice {
@@ -200,17 +206,119 @@ aside {
 
 .notice > div {
     width: 202px;
+    border: 1px solid #cccccc;
 }
 
 .notice > div:nth-child(1) {
-    height: 195px;
+    height: 194px;
 }
+
+.notice > div:nth-child(1) > img {
+    width: 100%;
+    height: 100%;
+}
+
 .notice > div:nth-child(2) {
     height: 30px;
 }
+
+.button > button:hover {
+    background: white;
+}
+
 .notice > div:nth-child(3) {
     height: 143px;
+    border-top: none;
 }
+
 .notice > div:nth-child(4) {
     height: 119px;
+}
+
+.button > button {
+    background: #F0F0F0;
+    color: #777;
+    width: 50%;
+    height: 100%;
+    font-size: 14px;
+    border: none;
+}
+
+.killer {
+    width: 1200px;
+}
+
+.killer-title {
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid black;
+}
+
+.killer-title > * {
+}
+
+.countdown {
+    margin: 0 !important;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.countdown-image {
+    width: 64px;
+    height: 39px
+}
+
+.countdown-image > img {
+    width: 100%;
+    height: 100%;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+}
+
+.timer > i {
+    padding: 10px;
+}
+
+.timer > div {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.timer > div > span {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    display: block;
+    line-height: 30px;
+}
+
+.venue {
+    display: flex;
+}
+
+.venue > li {
+    margin: 10px;
+    padding: 10px;
+}
+
+.recommend {
+    margin: 20px;
+    display: flex;
+}
+
+.recommend > span {
+    margin-right: 80px;
+}
+
+.recommend > li {
+    height: 100%;
+    font-size: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
 }

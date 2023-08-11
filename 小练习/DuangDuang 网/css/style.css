@@ -1,0 +1,216 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    white-space-collapse: discard;
+    box-sizing: border-box;
+    border: 1px solid #e3fae1;
+}
+
+a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    border-bottom: 2px solid crimson;
+}
+
+.top {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    background-color: #f9f9f9;
+    color: #646464;
+    font-size: 12px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.top > div {
+    width: 1200px;
+    overflow: hidden;
+}
+
+.duang-info {
+    float: right;
+}
+
+.duang-info > ul > li,
+.duang-info,
+.location {
+    display: inline-block;
+}
+
+.spacer {
+    margin: 0 3px;
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+}
+
+.center {
+    width: 1200px;
+}
+
+.bottom > div {
+    overflow: hidden;
+}
+
+.logo, .search-block, .order {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.search-area {
+    border: 2px solid crimson;
+}
+
+.search-area > input, .search-area > button, .search-area > select, .search-area > option {
+    height: 40px;
+    border: none;
+}
+
+.search-area > input {
+    width: 400px;
+}
+
+.search-area > input:focus {
+    outline: none;
+}
+
+.search-area > button {
+    width: 48px;
+    height: 40px;
+}
+
+.order {
+    float: right;
+    line-height: 100px;
+}
+
+.order > button {
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.order > button:nth-child(1) {
+    background: crimson;
+    color: white;
+    height: 40px;
+    text-align: center;
+    border: none;
+}
+
+.order > button:nth-child(2) {
+    height: 40px;
+    text-align: center;
+    border: 2px solid #cccccc;
+    border-left: none;
+    background-color: #f6f6f6;
+}
+
+.under-search {
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.hot {
+    float: left;
+}
+
+.advance {
+    float: right;
+}
+
+.sort {
+    width: 1200px;
+}
+
+.sort > ul {
+    overflow: hidden;
+}
+
+.sort > ul > li {
+    padding: 10px 16px;
+    font-weight: 600;
+    float: left;
+}
+
+.all > i {
+    margin-left: 20px;
+}
+
+.all {
+    padding: 10px !important;
+    width: 200px;
+    background: crimson;
+    color: white;
+}
+
+section {
+    width: 1200px;
+    display: flex;
+}
+
+aside {
+    width: 200px;
+}
+
+.partition > li {
+    padding-left: 18px;
+    height: 30px;
+    color: #323232;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.partition > li > a {
+    color: #323232;
+}
+
+.swiper {
+    width: 796px;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper > div:nth-child(1) {
+    width: 100%;
+    height: 326px;
+    background: #ccb2ff;
+}
+
+.small {
+    display: flex;
+}
+
+.small > div {
+    width: 198px;
+    height: 160px;
+    background-color: #fff4b9;
+}
+
+.notice {
+    width: 202px;
+}
+
+.notice > div {
+    width: 202px;
+}
+
+.notice > div:nth-child(1) {
+    height: 195px;
+}
+.notice > div:nth-child(2) {
+    height: 30px;
+}
+.notice > div:nth-child(3) {
+    height: 143px;
+}
+.notice > div:nth-child(4) {
+    height: 119px;
+}

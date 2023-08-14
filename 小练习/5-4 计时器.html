@@ -61,26 +61,9 @@
     //开始计时
     begin.onclick = function () {
       this.disabled = true
-      pause.disabled = false
-      end.disabled = false
       timer = setInterval(timeMove, 1000)
     }
-    // 暂停计时
-    pause.onclick = function () {
-      this.disabled = true
-      begin.disabled = false
-      end.disabled = false
-      clearInterval(timer)
-    }
-    // 结束计时
-    end.onclick = function () {
-      this.disabled = true
-      begin.disabled = false
-      pause.disabled = false
-      clearInterval(timer)
-      time = 0
-      timeShow()
-    }
+
     // 封装补0函数
     function formatTime(t) {
       t = t >= 10 ? t : '0' + t

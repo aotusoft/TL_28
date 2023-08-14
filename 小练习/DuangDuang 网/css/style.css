@@ -161,6 +161,7 @@ section {
 }
 
 aside {
+    padding-top: 1px;
     width: 200px;
     background-color: #fafafa;
 }
@@ -171,17 +172,25 @@ aside {
     color: #323232;
     font-size: 14px;
     line-height: 30px;
+    /*border-right: 2px solid crimson;*/
+}
+.partition > li:hover {
+    background-color: white;
+    border: 2px solid crimson;
 }
 
 .partition > li > a {
     color: #323232;
 }
 .float{
-    width: 296px;
+    width: 1000px;
     height: 488px;
     position: absolute;
-    border: 1px solid crimson;
-    right: 364px;
+    background-color: white;
+    border: 2px solid crimson;
+    border-left: none;
+    display: none;
+    right: 160px;
 }
 .swiper {
     width: 796px;

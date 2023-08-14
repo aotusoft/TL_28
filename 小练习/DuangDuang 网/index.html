@@ -93,8 +93,7 @@
                     </div>
                 </div>
                 <div class="order">
-                    <button><i class="fa-duotone fa-cart-shopping-fast"></i> 购物车 0</button>
-                    <button>我的订单</button>
+                    <button><i class="fa-duotone fa-cart-shopping-fast"></i> 购物车 0</button><button>我的订单</button>
                 </div>
             </div>
             <nav class="sort">
@@ -132,8 +131,12 @@
             <li>占位</li>
         </ul>
     </aside>
-    <div class="swiper">
-        <div></div>
+    <div id="swiper" class="swiper">
+        <div id="center" class="images-center">
+            <img src="./images/202308111019478726.jpg" alt="">
+            <img src="./images/2023080910005595568.jpg" alt="">
+            <img src="./images/2023080910003492036.jpg" alt="">
+        </div>
         <div class="small">
             <div></div>
             <div></div>
@@ -145,11 +148,12 @@
         <div>
             <img src="./images/53720339163559_y.jpg" alt=""></div>
         <div class="button">
-            <button>信息公告</button>
-            <button>服务公告</button>
+            <button>信息公告</button><button>服务公告</button>
         </div>
         <div></div>
-        <div></div>
+        <div class="gift">
+            <img src="./images/qixianshengmiaoxiaojie2-1559267193.jpg" alt="">
+        </div>
     </div>
     <div class="float"></div>
 </section>
@@ -507,7 +511,6 @@
                 if (this === liE[j]) {
                     liE[j].style.borderRight = "none"
                 } else {
-                    console.log(liE[j])
                     liE[j].style.borderRight = "2px solid crimson"
                 }
             }
@@ -519,7 +522,7 @@
         };
     }
 
-    CountDown(200000);
+    setInterval(Swiper,2000)
 </script>
 
 </html>

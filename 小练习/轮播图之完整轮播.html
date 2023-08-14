@@ -178,8 +178,6 @@
                         num = j
                         // j的值与num的值对应
                         slowMove(parent.scrollLeft, imgObj.clientWidth * num)
-                        // 调用变色函数
-                        changeBgColor()
                     }
                 }
                 // 启用自动轮播
@@ -189,13 +187,14 @@
     }
 
     // 声明一个小点变色函数
-    function changeBgColor() {
-        // 一开始就四个小点都为白色
-        for (let i = 0; i < listLi.length; i++) {
-            listLi[i].style.backgroundColor = '#fff'
-        }
-        listLi[num].style.backgroundColor = '#ff0000'
-    }
+    // function changeBgColor() {
+    //     // 一开始就四个小点都为白色
+    //     for (let i = 0; i < listLi.length; i++) {
+    //         listLi[i].style.backgroundColor = '#fff'
+    //     }
+    //     listLi[num].style.backgroundColor = '#ff0000'
+    // }
+
 </script>
 <script>
     // 3、

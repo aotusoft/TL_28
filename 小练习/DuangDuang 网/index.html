@@ -148,9 +148,18 @@
         <div>
             <img src="./images/53720339163559_y.jpg" alt=""></div>
         <div class="button">
-            <button>信息公告</button><button>服务公告</button>
+            <button id="info-btn">信息公告</button><button class="service-btn">服务公告</button>
         </div>
-        <div></div>
+        <div class="tab">
+            <div id="tab-1" class="tab-content tab-1" style="display: block;">
+                <p>限时抢购</p>
+                <p>特惠专区，88元10件</p>
+                <p>新书抢鲜看</p>
+            </div>
+            <div id="tab-2" class="tab-content tab-2" style="display: none;">
+                <p>关于谨防诈骗的重要提示</p>
+            </div>
+        </div>
         <div class="gift">
             <img src="./images/qixianshengmiaoxiaojie2-1559267193.jpg" alt="">
         </div>
@@ -390,8 +399,7 @@
     </div>
     <div class="ranking">
         <div class="ranking-btn">
-            <button>最新上架</button>
-            <button>独家畅品</button>
+            <button>最新上架</button><button>独家畅品</button>
         </div>
         <div id="book-column" class="newest">
         </div>
@@ -494,6 +502,17 @@
         </div>
     </div>
 </footer>
+<div class="ad-area">
+    <i class="fa-duotone fa-circle-xmark"></i>
+</div>
+<div class="tools-area">
+    <div><i class="fa-duotone fa-qrcode"></i></div>
+    <div class="to-top">
+        <i class="fa-duotone fa-arrow-up-to-line"></i>
+        <div class="pop" style="left: 96px">返回顶部</div>
+    </div>
+    <div><i class="fa-duotone fa-message-medical"></i></div>
+</div>
 </body>
 
 <script src="./js/GetElements.js"></script>
@@ -501,6 +520,7 @@
 <script src="./js/CountDown.js"></script>
 <script src="./js/ContentShowAndHide.js"></script>
 <script src="./js/Swiper.js"></script>
+<script src="./js/CloseAd.js"></script>
 
 <script>
     let liE = $(".partition>li");
@@ -521,7 +541,10 @@
             }
         };
     }
-
+    tabSwitch();
+    ElementPop();
+    CloseAd();
+    CountDown(20000);
     setInterval(Swiper,2000)
 </script>
 

@@ -174,6 +174,7 @@ aside {
     line-height: 30px;
     /*border-right: 2px solid crimson;*/
 }
+
 .partition > li:hover {
     background-color: white;
     border: 2px solid crimson;
@@ -182,7 +183,8 @@ aside {
 .partition > li > a {
     color: #323232;
 }
-.float{
+
+.float {
     width: 1000px;
     height: 488px;
     position: absolute;
@@ -192,16 +194,19 @@ aside {
     display: none;
     right: 160px;
 }
+
 .swiper {
     width: 796px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
-.images-center >img{
+
+.images-center > img {
     width: 796px;
     height: 326px;
 }
+
 .swiper > div:nth-child(1) {
     width: 400%;
     height: 326px;
@@ -254,10 +259,12 @@ aside {
 .notice > div:nth-child(4) {
     height: 119px;
 }
-.gift>img{
+
+.gift > img {
     width: 100%;
     height: 100%;
 }
+
 .button > button {
     background: #F0F0F0;
     color: #777;
@@ -423,11 +430,17 @@ progress::-webkit-progress-value {
 .column {
     width: 100%;
     border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
 }
 
 .column > div {
     height: 113px;
     width: 100%;
+    transition: transform .3s ease;
+}
+
+.column > div:hover {
+    transform: translate(-5px);
 }
 
 .column > div:nth-child(1) {
@@ -494,9 +507,10 @@ progress::-webkit-progress-value {
     overflow: hidden;
 }
 
-.big-books > ul{
+.big-books > ul {
     background-color: #FDFEFC;
 }
+
 .big-books > ul > li {
     width: 80px;
     height: 28px;
@@ -590,9 +604,11 @@ progress::-webkit-progress-value {
     text-align: center;
     display: flex;
 }
-.help > div > p{
+
+.help > div > p {
     margin: 20px 0 10px 0;
 }
+
 .line {
     margin: 20px 0;
     width: 100%;
@@ -624,4 +640,59 @@ progress::-webkit-progress-value {
 
 .mark > img {
     margin: 20px;
+}
+
+.ad-area {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.63);
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.ad-area > i {
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    float: right;
+}
+
+.tools-area {
+    height: fit-content;
+    background-color: #474747;
+    position: fixed;
+    right: 0;
+    bottom: 144px;
+    z-index: 999;
+}
+
+.tools-area > div {
+    width: 32px;
+}
+
+.tools-area > div:hover {
+    background-color: crimson;
+}
+
+.tools-area > div > i {
+    margin: 6px;
+    font-size: 20px;
+    color: white;
+}
+
+.to-top {
+    overflow: hidden;
+}
+
+.pop {
+    width: 96px;
+    height: 32px;
+    position: absolute;
+    background-color: #474747;
+    top: 32px;
+    color: white;
+    text-align: center;
+    line-height: 32px;
 }

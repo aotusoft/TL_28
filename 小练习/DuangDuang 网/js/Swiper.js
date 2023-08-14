@@ -14,7 +14,6 @@ function Swiper() {
 
     let interval = setInterval(function () {
         step++
-        console.log(step)
         if (step <= maxStep) {
             parent.scrollLeft = parent.scrollLeft + everyStep;
             // console.log(parent.scrollLeft)

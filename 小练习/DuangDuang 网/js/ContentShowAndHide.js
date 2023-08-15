@@ -12,38 +12,58 @@ function ContentShowAndHide(hoveredElement, operatedElement) {
 function tabSwitch() {
     let info = $("#info-btn")[0];
     let service = $("#service-btn")[0];
-    let tab = $(".tab")[0];
     let tab1 = $("#tab-1")[0];
     let tab2 = $("#tab-2")[0];
 
-    console.log(tab1)
-    info.onmouseover = function () {
-        tab1.setProperty("display", "block");
-        tab2.setProperty("display", "none");
+    console.log(info)
+    console.log(service)
+    info.onmouseenter = function () {
+        tab1.style.display = "block";
+        tab2.style.display = "none";
     }
-    service.onmouseover = function () {
-        tab2.setProperty("display", "block");
-        tab1.setProperty("display", "none");
+    service.onmouseenter = function () {
+        tab2.style.display = "block";
+        tab1.style.display = "none";
     }
 }
 
 function ElementPop() {
+    var slidePx = 0;
+    let toolsArea = $(".tools-area")[0];
     let toTop = $(".to-top")[0];
     let pop = $(".pop")[0];
-    
+
     toTop.onmouseenter = function () {
-        console.log("1")
-        // alert(1)
-        pop.style.left = "-96px";
+        let time = setInterval(function () {
+            pop.style.left = slidePx + "px";
+            slidePx -= 2;
+            if (slidePx === -98) {
+                slidePx = 0;
+                clearInterval(time)
+            }
+        }, 1)
     }
     toTop.onclick = function () {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
     toTop.onmouseleave = function () {
-        console.log("1")
-        // alert(1)
+        let time = setInterval(function () {
+            pop.style.left = slidePx + "px";
+            slidePx += 2;
+            if (slidePx === 32) {
+                slidePx = 0;
+                clearInterval(time)
+            }
+        }, 1)
         pop.style.left = "32px";
     }
+    window.addEventListener("scroll", function () {
+        if (document.documentElement.scrollTop + document.body.scrollTop <= 300) {
+            toolsArea.style.display = "none";
+        } else {
+            toolsArea.style.display = "block";
+        }
+    })
 }
 
 function CloseAd() {

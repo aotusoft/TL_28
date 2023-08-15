@@ -162,8 +162,6 @@ section {
 
 aside {
     padding-top: 1px;
-    width: 200px;
-    background-color: #fafafa;
 }
 
 .partition > li {
@@ -172,6 +170,8 @@ aside {
     color: #323232;
     font-size: 14px;
     line-height: 30px;
+    width: 200px;
+    background-color: #fafafa;
     /*border-right: 2px solid crimson;*/
 }
 
@@ -500,6 +500,7 @@ progress::-webkit-progress-value {
 
 .big-books {
     width: 240px;
+    font-size: 12px;
 }
 
 .big-books > div:nth-child(1) {
@@ -512,7 +513,7 @@ progress::-webkit-progress-value {
 }
 
 .big-books > ul > li {
-    width: 80px;
+    width: 76px;
     height: 28px;
     display: inline-block;
 }
@@ -521,18 +522,22 @@ progress::-webkit-progress-value {
     width: 668px;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid #e6e6e6;
+    /*border: 1px solid #e6e6e6; */
     border-left: none;
 }
 
 .book-center > div:nth-child(1) {
     margin: 0 !important;
+    width: 335px;
+    height: 220px;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
 }
 
 .ebooks {
     margin: 0 !important;
     width: 166px;
-    height: 227px;
+    height: 220px;
     font-size: 12px;
     border-right: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
@@ -560,6 +565,40 @@ progress::-webkit-progress-value {
     height: 92%;
     border: 1px solid #e6e6e6;
     border-top: none;
+}
+
+.list_ab {
+    padding: 14px 10px;
+}
+
+.liner {
+    font-size: 12px;
+    line-height: 24px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.liner > p {
+    width: 230px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 26px;
+}
+
+.liner > img {
+    width: 90px;
+    height: 90px;
+}
+
+.liner > div {
+    display: inline-block;
+    width: 150px;
+}
+
+.item {
+    height: 132px;
+    line-height: 20px;
 }
 
 .footer-content {

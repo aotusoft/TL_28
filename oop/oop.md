@@ -45,6 +45,22 @@ var fn2 = new Function('num1', 'num2', "return num1+num2")
 console.log(fn2(10, 20)) //30
 ```
 
-## 判断
+### 判断
 
 `instanceof`
+
+### 内存
+
+#### 内存分配
+
+变量定义 函数声明
+
+#### 内存使用
+
+变量运算 操作 函数调用
+
+#### 内存销毁
+
+浏览器关闭 函数调用完成
+
+JavaScript 拥有自主销毁内存的机制

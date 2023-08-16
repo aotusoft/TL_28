@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>原型</title>
+  </head>
+  <body></body>
+  <script>
+    /* 
+      一、原型的作用：
+          1、节省内存空间
+          2、实现数据共享（继承）
+      二、构造函数、实例对象以及原型之间的关系
+          结论1、任何一个函数都有prototype属性，它本身是个对象
+          结论2、构造函数也是函数也有prototype属性，它本身是个对象，我们称之为原型
+          结论3、构造函数的原型上的属性和方法都可以被实例化对象所继承
+          结论4、任何一个对象都有constructor属性，实例化对象的constructor属性指向构造函数
+          结论5、原型也是对象也有constructor属性，原型对象的constructor属性指向构造函数
+          结论6、任何一个对象都有__proto__属性，它是一个指针对象，实例化对象的__proto__指向构造函数的原型
+  */
+    // 结论1的推理
+    function fn1() {}
+    var fn2 = function () {}
+    console.log(fn1)
+    console.log(fn2)
+    console.log(fn1.prototype)
+    console.log(fn2.prototype)
+    // 结论2的推理
+    function Person(name) {
+      this.name = name
+      /* this.age = age
+      this.sex = sex */
+    }
+    // 结论3的推理
+    // 将公共的属性和方法挂载到原型上
+    Person.prototype.age = 18
+    Person.prototype.sex = '男生'
+    Person.prototype.study = function () {
+      console.log('喜欢学习')
+    }
+    console.log(Person.prototype)
+    var p1 = new Person('小明')
+    var p2 = new Person('小花')
+    console.log(p1)
+    console.log(p1.age)
+    console.log(p1.sex)
+    p1.study()
+    console.log(p2)
+    console.log(p2.age)
+    console.log(p2.sex)
+    p2.study()
+    // 结论4：上午讲了
+    // 结论5：
+    console.log(Person.prototype.constructor)
+    console.log(Person.prototype.constructor === Person) //true
+    // 结论6：
+    console.log(p1.__proto__)
+    console.log(p1.__proto__ === Person.prototype) //true
+  </script>
+</html>

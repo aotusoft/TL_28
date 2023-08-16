@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /* 
+    js内存的生命周期
+      1、内存的分配：变量的定义、函数的声明
+      2、内存的使用：变量的运算、操作，函数的调用
+      3、内存的销毁：浏览器关闭后、函数调用完成后
+      JavaScript拥有自主销毁内存的机制
+    如何解决构造函数的实例化对象的内存浪费问题
+      1、将公共的属性和方法定义在全局中
+      2、原型
+  */
+  </script>
+  <script>
+    var age = 18
+    var sex = '女生'
+    var study = function () {
+      console.log(this.name + '爱学习')
+    }
+    function Person(name, age, sex, study) {
+      this.name = name
+      this.age = age
+      this.sex = sex
+      this.study = study
+    }
+    /*     var p1 = new Person('小花', 18, '女生', function () {
+      console.log(this.name + '爱学习')
+    })
+    var p2 = new Person('小李', 18, '女生', function () {
+      console.log(this.name + '爱学习')
+    }) */
+    var p1 = new Person('小花', age, sex, study)
+    var p2 = new Person('小李', age, sex, study)
+    console.log(p1)
+    console.log(p2)
+  </script>
+</html>

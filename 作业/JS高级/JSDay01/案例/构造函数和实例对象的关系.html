@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>构造函数与实例对象的关系</title>
+  </head>
+  <body>
+    <p id="text">我是段落</p>
+  </body>
+  <script>
+    var Cup = function (brand) {
+      this.brand = brand
+    }
+    console.log(Cup)
+    var cup1 = new Cup('为人民服务')
+    console.log(cup1)
+    console.log(cup1.constructor == Cup) //Cup
+    /* 
+      ƒ (brand) {
+        this.brand = brand
+      }
+    */
+    var cup2 = new Cup('Lucky')
+    console.log(cup2)
+    console.log(cup2.constructor)
+    console.log(cup2.constructor === Cup) //true
+    /* 
+      结论：任何一个对象都有constructor属性，实例化对象的constructor属性指向构造函数
+    */
+  </script>
+  <script>
+    // 1、DOM对象
+    var Ptext = document.getElementById('text')
+    console.log(Ptext.constructor) //ƒ HTMLParagraphElement()
+    // new HTMLParagraphElement()
+    // 2、BOM对象
+    console.log(window.history)
+    console.log(window.history.constructor) //ƒ History()
+    // 3、自定义字面量
+    var book = {}
+    console.log(book.constructor) // f Object()
+    // 4、数组
+    var arr = []
+    console.log(arr.constructor) //ƒ Array()
+    // 5、日期对象
+    var date = new Date()
+    console.log(date.constructor) //f Date()
+    // 6、函数
+    var fn1 = function () {}
+    console.log(fn1.constructor) //f Function()
+    var fn2 = new Function('num1', 'num2', 'return num1+num2')
+    console.log(fn2(10, 20))
+    // 所有对象的constructor属性都指向一个构造函数
+  </script>
+</html>

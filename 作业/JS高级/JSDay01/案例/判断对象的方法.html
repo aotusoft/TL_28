@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="header">标题</h2>
+  </body>
+  <script>
+    //判断对象的方式  instanceof     变量/值 instanceof Object   如果是对象返回true，不是对象返回false
+    // 1、DOM对象
+    var H2 = document.getElementById('header')
+    console.log(H2 instanceof Object) //true
+    // 2、BOM
+    console.log(window.console instanceof Object) //true
+    // 3、数组
+    var arr = []
+    console.log(arr instanceof Object) //true
+    // 4、函数
+    var fn = function () {}
+    console.log(fn instanceof Object) //true
+    // 5、字符串对象
+    var str = new String('web')
+    console.log(str instanceof Object) //true
+
+    console.log(10 instanceof Object)
+    console.log('11' instanceof Object)
+    console.log(false instanceof Object)
+    console.log(null instanceof Object)
+    console.log(undefined instanceof Object)
+  </script>
+</html>

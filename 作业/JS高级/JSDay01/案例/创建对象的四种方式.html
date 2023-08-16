@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>创建对象的四种方式</title>
+  </head>
+  <body></body>
+  <script>
+    // 1、字面量
+    var book = {
+      price: '$5',
+      pageNum: 100,
+      name: 'JavaScript',
+      knowledge: function () {
+        console.log(this.name + '赋予我们知识')
+      },
+    }
+    console.log(book)
+    console.log(book.price)
+    book.knowledge()
+  </script>
+  <script>
+    // 2、new Object()
+    var car = new Object()
+    car.codeNum = '冀A66666'
+    car.color = '蓝色'
+    car.stop = function () {
+      console.log('驻车')
+    }
+    console.log(car)
+    car.stop()
+  </script>
+  <script>
+    // 3、工厂模式
+    function createCar(codeNum, color, stop) {
+      var car = new Object()
+      car.codeNum = codeNum
+      car.color = color
+      car.stop = stop
+      return car
+    }
+    var c1 = createCar('冀A66666', '蓝色', function () {
+      console.log('驻车')
+    })
+    console.log(c1)
+    var c2 = createCar('冀A11111', '红色', function () {
+      console.log('驻车')
+    })
+    console.log(c2)
+  </script>
+  <script>
+    // 4、构造函数
+    function Person(name, age) {
+      this.name = name
+      this.age = age
+      this.eat = function () {
+        console.log(this.name + '喜欢吃零食')
+      }
+    }
+    var p1 = new Person('小花', '18')
+    console.log(p1)
+  </script>
+</html>

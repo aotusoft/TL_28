@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let MiPhone = {
+        brand: "XiaoMi",
+        color: "white",
+        ram: 12,
+        play: function () {
+            console.log(this + "有喜欢玩的行为");
+        }
+    };
+</script>
+<script>
+    let phone = new Object();
+    phone.brand = "XiaoMi";
+    phone.color = "white";
+    phone.ram = 12;
+    phone.play = function () {
+        console.log(this + "有喜欢玩的行为");
+    }
+</script>
+<script>
+    function createPhone(brand, color, ram, play) {
+        let phone = {};
+        phone.brand = brand;
+        phone.color = color;
+        phone.ram = ram;
+        phone.play = play;
+        return phone
+    }
+    phone = createPhone("XiaoMi","white",12,function () {console.log(this + "有喜欢玩的行为");})
+</script>
+<script>
+    function Phone(brand, color, ram, play) {
+        this.brand = brand;
+        this.color = color;
+        this.ram = ram;
+        this.play = play;
+    }
+    phone = new Phone("XiaoMi","white",12,function () {console.log(this + "有喜欢玩的行为");})
+</script>
+</html>

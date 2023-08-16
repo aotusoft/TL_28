@@ -19,7 +19,7 @@ Everything is object.
 ![img_1.png](img_1.png "面向对象秒懂")
 
 ### 特征
-
+\
 - 封装
 - 继承
 - 多态
@@ -32,3 +32,19 @@ Everything is object.
   > `function www(xxx,yyy,zzz){}` 创建
 - 构造函数
   > function Xxx(){}
+
+实例化对象有默认的 `constructor` 属性 指向构造函数
+
+```javascript
+
+var fn1 = function () {
+}
+console.log(fn1.constructor) //f Function( )
+
+var fn2 = new Function('num1', 'num2', "return num1+num2")
+console.log(fn2(10, 20)) //30
+```
+
+## 判断
+
+`instanceof`

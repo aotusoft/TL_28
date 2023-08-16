@@ -19,7 +19,7 @@ Everything is object.
 ![img_1.png](img_1.png "面向对象秒懂")
 
 ### 特征
-\
+
 - 封装
 - 继承
 - 多态
@@ -64,3 +64,38 @@ console.log(fn2(10, 20)) //30
 浏览器关闭 函数调用完成
 
 JavaScript 拥有自主销毁内存的机制
+
+
+## 原型
+
+### 作用
+
+- 节省内存空间
+- 实现数据共享(继承)
+
+### 构造函数 实例对象 原型直接关系 
+
+- 函数有 `prototype` 原型默认属性
+  > `prototype` 本身为对象
+- 构造函数 `prototype` 上的属性和方法可被实例化对象继承
+- 对象有 `constructor` 属性，实例化对象的 `constructor` 属性指向构造函数
+- `prototype` 也存在 `constructor` 属性  `constructor` 指向构造函数
+  > Xxx.prototype.constructor === Xxx
+- 对象有 `__proto__` 属性，实例化对象的 `constructor` 属性指向构造函数
+  > `Xxx.__proto__ === Xxx.prototype`
+
+将公共的属性和方法挂载到原型上
+```javascript
+
+function Person(name) {
+    this.name = name;
+    // this.age = age;
+    // this.sex = sex;
+}
+
+Person.prototype.age = "xxx";
+Person.prototype.sex = "yyy";
+
+new Person("aaa");
+new Person("bbb");
+```

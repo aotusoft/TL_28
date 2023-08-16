@@ -80,13 +80,15 @@ JavaScript 拥有自主销毁内存的机制
 - 构造函数 `prototype` 上的属性和方法可被实例化对象继承
 - 对象有 `constructor` 属性，实例化对象的 `constructor` 属性指向构造函数
 - `prototype` 也存在 `constructor` 属性  `constructor` 指向构造函数
-  > Xxx.prototype.constructor === Xxx
+  > `Xxx.prototype.constructor === Xxx`
 - 对象有 `__proto__` 属性，实例化对象的 `constructor` 属性指向构造函数
   > `Xxx.__proto__ === Xxx.prototype`
 
+![img_2.png](img_2.png)
+  
 将公共的属性和方法挂载到原型上
-```javascript
 
+```javascript
 function Person(name) {
     this.name = name;
     // this.age = age;
@@ -98,4 +100,55 @@ Person.prototype.sex = "yyy";
 
 new Person("aaa");
 new Person("bbb");
+```
+
+## 原型链
+
+Object 原型中的 `__proto__` 指向 `null`
+
+### 查找规则
+
+[//]: # (先从构造函数 -> 原型链 -> undefined)
+
+最终指向 `null`
+
+### 改变this指向
+
+`call()`
+
+- 进行函数的调用
+- 改变 `this` 的指向 
+  > 没有参数时 `this` 指向 `window`
+  > 一个参数时 `this` 指向 该参数
+
+`apply()`
+
+- 进行函数的调用
+- 改变 `this` 的指向
+  > 没有参数时 `this` 指向 `window`
+
+`bind()`
+
+- 不会进行函数的调用
+- 改变 `this` 的指向
+  > 没有参数时 `this` 指向 `window`
+
+```javascript
+var name = "xxx";
+var obj = {
+  name: "yyy",
+  getName:function () {
+    console.log(this.name)
+  }
+}
+obj.apply();
+obj.getName.apply();
+obj.apply();
+
+var obg = {
+  name: "yyy",
+  getName:function () {
+    console.log(this.name)
+  }.bind()
+}
 ```

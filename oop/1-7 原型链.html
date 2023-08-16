@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>原型链</title>
+  </head>
+  <body></body>
+  <script>
+    /* 
+    一、原型链
+      在javascript中每个对象都会有一个__proto__属性，当我们访问一个对象的属性时，
+      如果这个对象内部不存在这个属性，那么它就会去__proto__里去找这个属性，这个__proto__又会有自己的__proto__
+    二、原型链上的属性查找规则：
+      先从构造函数中查找，如果有就返回，如果没有从原型链上查找，都没有返回undefined
+    三、原型链最终指向了哪儿？null
+    四、额外技巧
+        局部变量如何变成全局变量
+    */
+  </script>
+  <script>
+    function Cup(brand) {
+      this.brand = brand
+      // this.size = size
+    }
+    // Cup.prototype.size = '400ml'
+    Object.prototype.size = '800ml'
+    var cup = new Cup('蒙清', '200ml')
+    console.log(cup.size)
+    // 任何一个对象都有__proto__属性,它本身是个指针对象，实例化对象的__proto__属性指向构造函数的原型
+    console.log(cup.__proto__ === Cup.prototype) //true
+    // 构造函数的原型也是对象，也有__proto__属性，指向Object构造函数的原型
+    console.log(cup.__proto__.__proto__ === Object.prototype) //true
+    // Object的原型也是对象，也有__proto__属性，指向null
+    console.log(Object.prototype.__proto__) //null
+  </script>
+  <script>
+    function fn1(win) {
+      let num = 100
+      // console.log(num)
+      win.num = num
+    }
+    fn1(window)
+
+    console.log(num)
+  </script>
+</html>

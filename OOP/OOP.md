@@ -73,6 +73,8 @@ JavaScript 拥有自主销毁内存的机制
 - 节省内存空间
 - 实现数据共享(继承)
 
+考试
+
 ### 构造函数 实例对象 原型直接关系 
 
 - 函数有 `prototype` 原型默认属性
@@ -152,3 +154,29 @@ var obg = {
   }.bind()
 }
 ```
+
+原型对象的函数中的this指向
+
+如果被实例化对象所调用 this指向实例化对象
+如果被原型对象调用 this指向原型对象
+
+new关键字底层原理
+
+new关键字的作用
+1、创建实例化对象
+2、让构造函数中的this指向实例化对象
+new关键字的底层原理
+
+1、`var person = {}` 创建新对象
+2、`Person.call(person)` 构造函数调用完成让this指向实例对象 所以实例对象就拥有了构造函数中的属性和方法
+3、`p1.__proto__` 指向 `Person.protoType` 实例化对象的指针地址指向构造函数的原型 地址相同
+
+```javascript
+function Person(name) {
+  this.name = name;
+}
+Person.prototype.age = 18;
+
+var person = new Person("小明");
+```
+

@@ -41,7 +41,7 @@ Snake.prototype.renderSnake = function () {
 }
 
 // 蛇节移动方法
-Snake.prototype.moveSnake = function () {
+Snake.prototype.moveSnake = function (food) {
     // 调用蛇身转蛇头函数
     this.changeSnake();
 
@@ -50,6 +50,9 @@ Snake.prototype.moveSnake = function () {
 
     // 渲染蛇节
     this.renderSnake()
+
+    // 蛇吃食物
+    this.eatFood(food)
 }
 
 // 蛇尾 蛇身位置改变方法
@@ -91,5 +94,27 @@ Snake.prototype.changePosition = function () {
             break
         default:
             break
+    }
+}
+
+// 声明一个蛇吃食物的函数
+Snake.prototype.eatFood = function (food) {
+    // 当蛇头与食物重合（left/top）,食物消失，蛇尾变长，渲染新食物
+    let snakeHeadX = this.body[0].x * this.width //蛇头的left
+    let snakeHeadY = this.body[0].y * this.width //蛇头的top
+    // console.log(food)
+    if (snakeHeadX === food.left && snakeHeadY === food.top) {
+        console.log('重合了！！！！！！！！！！！！！')
+        // 食物消失，
+        food.deleteFood()
+        // 蛇尾变长，
+        this.body.push({
+            x: this.body[this.body.length - 1].x,
+            y: this.body[this.body.length - 1].y,
+            color: 'red',
+        })
+        this.renderSnake()
+        // 渲染新食物
+        food.renderFood()
     }
 }

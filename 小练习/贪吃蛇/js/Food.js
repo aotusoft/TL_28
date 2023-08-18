@@ -1,10 +1,11 @@
-function Food(width, height, backgroundColor, position, left, top) {
+function Food(width, height, backgroundColor, position, left, top,foodArr) {
     this.top = top;
     this.left = left;
     this.width = width;
     this.height = height;
     this.position = "absolute";
     this.backgroundColor = backgroundColor;
+    this.foodArr = foodArr;
 }
 
 Food.prototype.renderFood = function () {
@@ -18,4 +19,15 @@ Food.prototype.renderFood = function () {
     foodBox.style.top = this.top + 'px'
     foodBox.style.position = this.position;
     foodBox.style.backgroundColor = this.backgroundColor;
+    this.foodArr.push(foodBox)
+}
+
+
+// 删除食物方法
+Food.prototype.deleteFood = function () {
+    for (let i = this.foodArr.length - 1; i >= 0; i--) {
+        this.foodArr[i].parentNode.removeChild(this.foodArr[i])
+        // 删除的只是数组数据，在删除之前已经渲染到DOM中了。所以得删除DOM
+        this.foodArr.splice(i, 1)
+    }
 }

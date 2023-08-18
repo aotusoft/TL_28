@@ -180,3 +180,12 @@ Person.prototype.age = 18;
 var person = new Person("小明");
 ```
 
+### 继承
+
+#### 原型继承
+
+
+#### 构造继承
+
+
+

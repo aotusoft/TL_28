@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #GameSection {
+        width: 800px;
+        height: 600px;
+        background-color: #dddddd;
+        position: relative;
+    }
+</style>
+<body>
+<section id="GameSection">
+
+</section>
+</body>
+<script !src="">
+    let gameZone = document.getElementById("GameSection");
+</script>
+<script src="./js/Snake.js"></script>
+<script src="./js/Food.js"></script>
+<script src="./js/Game.js"></script>
+<script !src="">
+    let game = new Game(new Food(20, 20, "green", "absolute", 0, 0),new Snake(20, 20, 'right','yellow','red'),gameZone);
+    game.renderGame()
+</script>
+</html>

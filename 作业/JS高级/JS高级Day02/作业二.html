@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Animal(name, weight) {
+        this.name = name;
+        this.weight = weight;
+    }
+
+    function Tiger(sex) {
+        this.sex = sex;
+    }
+
+    let animal = new Animal("东北虎",250);
+    let tiger = new Tiger("雄性");
+
+    for (let animalKey in animal) {
+        tiger[animalKey] = animal[animalKey]
+    }
+
+    console.log(tiger.name)
+    console.log(tiger.sex)
+</script>
+
+</html>

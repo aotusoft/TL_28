@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拷贝继承</title>
+  </head>
+  <body></body>
+  <script>
+    //  // 目的：学生对象（子类）student去继承人员对象（父类）person对象的所有的属性和方法
+    // 人员的构造函数
+    function Person(name, age) {
+      this.name = name
+      this.age = age
+      this.work = function () {
+        console.log(this.name + '热爱工作')
+      }
+    }
+    // 人员的原型
+    Person.prototype.sex = '男生'
+    Person.prototype.playBasketBall = function () {
+      console.log(this.name + '喜欢打篮球')
+    }
+    // 学生的构造函数
+    var Student = function (score) {
+      this.score = score
+      this.study = function () {
+        console.log(this.name + '喜欢学习')
+      }
+    }
+    // 学生的原型
+    Student.prototype.className = '一班'
+    Student.prototype.playGame = function () {
+      console.log(this.name + '喜欢打游戏')
+    }
+
+    var stu1 = new Student(100)
+    var p1 = new Person('小花', 18)
+    // stu1 = p1
+    for (x in p1) {
+      stu1[x] = p1[x]
+    }
+
+    // 1、学生构造函数
+    console.log(stu1.score)
+    stu1.study()
+    // 2、学生的原型
+    console.log(stu1.className)
+    stu1.playGame()
+    // 3、人的构造函数
+    console.log(stu1.name)
+    console.log(stu1.age)
+    stu1.work()
+    // 4、人的原型
+    console.log(stu1.sex)
+    stu1.playBasketBall()
+  </script>
+</html>

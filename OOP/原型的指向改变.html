@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function Animal() {}
+    Animal.prototype.age = 3
+    function Dog() {}
+    Dog.prototype.sex = '雄性'
+    Dog.prototype = new Animal()
+    console.log(Animal.prototype.constructor === Animal) //true
+    console.log(Dog.prototype.constructor === Dog) //true false
+    console.log(Dog.prototype.constructor === Animal) //true
+  </script>
+</html>

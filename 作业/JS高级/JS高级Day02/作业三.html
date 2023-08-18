@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Animal(name, weight, age, sex) {
+        this.name = name;
+        this.weight = weight;
+        this.age = age;
+        this.sex = sex;
+        this.eat = function () {
+            console.log(this.name + "正在吃东西")
+        }
+    }
+
+    function Cat(name, weight, age, sex, color) {
+        this.color = color;
+        Animal.call(this, name, weight, age, sex)
+    }
+
+    let cat = new Cat("梅狸猫", 3, 2.5, "公", "灰白纹斑点");
+    console.log(cat)
+</script>
+</html>

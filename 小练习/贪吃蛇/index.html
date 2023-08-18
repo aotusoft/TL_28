@@ -17,14 +17,14 @@
 
 </section>
 </body>
-<script !src="">
+<script>
     let gameZone = document.getElementById("GameSection");
 </script>
 <script src="./js/Snake.js"></script>
 <script src="./js/Food.js"></script>
 <script src="./js/Game.js"></script>
-<script !src="">
-    let game = new Game(new Food(20, 20, "green", "absolute", 0, 0),new Snake(20, 20, 'right','yellow','red'),gameZone);
+<script>
+    let game = new Game(new Food(20, 20, "yellow", "absolute", 0, 0),new Snake(20, 20, 'right','green','lightgreen',[]),gameZone);
     game.renderGame()
 </script>
 </html>

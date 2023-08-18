@@ -8,7 +8,14 @@ function Game(food, snake, gameZone) {
     this.snake = snake
     this.gameZone = gameZone
 }
+
 Game.prototype.renderGame = function () {
     this.food.renderFood()
     this.snake.renderSnake()
+}
+
+Game.prototype.startGame = function () {
+    setInterval(function () {
+        this.snake.moveSnake()
+    }.bind(this), 1000)
 }

@@ -7,23 +7,45 @@
 <body>
 
 </body>
-<script !src="">
+<script>
 
     function Person(name) {
         this.name = name;
     }
 
-    function Student(score,name,sex) {
+    function Student(score, name, sex) {
         this.score = score;
-        Person.call(this,name,sex)
+        Person.call(this, name, sex)
     }
+
     Student.prototype.study = function () {
-        console.log(this.name+"正在学")
+        console.log(this.name + "正在学")
     }
 
     Person.prototype.sex = "男"
 
+    let student = new Student(100, "小明");
 
-    let student = new Student(100,"小明");
+    // function xxx(x) {
+    //     return x;
+    // }
+    // xxx(function () {
+    //     console.log("xxx")
+    // })
+
+    let name = "aaa";
+    let x = {
+        name: "bbb",
+        fun: function() {
+            console.log(name)
+            function fans() {
+                let name = "ccc";
+                console.log(this.name);
+                console.log(this)
+            }
+            fans.apply(this);
+        }
+    };
+    x.fun()
 </script>
 </html>

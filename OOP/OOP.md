@@ -184,8 +184,66 @@ var person = new Person("小明");
 
 #### 原型继承
 
-
 #### 构造继承
 
+#### 拷贝继承
 
+## 函数
 
+调用方式
+
+函数名()
+
+`call()`/`apply()`
+
+自调用
+
+```javascript
+(function () {
+  xxx
+})()
+
+var xxx = (function () {
+  xxx
+})()
+```
+
+对象中的调用
+
+数组中的调用
+
+函数作为参数调用
+
+```javascript
+function xxx(x) {
+  x()
+}
+xxx(function () {
+  console.log("xxx")
+})
+```
+
+函数作为参数返回
+
+```javascript
+function xxx(x) {
+  return x;
+}
+xxx(function () {
+  console.log("xxx")
+})
+```
+
+## 闭包
+
+定义在一个函数内部的函数
+
+作用 
+
+获取父函数内部的变量
+
+锁住父函数内部的变量
+
+本质
+
+让父函数相对于子元素成为永恒作用域

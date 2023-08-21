@@ -20,9 +20,8 @@
     console.log(a.name, b.name);
     fun.prototype.name = 'jack';
     console.log(a.name, b.name);
-    console.log(fun.prototype);
     fun.prototype = {};
-    console.log(fun.prototype);
+    console.log(a.prototype.constructor)
     fun.prototype.name = 'tom';
     console.log(a.name, b.name);
     b.constructor.prototype.name = 'kitty';

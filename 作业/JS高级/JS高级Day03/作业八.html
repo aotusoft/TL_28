@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    var P = function () {
+    }
+    P.prototype.aaa = function () {
+        alert("ddd")
+    }
+    var a = new P();
+    var num = 10;
+    console.log(P.__proto__ == Function.prototype);  // 输出：true
+    console.log(P == a.constructor);  // 输出：true
+    console.log(a.__proto__ == P.prototype);  // 输出：true
+    console.log(P.prototype.__proto__ == Object.prototype);  // 输出：true
+    console.log(a.prototype);  // 输出：undefined
+    console.log(Number.__proto__ == Function.prototype); // 输出：true
+    console.log(Number.prototype == num.__proto__);  // 输出：true
+    console.log(Function.__proto__ == Function.prototype);  // 输出：true
+    console.log(Function.prototype == P.__proto__);  // 输出：true
+    console.log(Function.prototype.__proto__ == Object.prototype);  // 输出：true
+    console.log(Object.__proto__ == Function.prototype);  // 输出：true
+    console.log(Object.prototype.__proto__ == null);  // 输出：true
+
+</script>
+</html>

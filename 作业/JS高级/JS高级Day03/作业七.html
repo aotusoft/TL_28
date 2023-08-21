@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    var F = function () {}
+    Object.prototype.a = function () {
+        console.log('a()')
+    }
+    Function.prototype.b = function () {
+        console.log('b()')
+    }
+    var f = new F()
+    f.a()  //a()
+    f.b()  //TypeError: f.b is not a function
+    F.a()  //a()
+    F.b()  //b()
+
+</script>
+</html>

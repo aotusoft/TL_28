@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var fun = function () {}
+
+    fun.prototype = {
+        name: 'peter',
+        age: 25
+    }
+
+    var a = new fun();
+    var b = new fun();
+    console.log(a.name, b.name);
+    fun.prototype.name = 'jack';
+    console.log(a.name, b.name);
+    console.log(fun.prototype);
+    fun.prototype = {};
+    console.log(fun.prototype);
+    fun.prototype.name = 'tom';
+    console.log(a.name, b.name);
+    b.constructor.prototype.name = 'kitty';
+
+</script>
+</html>

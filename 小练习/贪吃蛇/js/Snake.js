@@ -46,13 +46,13 @@ Snake.prototype.moveSnake = function (food) {
     this.changeSnake();
 
     // 调用蛇节方向改变函数
-    this.changePosition()
+    this.changePosition();
 
     // 渲染蛇节
-    this.renderSnake()
+    this.renderSnake();
 
     // 蛇吃食物
-    this.eatFood(food)
+    this.eatFood(food);
 }
 
 // 蛇尾 蛇身位置改变方法
@@ -74,23 +74,24 @@ Snake.prototype.deleteSnake = function () {
         // 删除子元素：父元素.removeChild(子元素)
         this.snakeArr[i].parentNode.removeChild(this.snakeArr[i])
         // 删除数组数据
-        this.snakeArr.splice(i, 1)
+        this.snakeArr.splice(i, 1);
+        // this.snakeArr.pop();
     }
 }
 // 声明一个蛇节方向改变的函数
 Snake.prototype.changePosition = function () {
     switch (this.direction) {
         case 'right':
-            this.body[0].x++
+            this.body[0].x++;
             break
         case 'left':
-            this.body[0].x--
+            this.body[0].x--;
             break
         case 'top':
-            this.body[0].y--
+            this.body[0].y--;
             break
         case 'bottom':
-            this.body[0].y++
+            this.body[0].y++;
             break
         default:
             break
@@ -104,17 +105,16 @@ Snake.prototype.eatFood = function (food) {
     let snakeHeadY = this.body[0].y * this.width //蛇头的top
     // console.log(food)
     if (snakeHeadX === food.left && snakeHeadY === food.top) {
-        console.log('重合了！！！！！！！！！！！！！')
         // 食物消失，
-        food.deleteFood()
+        food.deleteFood();
         // 蛇尾变长，
         this.body.push({
             x: this.body[this.body.length - 1].x,
             y: this.body[this.body.length - 1].y,
-            color: 'red',
+            color: this.bodyColor,
         })
-        this.renderSnake()
+        this.renderSnake();
         // 渲染新食物
-        food.renderFood()
+        food.renderFood();
     }
 }

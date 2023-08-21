@@ -580,7 +580,7 @@ for (x in 对象名){
 - `pow(底数,指数)` 指数幂
 - `sqrt()` 平方根
 
-min-max之间的随机数
+`min~max`之间的随机数
 
 ```javascript
 function getRand(min, max) {

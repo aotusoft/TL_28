@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>闭包作用2</title>
+  </head>
+  <body>
+    <button id="btn">点赞（0）</button>
+  </body>
+  <!-- 一、随机数案例 -->
+  <!--   <script>
+    // 2、锁住父函数内部的变量
+    // 求min-max之间的随机数： Math.floor(Math.random()*(max-min)+min)
+    function getRandom(min, max) {
+      var num = Math.floor(Math.random() * (max - min) + min)
+      return num
+    }
+    // 1
+    var result = getRandom(10, 20)
+    console.log(result)
+    // 2
+    console.log(getRandom(10, 20))
+    console.log(getRandom(10, 20))
+    console.log(getRandom(10, 20))
+  </script> -->
+  <!--   <script>
+    function getRandom(min, max) {
+      var num = Math.floor(Math.random() * (max - min) + min)
+      return function () {
+        console.log(num)
+      }
+    }
+    var result = getRandom(10, 20)
+    result()
+    result()
+    result()
+  </script> -->
+  <!-- 二、点赞案例 -->
+  <script>
+    let btn = document.getElementById('btn')
+    // var num = 0
+    btn.onclick = (function () {
+      console.log(this)
+      let num = 0;
+      return function () {
+        num++
+        // 先进行的是复函数（匿名函数的自调用），相当于普通函数this指向window。闭包函数是事件函数this指向事件源
+        // 原因：事件是异步的
+        this.innerText = '点赞（' + num + '）'
+      }
+    })()
+  </script>
+</html>

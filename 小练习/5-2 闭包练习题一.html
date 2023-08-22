@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>闭包练习题</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>苹果</li>
+      <li>橘子</li>
+      <li>香蕉</li>
+      <li>鸭梨</li>
+    </ul>
+  </body>
+  <script>
+    let liArr = document.getElementById('list').getElementsByTagName('li')
+    for (let i = 0; i < liArr.length; i++) {
+      // 当i=0;
+      ;(function (i) {
+        // var i=0;
+        liArr[i].onclick = function () {
+          console.log(i)
+        }
+      })(i)
+    }
+  </script>
+</html>

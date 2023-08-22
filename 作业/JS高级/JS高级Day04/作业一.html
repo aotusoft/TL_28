@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var x = 11;
+
+    function fn(x) {//返回值里面没东西
+        // console.log(x);//undefined
+        x = 10;
+        // console.log(x);//10
+        // console.log(arguments[0])
+        arguments[0] = 20;
+        // console.log(arguments[0])
+        // console.log(x); //20
+        console.log(fn.arguments); //20
+    }
+
+    fn();
+    // console.log(x);//11
+
+</script>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+  <!-- 函数的返回值+闭包 -->
+  <!-- 第1题 -->
+  <script>
+    function fn() {
+      var name = 'hello'
+      return function () {
+        return name
+      }
+    }
+    var fnc = fn()
+    console.log(fnc()) //hello
+    /* 
+      
+    */
+  </script>
+  <!-- 第2题 -->
+  <!--  <script>
+    var inner = 'hi'
+    function fn() {
+      var inner = 'hello'
+      inner = function () {
+        return inner
+      }
+      console.log(inner())
+    }
+    fn()
+  </script> -->
+  <!-- 第3题 -->
+  <!-- <script>
+    function fn() {
+      var name = 'hello'
+      return function callback() {
+        return name
+      }
+    }
+    var fn1 = fn() //  fn1 = callback
+
+    function fn2(f) {
+      //f =fn1
+      console.log(f()) //f()==fn1()==callback()     hello
+      // console.log(callback()  )
+    }
+    fn2(fn1)
+  </script>  -->
+  <!-- 第4题 -->
+  <!--  <script>
+    ;(function () {
+      var name = 'hello'
+      var fn1 = function () {
+        return name
+      }
+      fn2(fn1) //fn1是实参  ====fn2(fn1())
+    })()
+    function fn2(f) {
+      //f是形参
+      console.log(f()) // console.log(fn1())  hello
+    }
+  </script> -->
+  <!-- 第5题 -->
+  <!--  <script>
+    function fn() {
+      var name = 'hello'
+      setName = function (n) {
+        name = n //name ='word'
+      }
+      getName = function () {
+        return name
+      }
+      return {
+        setName: setName,
+        getName: getName,
+      }
+    }
+    var fn1 = fn()
+    /* 
+      fn1 = {
+        setName: setName,
+        getName: getName,
+      }
+    */
+    console.log(fn1.getName()) //hello
+    fn1.setName('world')
+    console.log(fn1.getName()) //word
+  </script> -->
+  <!-- 第6题 -->
+  <!--  <script>
+    // 数组去重的方式（闭包）
+    var fn = (function () {
+      var arr = []
+      // 获取
+      // 锁住
+      return function (val) {
+        if (arr.indexOf(val) == -1) {
+          // 数组中没有val才执行
+          arr.push(val)
+          console.log('函数被执行了', arr) //[10]  [10,1000]  [10,1000,200]
+        } else {
+          console.log('此次函数不需要执行')
+        }
+        console.log('函数调用完打印一下，方便查看已缓存的数组：', arr) //[10]  [10,1000]   [10,1000,200]
+      }
+    })()
+    /* 
+      优先执行匿名父函数自调用，把自调用的结果赋值给了fn，相当于把匿名父函数的返回值赋给了fn
+      又因为匿名父函数的返回值又是一个匿名子函数，所以fn就是匿名子函数（闭包函数）
+    */
+    fn(10)
+    fn(10)
+    fn(1000)
+    fn(200)
+    fn(1000)
+  </script>  -->
+  <!-- 第7题 -->
+  <script>
+    var arr = []
+    for (var i = 0; i < 3; i++) {
+      // 当i = 0
+      // 当i = 1
+      // 当i = 2
+      arr[i] = (function (i) {
+        // i=0
+        //i=1
+        return function () {
+          console.log(i) //0 //1
+        }
+      })(i)
+    }
+    arr[0]() //0
+    arr[1]() //1
+    arr[2]() //2
+    // arr[3]()
+
+    /*
+      这个例子是闭包函数的一个典型应用，示例中只有两个函数嵌套，但是加上window全局作用域，
+    一共会有三个嵌套作用域。其中for循环了三次，三次调用了匿名自执行函数，就开了三个函数作用域，
+    开第一个作用域时保存的i的值是0，开第二个作用域保存的是1，第三个保存的是2。
+    三次调用父函数，又创建了三个闭包函数，每个闭包函数沿着它自己的作用域链向上访问，访问的值就都不相同。
+    三个闭包函数调用完了，它们自己的作用域就关闭了，
+    但是各自的父函数作用域还一直在内存中处于打开状态，下次闭包函数再调用时，再接着访问它自己的作用域。
+    就像在window全局作用域定义了一个函数，函数调用几次，全局作用域都在，每次调用都接着访问全局作用域。
+  */
+  </script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        border-spacing: 0;
+    }
+</style>
+<body>
+<section>
+    <div>
+        <label for="key">键: </label>
+        <input id="key" type="text" required>
+    </div>
+    <div>
+        <label for="value">值: </label>
+        <input id="value" type="text" required>
+        <button id="add">添加</button>
+    </div>
+</section>
+<p></p>
+<section>
+    <label for="qkey">键: </label>
+    <input id="qkey" type="text">
+    <button id="query">查询</button>
+</section>
+<table id="table" border="1">
+</table>
+</body>
+<script !src="">
+    let key = document.getElementById("key");
+    let value = document.getElementById("value");
+    let add = document.getElementById("add");
+    let qkey = document.getElementById("qkey");
+    let query = document.getElementById("query");
+    let table = document.getElementById("table");
+
+    function addElement() {
+        let tableRowElement = document.createElement("tr");
+        let tableCellKeyElement = document.createElement("td");
+        let tableCellValueElement = document.createElement("td");
+        table.appendChild(tableRowElement);
+        let tableCellKey = tableRowElement.appendChild(tableCellKeyElement);
+        let tableCellValue = tableRowElement.appendChild(tableCellValueElement);
+        return
+    }
+
+    add.addEventListener("click", function () {
+        let flag = false;
+        for (let i = 0; i < sessionStorage.length; i++) {
+            if (key.value === sessionStorage.key(i)) {
+                flag = true;
+                alert("重复");
+            }
+        }
+        if (flag === false){
+            sessionStorage.setItem(key.value, value.value);
+            let tableRowElement = document.createElement("tr");
+            let tableCellKeyElement = document.createElement("td");
+            let tableCellValueElement = document.createElement("td");
+            table.appendChild(tableRowElement);
+            let tableCellKey = tableRowElement.appendChild(tableCellKeyElement);
+            let tableCellValue = tableRowElement.appendChild(tableCellValueElement);
+            tableCellKey.innerText = key.value;
+            tableCellValue.innerText = value.value;
+            console.log(sessionStorage)
+        }
+    })
+
+    window.onload = function () {
+        for (let i = 0; i < sessionStorage.length; i++) {
+            let tableRowElement = document.createElement("tr");
+            let tableCellKeyElement = document.createElement("td");
+            let tableCellValueElement = document.createElement("td");
+            table.appendChild(tableRowElement);
+            let tableCellKey = tableRowElement.appendChild(tableCellKeyElement);
+            let tableCellValue = tableRowElement.appendChild(tableCellValueElement);
+
+            tableCellKey.innerText = sessionStorage.key(i);
+            tableCellValue.innerText = sessionStorage.getItem(sessionStorage.key(i));
+        }
+    }
+</script>
+</html>

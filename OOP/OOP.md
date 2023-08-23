@@ -261,7 +261,7 @@ xxx(function () {
 - `\w` 匹配至少一个字母数字下划线字符
 - `\W` 匹配至少有一个不是字母数字下划线字符
 - `\s` 匹配至少任意的空白字符
-- `\S` 匹配至少一个不是空白符的字符
+- `\S` 匹配至少一个不是空白字符
 - `\.` 匹配至少一个换行符
 - `^` 匹配行首的文本
 - `$` 匹配行尾的文本
@@ -274,3 +274,17 @@ xxx(function () {
 - `{n}` 匹配至少重复 `n` 次
   > `^{n}$` 匹配必须重复 `n` 次
 - `{n,m}` 匹配重复 `n` 到 `m` 次
+
+
+Web 存储
+
+localStorage 本地存储 永久存储
+
+sessionStorage 会话存储 会话存储
+
+- `length` 数据长度
+- `setItem(key,value)` 存储数据
+- `setItem(key)` 获取数据
+- `removeItem(key)` 删除数据
+- `clearItem(key)` 清空数据
+- `key(index)` 获取index索引的key值

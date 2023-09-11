@@ -86,8 +86,6 @@ JavaScript 拥有自主销毁内存的机制
 - 对象有 `__proto__` 属性，实例化对象的 `constructor` 属性指向构造函数
   > `Xxx.__proto__ === Xxx.prototype`
 
-![img_2.png](img_2.png)
-  
 将公共的属性和方法挂载到原型上
 
 ```javascript
@@ -116,20 +114,20 @@ Object 原型中的 `__proto__` 指向 `null`
 
 ### 改变this指向
 
-`call()`
+#### call()
 
 - 进行函数的调用
 - 改变 `this` 的指向 
   > 没有参数时 `this` 指向 `window`
   > 一个参数时 `this` 指向 该参数
 
-`apply()`
+#### apply()
 
 - 进行函数的调用
 - 改变 `this` 的指向
   > 没有参数时 `this` 指向 `window`
 
-`bind()`
+#### bind()
 
 - 不会进行函数的调用
 - 改变 `this` 的指向
@@ -155,21 +153,22 @@ var obg = {
 }
 ```
 
-原型对象的函数中的this指向
+### 原型对象的函数中的this指向
 
 如果被实例化对象所调用 this指向实例化对象
 如果被原型对象调用 this指向原型对象
 
-new关键字底层原理
 
-new关键字的作用
-1、创建实例化对象
-2、让构造函数中的this指向实例化对象
-new关键字的底层原理
+### new关键字的作用
 
-1、`var person = {}` 创建新对象
-2、`Person.call(person)` 构造函数调用完成让this指向实例对象 所以实例对象就拥有了构造函数中的属性和方法
-3、`p1.__proto__` 指向 `Person.protoType` 实例化对象的指针地址指向构造函数的原型 地址相同
+- 创建实例化对象
+- 让构造函数中的this指向实例化对象
+
+### new关键字的底层原理
+
++ `var person = {}` 创建新对象
++ `Person.call(person)` 构造函数调用完成让this指向实例对象 实例对象拥有构造函数中的属性和方法
++ `p1.__proto__` 指向 `Person.protoType` 实例化对象的指针地址指向构造函数的原型 地址相同
 
 ```javascript
 function Person(name) {
@@ -180,23 +179,23 @@ Person.prototype.age = 18;
 var person = new Person("小明");
 ```
 
-### 继承
+## 继承
 
-#### 原型继承
+### 原型继承
 
-#### 构造继承
+### 构造继承
 
-#### 拷贝继承
+### 拷贝继承
 
 ## 函数
 
-调用方式
+### 调用方式
 
 函数名()
 
 `call()`/`apply()`
 
-自调用
+#### 自调用
 
 ```javascript
 (function () {
@@ -208,11 +207,11 @@ var xxx = (function () {
 })()
 ```
 
-对象中的调用
+### 对象中的调用
 
-数组中的调用
+### 数组中的调用
 
-函数作为参数调用
+### 函数作为参数调用
 
 ```javascript
 function xxx(x) {
@@ -223,7 +222,7 @@ xxx(function () {
 })
 ```
 
-函数作为参数返回
+### 函数作为参数返回
 
 ```javascript
 function xxx(x) {
@@ -238,23 +237,25 @@ xxx(function () {
 
 定义在一个函数内部的函数
 
-作用 
+### 作用 
 
-获取父函数内部的变量
+- 获取父函数内部的变量
+- 锁住父函数内部的变量
 
-锁住父函数内部的变量
-
-本质
+### 本质
 
 让父函数相对于子元素成为永恒作用域
 
-正则表达式
+## 正则表达式
 
-特定字符 元字符 限定符 其他符号
+- 特定字符
+- 元字符
+- 限定符
+- 其他符号
 
 `var xxx = new RegExp()`
 
-元字符
+### 元字符
 
 - `\d` 匹配至少一个数字字符
 - `\D` 匹配至少一个非数字任意字符
@@ -276,15 +277,16 @@ xxx(function () {
 - `{n,m}` 匹配重复 `n` 到 `m` 次
 
 
-Web 存储
+## Web 存储
 
-localStorage 本地存储 永久存储
+- localStorage 本地存储 永久存储
+- sessionStorage 会话存储 会话存储
 
-sessionStorage 会话存储 会话存储
+### 方法
 
 - `length` 数据长度
 - `setItem(key,value)` 存储数据
 - `setItem(key)` 获取数据
 - `removeItem(key)` 删除数据
-- `clearItem(key)` 清空数据
+- `clear()` 清空数据
 - `key(index)` 获取index索引的key值

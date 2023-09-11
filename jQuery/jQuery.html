@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+</head>
+<style>
+    #box * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+
+    li, div {
+        width: 20vw;
+    }
+</style>
+<body>
+<section id="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li id="five">5</li>
+        <li>6</li>
+        <li id="seven">7</li>
+        <li id="eight">8</li>
+        <div>nine</div>
+    </ul>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>seven</li>
+        <li>eight</li>
+    </ul>
+</section>
+</body>
+<script !src="">
+    $("li").eq(7).css("color", "yellowgreen")
+    $("#eight").prev().css("color", "plum")
+    $("ul").find("div").css("color", "seagreen")
+    $("#five").next().css("color", "crimson")
+</script>
+</html>

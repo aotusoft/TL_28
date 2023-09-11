@@ -5,19 +5,72 @@
     <title>Title</title>
 </head>
 <style>
+    section {
+        vertical-align: middle;
+    }
+
     table {
         border-spacing: 0;
+    }
+
+    #reset {
+        color: crimson;
+        font-weight: 600;
+    }
+
+    input, button, label {
+        font-size: 18px;
+    }
+
+
+    /* CSS */
+    button {
+        font-size: 16px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        padding: 13px 20px 13px;
+        outline: 0;
+        border: 1px solid black;
+        cursor: pointer;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    button:after {
+        content: "";
+        background-color: #ffe54c;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: 7px;
+        left: 7px;
+        transition: 0.2s;
+    }
+
+    button:hover:after {
+        top: 0px;
+        left: 0px;
+    }
+
+    @media (min-width: 768px) {
+        button {
+            padding: 13px 50px 13px;
+        }
     }
 </style>
 <body>
 <section>
     <div>
         <label for="key">键: </label>
-        <input id="key" type="text" required>
+        <input id="key" required type="text">
     </div>
     <div>
         <label for="value">值: </label>
-        <input id="value" type="text" required>
+        <input id="value" required type="text">
         <button id="add">添加</button>
     </div>
 </section>
@@ -26,8 +79,9 @@
     <label for="qkey">键: </label>
     <input id="qkey" type="text">
     <button id="query">查询</button>
+    <button id="reset">重置</button>
 </section>
-<table id="table" border="1">
+<table border="1" id="table">
 </table>
 </body>
 <script !src="">
@@ -37,15 +91,17 @@
     let qkey = document.getElementById("qkey");
     let query = document.getElementById("query");
     let table = document.getElementById("table");
+    let reset = document.getElementById("reset");
 
-    function addElement() {
+    function addElement(k, v) {
         let tableRowElement = document.createElement("tr");
         let tableCellKeyElement = document.createElement("td");
         let tableCellValueElement = document.createElement("td");
         table.appendChild(tableRowElement);
         let tableCellKey = tableRowElement.appendChild(tableCellKeyElement);
         let tableCellValue = tableRowElement.appendChild(tableCellValueElement);
-        return
+        tableCellKey.innerText = k;
+        tableCellValue.innerText = v;
     }
 
     add.addEventListener("click", function () {
@@ -56,31 +112,20 @@
                 alert("重复");
             }
         }
-        if (flag === false){
+        if (flag === false) {
             sessionStorage.setItem(key.value, value.value);
-            let tableRowElement = document.createElement("tr");
-            let tableCellKeyElement = document.createElement("td");
-            let tableCellValueElement = document.createElement("td");
-            table.appendChild(tableRowElement);
-            let tableCellKey = tableRowElement.appendChild(tableCellKeyElement);
-            let tableCellValue = tableRowElement.appendChild(tableCellValueElement);
-            tableCellKey.innerText = key.value;
-            tableCellValue.innerText = value.value;
+            addElement(key.value, value.value)
             console.log(sessionStorage)
         }
+    })
+    reset.addEventListener("click", function () {
+        sessionStorage.clear()
+        location.reload()
     })
 
     window.onload = function () {
         for (let i = 0; i < sessionStorage.length; i++) {
-            let tableRowElement = document.createElement("tr");
-            let tableCellKeyElement = document.createElement("td");
-            let tableCellValueElement = document.createElement("td");
-            table.appendChild(tableRowElement);
-            let tableCellKey = tableRowElement.appendChild(tableCellKeyElement);
-            let tableCellValue = tableRowElement.appendChild(tableCellValueElement);
-
-            tableCellKey.innerText = sessionStorage.key(i);
-            tableCellValue.innerText = sessionStorage.getItem(sessionStorage.key(i));
+            addElement(sessionStorage.key(i), sessionStorage.getItem(sessionStorage.key(i)))
         }
     }
 </script>

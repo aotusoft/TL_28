@@ -6,10 +6,10 @@ Cascading Style Sheets 层叠样式表，级联样式表
 
 ## ⛄️ 作用
 
-为了美化网页
-标签中的属性不能满足所有样式的需求
-标签中的属性会使页面变得臃肿
-为了实现结构与样式的相分离
+- 美化网页
+- 标签中的属性不能满足所有样式的需求
+- 标签中的属性会使页面变得臃肿
+- 实现结构与样式的相分离
 
 ## 🌁 用法
 
@@ -24,21 +24,21 @@ Cascading Style Sheets 层叠样式表，级联样式表
 
 - 内部样式表
 
-  ```html
-  <style>
-      选择器 {
-        css属性名A: css属性值A;
-        css属性名B: css属性值B;
-  </style>
-  ```
+```html
+<style>
+  选择器 {
+    css属性名A: css属性值A;
+    css属性名B: css属性值B;
+</style>
+ ```
 
   > 作用于选择器相同的标签
   > 部分实现了结构与样式的相分离
-  >
+  
 - 外部样式表
 
   > 在外部建立后缀名为css的文件
-  >
+
 
   ```html
   <link rel= "stylesheet" href="./css/style.css" /> 
@@ -73,13 +73,9 @@ font-family font-weight font-style font-size
 ### ✒️ 字体样式
 
 - `font-size` 字体大小
-
   > 默认16px Chrome中最小设置12px
-  >
 - `font-family` 字形
-
   > 还可以使用unicode编码
-  >
 
   ```css
   font-family: \6977\4F53
@@ -191,11 +187,7 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 盒子的水平居中 margin:0 auto
 
-> 需要为块状元素
->
-> 需要设置宽高
->
-> 相邻元素垂直外边距将会合并（外边距塌陷）
+> 需要为块状元素 需要设置宽高 相邻元素垂直外边距将会合并（外边距塌陷）
 
 对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者
 
@@ -223,20 +215,15 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 - 浮动的元素拥有行内块元素的特性
 - 浮动后的子元素无法撑开父元素高度（子元素不占位置）
   > 通过清除浮动解决
-  >
 
 #### 清除浮动的方法
 
 - **额外标签法** 给子元素添加额外的兄弟元素和 `clear`属性
-
   > 添加了对于页面结构无意义的标签
-  >
 - **伪元素法** 给父元素添加 `::after` 伪元素
-
   > 该伪元素向父元素内部末尾添加内容
   > 本质上与额外标签法相同
-  > IE6一下不支持
-  >
+  > IE6以下不支持
 
   ```css
   xxx::after{
@@ -245,12 +232,10 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
     clear:both;
   }
   ```
-- 给父元素添加 `overflow: hideen`属性
-
+- 父元素添加 `overflow: hideen`属性
   > 会让多余内容隐藏
-  >
 
-**考试** **overflow: hidden作用**
+**overflow: hidden 作用** **考试**
 
 - 隐藏溢出的内容
 - 清除嵌套元素外边距合并所带来的影响
@@ -352,18 +337,16 @@ solid 实线 dashed 虚线 dotted 点线 double 双实线
 
 #### 文本显示省略号
 
-`white-space:nowrap`强制文本在同一行显示
-`overflow:hidden` 隐藏溢出元素
-`text-overflow:ellipsis` 文本显示省略号
++ `white-space:nowrap`强制文本在同一行显示
++ `overflow:hidden` 隐藏溢出元素
++ `text-overflow:ellipsis` 文本显示省略号
 
 #### 鼠标指针
 
-`cursor`
-
-`cursor:default` 默认指针
-`cursor:pointer` 指向指针
-`cursor:text` 输入指针
-`cursor:move` 移动指针
+- `cursor:default` 默认指针
+- `cursor:pointer` 指向指针
+- `cursor:text` 输入指针
+- `cursor:move` 移动指针
 
 #### 轮廓
 
@@ -630,7 +613,7 @@ CSS中设置 `display`属性
 
 ### 优先级
 
-在同一元素中  通配符选择器<标签选择器<类选择器<ID选择器<内部元素样式<!important
+在同一元素中  通配符选择器<标签选择器<类选择器<ID选择器<内部元素样式< `!important`
 
 #### 复合选择器对比权重
 
@@ -643,7 +626,7 @@ CSS中设置 `display`属性
 
 权重相同时 再对比
 
-## CSS3样式
+## CSS3 样式
 
 ### 阴影
 
@@ -652,16 +635,17 @@ CSS中设置 `display`属性
 
 ### 边框圆角
 
- `border-radius: 左上 右上 右下 左下`
- `border-radius: 左上 右上左下 右下`
- `border-radius: 左上右下 右上左下`
+- `border-radius: 左上 右上 右下 左下`
+- `border-radius: 左上 右上左下 右下`
+- `border-radius: 左上右下 右上左下`
+
 
 - 属性值为高度一半时
 - 属性值为50%时 为椭圆
 
 ### 怪异盒模型
 
-`box-sizing:bordr-box`
+`box-sizing:border-box`
 
 ### CSS3 背景
 
@@ -677,8 +661,9 @@ CSS中设置 `display`属性
 - `background-origin:padding-box` 背景图覆盖内边距 内容
 - `background-origin:content-box` 背景图覆盖内容
 
-BFC
-Block Formatting Context 格式化上下文 一个独立的容器
+### BFC
+
+`Block Formatting Context` 格式化上下文 一个独立的容器
 
 ### 渐变
 
@@ -721,10 +706,15 @@ Block Formatting Context 格式化上下文 一个独立的容器
 ### 3D 透视图
 
 /*让当前的元素变成三维效果*/
+
 /*设置3D透视度*/
+
 /*当为元素定义perspective 属性时，其子元素会获得透视效果，而不是元素本身。*/
-perspective:2000px
+
+`perspective:2000px`
+
 /*设置为3D转换*/
+
 `transform-style: preserve-3d`
 
 与translateZ()属性配合使用
@@ -732,42 +722,25 @@ perspective:2000px
 ### 过渡
 
 - `transition-property: xxx` 过渡的CSS属性
-- `transition-duration: xxx` 过渡所需要的时间单位秒
+- `transition-duration: xxx` 过渡所需要的时间 单位秒
 - `transition-timing-function: xxx` 过渡时间曲线
 - `transition-delay: xxx` 过渡时间延迟
 - `transition: property duration timing-function delay,[...],...` 过渡时间延迟 `all`
-
   > 选取所有CSS属性
-  >
+
 
 ### 动画
 
 动画属性
 
-- 名称
-  > `animation-name: name`
-  >
-- 动画周期 单位秒
-  > `animation-duration: time`
-  >
-- 动画延迟 单位秒
-  > `animation-delay: time`
-  >
-- 动画类型
-  > `animation-time-function: type`
-  >
-- 动画次数
-  > `animation-iteration-count: time`
-  >
-  >> `infinite` 不限制次数
-  >>
-  >
-- 动画次数
-  > `animation-play-state: status`
-  >
-  >> `pause` 暂停状态
-  >>
-  >
+- `animation-name: name` 名称
+- `animation-duration: time` 动画周期 单位秒
+- `animation-delay: time` 动画延迟 单位秒
+- `animation-time-function: type` 动画类型
+- `animation-iteration-count: time` 动画次数
+ `infinite` 不限制次数
+- `animation-play-state: status` 动画次数
+  > `pause` 暂停状态
 
 创建动画
 
@@ -793,7 +766,8 @@ xxx{
 
 ## 🗺️ 响应式Web布局
 
-响应式布局是：一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。 **考试**
+一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。
+**考试**
 
 优点
 
@@ -862,14 +836,11 @@ xxx{
 - `flex-end` 对齐于主轴终点
 - `center` 对齐于主轴中心
   > 会有沿主轴方向居中效果
-  >
 - `space-between` 分散对齐于容器主轴起点与终点 两端无间隙
 - `space-around` 分散对齐于容器主轴起点与终点
   > 两端有间隙 两端间隙为其他间隙的 $ \frac {1} {2} $
-  >
 - `space-evenly` 分散对齐于容器主轴起点与终点
   > 两端有间隙 间隙相等
-  >
 
 #### `align-items`
 
@@ -907,20 +878,12 @@ xxx{
 
 ## 大小单位
 
-### px 像素
-
-绝对单位 不受其他元素影响
-
-### em 字符
-
-相对单位 相对于父元素倍数
-
-#### rem
-
- 相对单位 相对于根元素的大小
-
-#### vh vw 视口单位
-
-vmin 选取vw和vh中最小的
-
-vmax 选取vw和vh中最大的
+- px 像素
+  > 绝对单位 不受其他元素影响
+- em 字符
+  > 相对单位 相对于父元素倍数
+- rem
+  > 相对单位 相对于根元素的大小
+- vh vw 视口单位
+  > `vmin` 选取vw和vh中最小的
+  > `vmax` 选取vw和vh中最大的

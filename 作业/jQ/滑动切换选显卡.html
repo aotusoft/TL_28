@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+</head>
+<style type="text/css">
+    .btns input {
+        width: 100px;
+        height: 40px;
+        background-color: grey;
+        border: 0;
+    }
+
+    .cons {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slides {
+        width: 1500px;
+        height: 300px;
+        /*把slide加长*/
+        position: absolute;
+    }
+
+    .cons > .slides > .litteBox {
+        width: 500px;
+        height: 300px;
+        background-color: gold;
+        text-align: center;
+        line-height: 300px;
+        font-size: 30px;
+        float: left;
+    }
+
+    .btns .current {
+        background-color: gold;
+    }
+</style>
+
+<body>
+<div class="btns">
+    <input type="button" value="01" class="current">
+    <input type="button" value="02">
+    <input type="button" value="03">
+</div>
+<div class="cons">
+    <div class="slides">
+        <div class="litteBox">选项卡1的内容</div>
+        <div class="litteBox">选项卡2的内容</div>
+        <div class="litteBox">选项卡3的内容</div>
+    </div>
+</div>
+</body>
+<script>
+    $(".btns input").click(function () {
+        var index = $(this).index();
+        $(".btns input").removeClass("current");
+        $(this).addClass("current");
+        $(".slides").css("left", -index * 500 + "px");
+    });
+</script>
+</html>

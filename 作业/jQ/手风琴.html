@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手风琴</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 500px;
+        height: auto;
+        margin: auto;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .outerUl > li {
+        text-align: center;
+        background-color: royalblue;
+        border-bottom: 1px solid gray;
+    }
+
+    .outerUl > li:last-child {
+        border-bottom: none;
+    }
+
+    .childUl > li {
+        width: 100%;
+        background-color: white;
+        line-height: 40px;
+    }
+
+    .childUl {
+        display: none;
+    }
+
+    h4 {
+        padding: 8px 0;
+    }
+</style>
+<body>
+<div class="box">
+    <ul class="outerUl">
+        <li>
+            <h4>软件教学</h4>
+            <ul class="childUl">
+                <li>java</li>
+                <li>web前端</li>
+                <li>安卓开发</li>
+                <li>iOS开发</li>
+            </ul>
+        </li>
+        <li>
+            <h4>游戏动漫</h4>
+            <ul class="childUl">
+                <li>英雄联盟</li>
+                <li>王者荣耀</li>
+                <li>超级玛丽</li>
+                <li>双截龙</li>
+            </ul>
+        </li>
+        <li>
+            <h4>电商企业</h4>
+            <ul class="childUl">
+                <li>淘宝</li>
+                <li>天猫</li>
+                <li>京东</li>
+                <li>苏宁易购</li>
+            </ul>
+        </li>
+        <li>
+            <h4>营销培训</h4>
+            <ul class="childUl">
+                <li>seo</li>
+                <li>微信营销</li>
+                <li>网络创业</li>
+                <li>市场营销</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    $(".outerUl > li").click(function () {
+        $(".childUl").not($(this).find(".childUl")).slideUp();
+        $(this).find(".childUl").slideToggle();
+    });
+</script>
+</html>

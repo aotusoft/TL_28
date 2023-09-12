@@ -75,5 +75,69 @@ css({
 - jQuery 返回 jQuery 对象
 - JavaScript 中返回 DOM 对象
 
+## 动画
+
+- 隐藏/显示
+  - hide()
+  - show()
+- 淡入/淡出
+  - fadeIn()
+  - fadeOut()
+  - fadeToggle()
+- 自定义动画
+  > animate()
+- stop() 停止动画或效果
+```javascript
+$("button").click(function(){
+    $("div").animate({
+      left:'250px',
+      opacity:'0.5',
+      height:'150px',
+      width:'150px'
+    });
+});
+```
+
 ## 事件
+
+绑定
+
+-`事件源.bind/on("事件类型","事件处理程序")`
+-`事件源.bind/on({"事件类型":"事件处理程序","事件类型":"事件处理程序"})`
+
+遍历
+
+```javascript
+$.each("数组/对象", function (index, item) {
+
+})
+$.each("对象", function (key, value) {
+
+})
+```
+
+## DOM 操作
+
+
+
+- $(xxx).width()
+- $(xxx).height()
+- $(xxx).outerWidth()
+  > 返回元素宽度(包括内边距和边框) offsetWidth
+- $(xxx).outerHeight()
+  > 返回元素高度(包括内边距和边框) offsetHeight
+
+
+添加
+
+|      | 元素之前 | 元素之后  |
+|------|----------|-----------|
+| 内部 | append() | prepend() |
+| 外部 | before() |  after()  |
+
+删除
+
+`remove()` 删除被选元素及其子元素 占位置
+
+`empty()` 从被选元素中删除子元素 不占位置
 

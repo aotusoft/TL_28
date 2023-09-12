@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>untitled</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+</head>
+<style>
+    body {
+        height: 3000px;
+    }
+
+    #box {
+        position: fixed;
+        bottom: 100px;
+        right: 50px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: blueviolet;
+        text-align: center;
+        line-height: 40px;
+        color: aliceblue;
+    }
+</style>
+<body>
+<div id="box">^</div>
+</body>
+<script>
+    $("#box").click(function () {
+        let len = $(document).scrollTop();
+        let timer = setInterval(function () {
+            len -= (len / 20);
+            if (len <= 1) {
+                $(document).scrollTop(0);
+                clearInterval(timer);
+            } else {
+                $(document).scrollTop(len);
+                console.log(len)
+            }
+        }, 1);
+    });
+</script>
+</html>

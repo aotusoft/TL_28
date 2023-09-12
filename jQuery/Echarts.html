@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.common.js"></script>
+
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px;"></div>
+</body>
+<script !src="">
+    var option = {
+        title: {text: '第一个 ECharts 实例'},
+        legend: {
+            data: [{
+                name: '系列1',
+                // 强制设置图形为圆。
+                icon: 'circle',
+                // 设置文本为红色
+                textStyle: {
+                    color: 'red'
+                }
+            }]
+        },
+        xAxis: {data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]},
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            },
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',  // 系列名称
+            type: 'bar',  // 系列图表类型
+            data: [5, 20, 36, 10, 10, 20]  // 系列中的数据内容}]
+        }],
+        type: 'bar'
+    }
+    echarts.init(document.getElementById('main')).setOption(option);
+</script>
+</html>

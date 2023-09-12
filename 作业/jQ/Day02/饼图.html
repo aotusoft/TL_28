@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>untitled</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.common.js"></script>
+</head>
+<body>
+<div id="box" style="width: 800px;height:800px;"></div>
+</body>
+<script !src="">
+    let option = {
+        title: {text: 'Search Engines Market Share'},
+        legend: {},
+        series: [{
+            name: 'Access From',
+            type: 'pie',
+            radius: ['40%', '70%'],
+            center: ['50%', '50%'],
+            roseType: 'area',
+            itemStyle: {
+                borderRadius: 8
+            },
+            data: [
+                {value: 90.68, name: 'Google'},
+                {value: 3.23, name: 'Bing'},
+                {value: 3.17, name: 'Yahoo'},
+                {value: 0.48, name: 'Naver'},
+                {value: 0.35, name: 'DuckDuckGo'},
+                {value: 2.09, name: 'Other'}
+            ]
+        }
+        ],
+        tooltip: {
+            trigger: 'item'
+        },
+    }
+    echarts.init(document.getElementById('box')).setOption(option);
+</script>
+</html>

@@ -84,9 +84,9 @@ css({
   - fadeIn()
   - fadeOut()
   - fadeToggle()
+- stop() 停止动画或效果
 - 自定义动画
   > animate()
-- stop() 停止动画或效果
 ```javascript
 $("button").click(function(){
     $("div").animate({
@@ -102,42 +102,53 @@ $("button").click(function(){
 
 绑定
 
--`事件源.bind/on("事件类型","事件处理程序")`
--`事件源.bind/on({"事件类型":"事件处理程序","事件类型":"事件处理程序"})`
+- `事件源.bind/on("事件类型","事件处理程序")`
+- `事件源.bind/on({"事件类型":"事件处理程序","事件类型":"事件处理程序"})`
 
 遍历
 
 ```javascript
 $.each("数组/对象", function (index, item) {
-
+  xxx
 })
 $.each("对象", function (key, value) {
-
+  xxx
 })
 ```
 
 ## DOM 操作
 
+### 尺寸修改
 
-
-- $(xxx).width()
-- $(xxx).height()
-- $(xxx).outerWidth()
+- `$(xxx).width()`
+- `$(xxx).height()`
+- `$(xxx).outerWidth()`
   > 返回元素宽度(包括内边距和边框) offsetWidth
-- $(xxx).outerHeight()
+- `$(xxx).outerHeight()`
   > 返回元素高度(包括内边距和边框) offsetHeight
-
-
-添加
+  
+### 添加
 
 |      | 元素之前 | 元素之后  |
 |------|----------|-----------|
 | 内部 | append() | prepend() |
 | 外部 | before() |  after()  |
 
-删除
+### 删除
 
-`remove()` 删除被选元素及其子元素 占位置
+- `remove()` 删除被选元素及其子元素 占位置
+- `empty()` 从被选元素中删除子元素 不占位置
 
-`empty()` 从被选元素中删除子元素 不占位置
+### 修改
 
+- html() 设置或返回元素内容
+  > innerHTML()
+- text() 设置或返回元素文本
+  > innerText()
+- val() 设置或返回元素文本
+- attr() 设置或返回元素属性
+- prop() 设置或返回元素属性
+
+attr()可获取设置元素的自定属性 prop()不可行
+
+prop() 控件属性时返回值为布尔类型 attr()为实际值

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="user">姓名: </label>
+    <input id="user" type="text" onkeyup="show(this.value)"/>
+    <p id="result"></p> <br><br><br>
+    <label for="name">姓名: </label>
+    <input id="name" type="text" onkeyup="show(this.value)"/>
+    <label for="password">密码: </label>
+    <input id="password" type="text" onkeyup="show(this.value)"/>
+    <button onclick="login()">提交</button>
+</body>
+<script>
+    let xhr = new XMLHttpRequest();
+    function show(str) {
+        xhr.open("get", "getHead.php?q=" + str, true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.write(xhr.response)
+            }
+        }
+    }
+
+    function login() {
+        let name = document.getElementById("name");
+        let password = document.getElementById("password");
+        xhr.open("post","tt_post.php")
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send("name="+name.name+"&password="+password.name)
+    }
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="color.js"></script>
+</head>
+<body>
+<h1>
+    单击按钮向后台请求数据，动态的创建列表，将数据渲染在浏览器端，且每一行的颜色不一样
+</h1>
+<button onclick="getData();">获取数据</button>
+<div id="box"></div>
+</body>
+<script>
+    console.log(changeColor())
+
+    var box = document.getElementById('box')
+
+    function getData() {
+        if (window.XMLHttpRequest) {
+            var xhr = new XMLHttpRequest()
+        } else {
+            var xhr = ActiveXObject()
+        }
+        xhr.open('get', 'http://jsonplaceholder.typicode.com/posts?userId=' + 5)
+        xhr.send()
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.response)
+                var arr = JSON.parse(xhr.response)
+                console.log(arr)
+                // 创建ul
+                var ulObj = document.createElement('ul')
+                box.appendChild(ulObj)
+                // 遍历数组
+                arr.forEach(function (value, index) {
+                    var liObj = document.createElement('li')
+                    ulObj.appendChild(liObj)
+                    liObj.innerText = value.title
+                    // liObj.setAttribute('style', 'color:rgb(255,0,0)')
+                    liObj.setAttribute('style', 'color:rgb' + changeColor() + '')
+                })
+            }
+        }
+    }
+</script>
+</html>

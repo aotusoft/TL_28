@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax初始</title>
+  </head>
+  <body>
+    <h1></h1>
+  </body>
+  <script>
+    /* 
+    一、什么是Ajax:异步的JavaScript和XML
+    二、Ajax的特点：
+        1、局部加载
+        2、异步更新
+    三、Ajax的工作原理或者过程
+        1、创建Ajax对象
+        2、配置请求的地址、请求的方式、是否异步
+        3、向后端发起请求
+        4、服务器接受数据进行数据的判断
+        5、将数据返回给浏览器
+        6、浏览器将接收的数据渲染
+  */
+    // 1、
+    if (window.XMLHttpRequest) {
+      var xhr = new XMLHttpRequest()
+      console.log(xhr)
+      console.log(typeof xhr)
+      console.log(xhr.constructor)
+      console.log(xhr instanceof Object)
+    } else {
+      // iE6/7/8
+      var xhr = new ActiveXObject()
+    }
+    // 2、
+    // ajax对象.open(请求的方式，请求的地址，是否异步)   true是异步，false同步，默认不写就是异步
+    xhr.open('get', '28期数据', true)
+    // 3、
+    xhr.send()
+    // 4、
+    xhr.onreadystatechange = function () {
+      console.log(xhr)
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        // 5、
+        console.log(xhr.response)
+        // 6、
+        document.getElementsByTagName('h1')[0].innerText = xhr.response
+      }
+    }
+  </script>
+</html>

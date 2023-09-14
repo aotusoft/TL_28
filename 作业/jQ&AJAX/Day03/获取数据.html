@@ -18,7 +18,7 @@
     function getData() {
         $.ajax({
             type: "get",
-            url: "http://jsonplaceholder.typicode.com/posts?userId=" + 5,
+            url: "http://jsonplaceholder.typicode.com/posts?userId=5",
             success: function (res) {
                 $("#box").html("<ul id='list'></ul>");
                 for (let i = 0; i < res.length; i++) {

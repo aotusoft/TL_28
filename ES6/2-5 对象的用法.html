@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let username = 'root'
+    let password = 456
+    let a = 'first'
+    let b = 'Name'
+    let c = 'eat'
+    let d = 'Food'
+    const connection = {
+      username,
+      password,
+      linkData() {
+        console.log(this.username + '可以链接数据库')
+      },
+      // "firstName":"Zhang"
+      [a + b]: 'Zhang',
+      [c + d]() {
+        console.log('执行了！！！')
+      },
+    }
+    console.log(connection)
+    console.log(connection.username)
+    console.log(connection.password)
+    connection.linkData()
+    console.log(connection.firstName)
+    console.log(connection[a + b])
+    connection[c + d]()
+
+    /* 
+      ES6中新增对象的语法：、
+        1、如果对象的属性值是一个变量且与属性名的名称一样，可以省略:属性值
+        2、对象的方法可以省略:function
+        3、对象的属性名或者方法名可以是字符串的拼接，需要添加[]
+    */
+  </script>
+  <script>
+    // 1、Object.is(x,y) 比较两个值是否严格相等，或者说全等，返回布尔
+    console.log('12' == 12) //true
+    console.log('12' === 12) //false
+    console.log(Object.is('12', 12)) //false
+    console.log(Object.is(12, 12)) //true
+    // 2、Object.assign(target,origin)target和origin都是对象。合并两个对象，返回一个新对象
+    let objTarget = {
+      name: '小花',
+      age: 12,
+    }
+    let objOrigin = {
+      name: '小丽',
+      sex: '女生',
+      like() {
+        console.log('喜欢逛街')
+      },
+    }
+    let newObj = Object.assign(objTarget, objOrigin)
+    console.log(newObj)
+    // 3、Object.getPrototypeOf(实例化对象)  获取实例化对象的构造函数的原型
+    function Person() {};
+    Person.prototype.name = '小刚' ;
+    Person.prototype.age = 12;
+    let p1 = new Person()
+    console.log(p1.__proto__)//原型
+    console.log(Object.getPrototypeOf(p1))//原型
+    ///4、Object.setPrototypeOf(实例化对象，原型对象)
+    Object.setPrototypeOf(p1,{
+      pageSize:12,
+      pageNum:10
+    })
+    console.log(Object.getPrototypeOf(p1));
+  </script>
+</html>

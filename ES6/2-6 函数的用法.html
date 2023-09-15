@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>函数的用法</title>
+  </head>
+  <body></body>
+  <script>
+    // 1、对形参数赋值
+    function demo1(x = 5) {
+      console.log(x)
+    }
+    demo1()
+    demo1(10)
+    // 2、参数可以是数组的解构赋值
+    let arr = ['java', 'web', 'C']
+    function demo2([x, y, z, w = 5]) {
+      console.log(x)
+      console.log(y)
+      console.log(z)
+      console.log(w)
+    }
+    demo2(arr)
+    // 3、参数可以对象的解构赋值
+    function demo3({ pageNum, pageSize, length = 15 }) {
+      console.log(pageNum)
+      console.log(pageSize)
+      console.log(length)
+    }
+    demo3({
+      pageSize: 10,
+      pageNum: 1,
+    })
+    // 4、rest参数：剩下的参数，返回一个数组
+    function demo4(a, b, ...rest) {
+      console.log(a)
+      console.log(b)
+      console.log(rest)
+    }
+    demo4(10, 20, 30, 40, 50)
+  </script>
+</html>

@@ -125,8 +125,6 @@ eg:
 name相同时会单选效果
 value指定属性
 
-
-
 ### 复选框
 
 `checkbox`
@@ -135,9 +133,25 @@ value指定属性
 
 `textarea`
 
+## 文件
+
+`file`
+
+首先需要在 `form` 属性中设置 `enctype ="multipart/form-data"` 最后提交 form 表单 
+
+这样做会直接刷新页面
+
+## 图片
+
+`image`
+
+在 src 属性中设置图片位置
+点击图片后会提交表单
+
 ## 下拉框
 
 `<select><option></option></select>`组合标签
+select 标签同添加 `multiple` 属性后可进行多选
 
 ## H5新特性表单域
 
@@ -173,12 +187,14 @@ value指定属性
 
 # 新增多媒体标签
 
-- audio 音频标签
+## audio 音频标签
+
   controls 显示控制器
   loop 循环播放
   muted 静音播放
 
-- video 视频标签
+## video 视频标签
+
   controls 显示控制器
   loop 循环播放
   muted 静音播放

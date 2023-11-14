@@ -1,16 +1,12 @@
-/* 清除浏览器默认边距，
-使边框和内边距的值包含在元素的width和height内 */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 /* 使用flex布局，让内容垂直和水平居中 */
-
 section {
-  /* 相对定位 */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -22,23 +18,21 @@ section {
 }
 
 /* 背景颜色 */
-section .color {
+.color {
   /* 绝对定位 */
   position: absolute;
-  /* 使用filter(滤镜) 属性，给图像设置高斯模糊*/
+  /* 使用filter 背景设置高斯模糊*/
   filter: blur(200px);
 }
 
-/* :nth-child(n) 选择器匹配父元素中的第 n 个子元素 */
-
-section .color:nth-child(1) {
+.color:nth-child(1) {
   top: -350px;
   width: 600px;
   height: 600px;
   background: #ff359b;
 }
 
-section .color:nth-child(2) {
+.color:nth-child(2) {
   bottom: -150px;
   left: 100px;
   width: 500px;
@@ -46,7 +40,7 @@ section .color:nth-child(2) {
   background: #fffd87;
 }
 
-section .color:nth-child(3) {
+.color:nth-child(3) {
   bottom: 50px;
   right: 100px;
   width: 500px;
@@ -59,39 +53,37 @@ section .color:nth-child(3) {
 }
 
 /* 背景圆样式 */
-
-.box .circle {
+.circle {
   position: absolute;
   background: rgba(255, 255, 255, 0.1);
   /* backdrop-filter属性为一个元素后面区域添加模糊效果 */
   backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 45px #0000001a;
+  border: 1px solid #ffffff80;
+  border-right: 1px solid #ffffff33;
+  border-bottom: 1px solid #ffffff33;
   border-radius: 50%;
   /* 使用filter(滤镜) 属性，改变颜色。
-  hue-rotate(deg)  给图像应用色相旋转 
-  calc() 函数用于动态计算长度值 
-  var() 函数调用自定义的CSS属性值x*/
+    hue-rotate(deg)  给图像应用色相旋转
+    calc() 函数用于动态计算长度值
+    var() 函数调用自定义的CSS属性值x*/
   filter: hue-rotate(calc(var(--x) * 70deg));
   /* 调用动画animate，需要10s完成动画，
-  linear表示动画从头到尾的速度是相同的，
-  infinite指定动画应该循环播放无限次*/
+    linear表示动画从头到尾的速度是相同的，
+    infinite指定动画应该循环播放无限次*/
   animation: animate 10s linear infinite;
   /* 动态计算动画延迟几秒播放 */
   animation-delay: calc(var(--x) * -1s);
 }
 
 /* 背景圆动画 */
-
 @keyframes animate {
   0%,
   100% {
-    transform: translateY(-50px);
+      transform: translateY(-50px);
   }
   50% {
-    transform: translateY(50px);
+      transform: translateY(50px);
   }
 }
 
@@ -133,104 +125,167 @@ section .color:nth-child(3) {
 }
 
 /* 登录框样式 */
-
 .container {
-  position: relative;
   width: 400px;
-  min-height: 400px;
-  background: rgba(255, 255, 255, 0.1);
+  height: 400px;
+  background: #ffffff1a;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 45px #00000019;
+  border: 1px solid #ffffff7f;
+  border-right: 1px solid #ffffff33;
+  border-bottom: 1px solid #ffffff33;
 }
 
 .form {
-  position: relative;
   width: 100%;
   height: 100%;
   padding: 50px;
+  overflow: hidden;
 }
 
 /* 登录标题样式 */
-
 .form h2 {
   position: relative;
-  color: #fff;
+  color: white;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 5px;
   margin-bottom: 30px;
-  cursor: pointer;
+  cursor: default;
 }
 
-/* 登录标题的下划线样式 */
-
+/* 登录标题下划线样式 */
 .form h2::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -6px;
   width: 0px;
   height: 3px;
-  background: #fff;
-  transition: 0.5s;
+  background: white;
+  transition: 0.3s;
 }
 
 .form h2:hover:before {
   width: 53px;
 }
 
-.form .inputBox {
+.inputBox {
+  margin: 20px 0;
   width: 100%;
-  margin-top: 20px;
+  background: #ffffff66;
+  border-radius: 30px;
+  border: 1px solid #ffffff80;
+  border-right: 1px solid #ffffff33;
+  border-bottom: 1px solid #ffffff33;
+  box-shadow: 0 5px 15px #0000000d;
+}
+
+.inputBox:nth-child(4) {
+  width: fit-content;
+  height: fit-content;
 }
 
 /* 输入框样式 */
-
-.form .inputBox input {
-  width: 100%;
+.input-area {
   padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
   outline: none;
   border: none;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 16px;
   letter-spacing: 1px;
-  color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff00;
+  font-size: 16px;
+  color: white;
 }
-
-.form .inputBox input::placeholder {
-  color: #fff;
+input::placeholder {
+  color: white;
 }
 
 /* 登录按钮样式 */
-
-.form .inputBox input[type="submit"] {
-  background: #fff;
+.submit {
+  height: 44px;
+  width: 100px;
+  outline: none;
+  border: none;
+  background-color: #ffffff00;
+  font-size: 16px;
+  border-radius: 30px;
+  background: white;
   color: #666;
-  max-width: 100px;
-  margin-bottom: 20px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
-.forget {
-  margin-top: 6px;
+.submit:hover {
+  background-color: #1e293b;
   color: #fff;
+  transform: scale(1.085);
+}
+
+.submit:active {
+  transform: scale(1.025);
+}
+
+.operate {
+  margin-top: 6px;
+  color: white;
   letter-spacing: 1px;
 }
 
-.forget a {
-  color: #fff;
-  font-weight: 600;
+.operate a {
+  margin: 0 10px;
+  position: relative;
+  color: white;
   text-decoration: none;
+}
+
+.operate a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.operate a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a {
+  margin: 0 10px;
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+a.warning::after {
+  background-color: #ff359b;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

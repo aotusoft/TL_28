@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>纯杏起始页</title>
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/c/font_3865589_713jmlj249e.css?spm=a313x.7781069.1998910419.53&file=font_3865589_713jmlj249e.css"
+    />
+    <!-- 阿里图标库 -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- 引入css文件 -->
+    <script src="./js/time.js"></script>
+    <!-- 引入别人写好的时间模块 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- 引入vue包 -->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <!-- 这个暂时用不到因为我们本期用的是jsonp请求 -->
+  </head>
+  <body>
+    <!-- 首先建立一个用于挂载vue的盒子 -->
+    <div id="app" :class="{'focus':isFocus,'hover':isHover&&!isFocus}">
+      <div id="bground">
+        <img
+          class="bg"
+          @load="onload()"
+          src="./img/Default1.jpg"
+          :style="loadf? 'display:block;opacity: 1;':''"
+        />
+        <!-- 当loadf为true时添加display:block;opacity: 1; -->
+        <!-- 加一个滤镜 -->
+        <div class="cover"></div>
+      </div>
+      <div id="body">
+        <div class="bhead">
+          <div
+            class="timer"
+            :style="(timer!='00:00'&&loadf==true) ? 'opacity: 1;display:block' : '' "
+          >
+            {{timer[0]}}<span>:</span>{{timer[1]}}
+          </div>
+          <div id="unFocusCover" @click.stop="searchBlur"></div>
+          <!-- 用于取消聚焦事件 -->
+          <div class="searchBox">
+            <div class="search">
+              <input
+                type="text"
+                placeholder="搜索"
+                size="30"
+                @focus="searchFocus"
+                v-model="searchValue"
+                @keyup.enter="search"
+                @input="searchinput"
+                autocomplete="off"
+                ondrop="event.dataTransfer.dropEffect='none';event.stopPropagation(); event.preventDefault();"
+                ondragover="event.dataTransfer.dropEffect='none';event.stopPropagation(); event.preventDefault();"
+              /><!-- 禁止拖动文本进搜索框内和禁止使用历史填写记入直接显示针对部分浏览器 -->
+            </div>
+            <div
+              id="SearchEngBtn"
+              class="searchInputBtn"
+              @mouseover="isHover=true"
+              @mouseleave="isHover=false"
+              :style="isFocus?'opacity: 1':''"
+            >
+              <span class="iconfont icon-Bing searchInputBtn"></span>
+            </div>
+            <div
+              id="SearchBtn"
+              class="searchInputBtn"
+              @mouseover="isHover=true"
+              @mouseleave="isHover=false"
+              :style="isFocus?'opacity: 1':''"
+              @click="isFocus?search():''"
+            >
+              <span class="iconfont icon-sousuo"></span>
+            </div>
+          </div>
+          <div class="searchSuggestionContainer" :style="advSearchBoxStyle">
+            <ul>
+              <li class="DefaultSuggest" @click="search(searchValue,true,true)">
+                <span class="iconfont icon-shuyi_fanyi-36"></span>翻译:
+                {{searchValue}}
+              </li>
+              <li
+                class="add"
+                v-for="list in advSuggest"
+                @click="search(list,true)"
+              >
+                {{list}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./js/index.js"></script>

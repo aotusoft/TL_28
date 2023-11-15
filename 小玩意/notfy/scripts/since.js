@@ -1,4 +1,4 @@
-function show_date_time () {
+function show_date_time() {
     window.setTimeout(function () {
         show_date_time();
     }, 1000);
@@ -13,6 +13,6 @@ function show_date_time () {
     var e_minsold = (e_hrsold - hrsold) * 60;
     var minsold = Math.floor((e_hrsold - hrsold) * 60);
     var seconds = Math.floor((e_minsold - minsold) * 60);
-    $('#since').html(daysold + "Ìì" + hrsold + "Ğ¡Ê±" + minsold + "·Ö" + seconds + "Ãë");
+    document.getElementById('since').innerText = daysold + "å¤©" + hrsold + "å°æ—¶" + minsold + "åˆ†é’Ÿ" + seconds + "ç§’";
 }
 show_date_time();

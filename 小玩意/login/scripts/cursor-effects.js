@@ -24,13 +24,17 @@ class Circle {
 }
 
 class Boom {
-  constructor ({ origin, context, circleCount = 10, area }) {
+  constructor({ origin, context, circleCount = 10, area }) {
     this.origin = origin
     this.context = context
     this.circleCount = circleCount
     this.area = area
     this.stop = false
     this.circles = []
+  }
+
+  night() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
   }
 
   randomArray(range) {
@@ -40,7 +44,12 @@ class Boom {
   }
 
   randomColor() {
-    const range = ['8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+    let range;
+    if (this.night()) {
+      range = ['3', '4', '5', '6', '7', '8', '9', 'A']
+    } else {
+      range = ['8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+    }
     return '#' + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range)
   }
 
@@ -49,7 +58,7 @@ class Boom {
   }
 
   init() {
-    for(let i = 0; i < this.circleCount; i++) {
+    for (let i = 0; i < this.circleCount; i++) {
       const circle = new Circle({
         context: this.context,
         origin: this.origin,
@@ -94,17 +103,20 @@ class CursorSpecialEffects {
   }
 
   handleMouseDown(e) {
-    const boom = new Boom({
-      origin: { x: e.clientX, y: e.clientY },
-      context: this.computerContext,
-      area: {
-        width: this.globalWidth,
-        height: this.globalHeight
-      }
-    })
-    boom.init()
-    this.booms.push(boom)
-    this.running || this.run()
+    //鼠标右键不触发事件
+    if (e.button != 2) {
+      const boom = new Boom({
+        origin: { x: e.clientX, y: e.clientY },
+        context: this.computerContext,
+        area: {
+          width: this.globalWidth,
+          height: this.globalHeight
+        }
+      })
+      boom.init()
+      this.booms.push(boom)
+      this.running || this.run()
+    }
   }
 
   handlePageHide() {

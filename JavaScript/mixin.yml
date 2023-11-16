@@ -1,5 +1,0 @@
-mixin: # object
-  rules:
-    - "DOMAIN-SUFFIX,google.com.hk,REJECT"
-  hosts:
-    'www.baidu.com': '127.0.0.1'

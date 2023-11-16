@@ -6,16 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cube Generator</title>
   <link rel="stylesheet" href="style.min.css">
-  <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/animejs/3.2.1/anime.min.js"
-    type="application/javascript"></script>
+  <script src="./anime.js" type="application/javascript"></script>
 </head>
 
 <body>
   <div class="btn" onclick="GenCube()">重新生成</div>
 </body>
 <script>
-  const count = 80
-  const colors = ['gold', 'orange', 'chocolate', 'skyblue', 'darkcyan', 'green', 'turquoise']
+  const count = 3
+  const colors = ['#ff359b', '#fffd87', '#00d2ff']
   for (let i = 0; i < count; i++) {
     const body = document.body
     const block = document.createElement('div')
@@ -27,9 +26,10 @@
   function GenCube() {
     anime({
       targets: '.block',
-      translateX: () => anime.random(-900, 900),
-      translateY: () => anime.random(-600, 600),
-      scale: () => anime.random(1, 6)
+      translateX: () => anime.random(-800, 800),
+      translateY: () => anime.random(-300, 300),
+      scale: () => anime.random(3, 8),
+      duration: 2000,
     })
   }
   GenCube()

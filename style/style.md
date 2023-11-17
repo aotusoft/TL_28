@@ -144,7 +144,7 @@ margin > float > 定位
 
 ## 📮 盒子模型
 
- 盒子模型 包括 边框border 内边距padding 外边距margin
+盒子模型 包括 边框border 内边距padding 外边距margin
 
 网页布局的本质：拼接盒子的过程
 
@@ -544,9 +544,7 @@ Element **CSS3 新特性**
 
 # 标签显示模式
 
-## 分类
-
-### 块状元素
+## 块状元素
 
 > h1~h6/p/div/ul/li/dd/dt/form/table/thead/tr/caption
 > header/section/footer/nav/aside/article
@@ -555,7 +553,7 @@ Element **CSS3 新特性**
 - 可设置宽高
 - 可包含其他标签 **标题标签无法包含标题标签 p标签不能包含块元素 table只能**
 
-### 行内元素/内联元素
+## 行内元素/内联元素
 
 > span/a
 
@@ -563,11 +561,11 @@ Element **CSS3 新特性**
 - 无法设置宽高
 - 只能包含行内元素
 
-### 行内块元素
+## 行内块元素
 
 > img/label/input/select/button
 
-- 有默认宽高 有内容所撑起
+- 有默认宽高 由内容所撑起
 - 可设置宽高
 - 相邻的元素在同一行
 - 一般不包含其他元素

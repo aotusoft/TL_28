@@ -1,4 +1,4 @@
-# OOP
+# 基于对象
 
 ![img.png](img.png "面向对象")
 
@@ -6,8 +6,7 @@ Everything is object.
 
 ## 对象
 
-对象是一个容器 封装了属性(property)和方法(method)
-
+对象是一个容器 封装了**属性(property)**和**方法(method)**
 对象可理解为数据集  无序属性的集合
 
 ## 面向对象

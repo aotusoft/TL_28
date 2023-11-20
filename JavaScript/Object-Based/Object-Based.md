@@ -2,35 +2,35 @@
 
 ![img.png](img.png "面向对象")
 
-Everything is object.
+**Everything is object.**
 
-## 对象
+# 对象
 
 对象是一个容器 封装了**属性(property)**和**方法(method)**
 对象可理解为数据集  无序属性的集合
 
-## 面向对象
+# 面向对象
 
 将真实世界复杂关系抽象为一个个对象 然后由对象之间的分工与合作 完成对真实世界的模拟
 
-### 秒懂
+## 秒懂
 
 ![img_1.png](img_1.png "面向对象秒懂")
 
-### 特征
+## 特征
 
 - 封装
 - 继承
 - 多态
 
-### 创建对象
+## 创建对象
 
 - 字面量创建
 - `new Object()` 创建
 - 工厂模式
-  > `function www(xxx,yyy,zzz){}` 创建
+  - `function www(xxx,yyy,zzz){}` 创建
 - 构造函数
-  > function Xxx(){}
+  - function Xxx(){}
 
 实例化对象有默认的 `constructor` 属性 指向构造函数
 
@@ -44,46 +44,45 @@ var fn2 = new Function('num1', 'num2', "return num1+num2")
 console.log(fn2(10, 20)) //30
 ```
 
-### 判断
+## 判断
 
 `instanceof`
 
-### 内存
+## 内存
 
-#### 内存分配
+### 内存分配
 
 变量定义 函数声明
 
-#### 内存使用
+### 内存使用
 
 变量运算 操作 函数调用
 
-#### 内存销毁
+### 内存销毁
 
 浏览器关闭 函数调用完成
-
 JavaScript 拥有自主销毁内存的机制
 
 
-## 原型
+# 原型
 
-### 作用
+## 作用
 
 - 节省内存空间
 - 实现数据共享(继承)
 
 考试
 
-### 构造函数 实例对象 原型直接关系 
+## 构造函数 实例对象 原型直接关系 
 
 - 函数有 `prototype` 原型默认属性
-  > `prototype` 本身为对象
+  - `prototype` 本身为对象
 - 构造函数 `prototype` 上的属性和方法可被实例化对象继承
 - 对象有 `constructor` 属性，实例化对象的 `constructor` 属性指向构造函数
 - `prototype` 也存在 `constructor` 属性  `constructor` 指向构造函数
-  > `Xxx.prototype.constructor === Xxx`
+  - `Xxx.prototype.constructor === Xxx`
 - 对象有 `__proto__` 属性，实例化对象的 `constructor` 属性指向构造函数
-  > `Xxx.__proto__ === Xxx.prototype`
+  - `Xxx.__proto__ === Xxx.prototype`
 
 将公共的属性和方法挂载到原型上
 
@@ -101,36 +100,36 @@ new Person("aaa");
 new Person("bbb");
 ```
 
-## 原型链
+# 原型链
 
 Object 原型中的 `__proto__` 指向 `null`
 
-### 查找规则
+## 查找规则
 
 [//]: # (先从构造函数 -> 原型链 -> undefined)
 
 最终指向 `null`
 
-### 改变this指向
+## 改变this指向
 
-#### call()
+### call()
 
 - 进行函数的调用
 - 改变 `this` 的指向 
-  > 没有参数时 `this` 指向 `window`
-  > 一个参数时 `this` 指向 该参数
+  - 没有参数时 `this` 指向 `window`
+  - 一个参数时 `this` 指向 该参数
 
-#### apply()
+### apply()
 
 - 进行函数的调用
 - 改变 `this` 的指向
-  > 没有参数时 `this` 指向 `window`
+  - 没有参数时 `this` 指向 `window`
 
-#### bind()
+### bind()
 
 - 不会进行函数的调用
 - 改变 `this` 的指向
-  > 没有参数时 `this` 指向 `window`
+  - 没有参数时 `this` 指向 `window`
 
 ```javascript
 var name = "xxx";
@@ -152,22 +151,22 @@ var obg = {
 }
 ```
 
-### 原型对象的函数中的this指向
+## 原型对象的函数中的this指向
 
 如果被实例化对象所调用 this指向实例化对象
 如果被原型对象调用 this指向原型对象
 
 
-### new关键字的作用
+## new关键字的作用
 
 - 创建实例化对象
 - 让构造函数中的this指向实例化对象
 
-### new关键字的底层原理
+## new关键字的底层原理
 
-+ `var person = {}` 创建新对象
-+ `Person.call(person)` 构造函数调用完成让this指向实例对象 实例对象拥有构造函数中的属性和方法
-+ `p1.__proto__` 指向 `Person.protoType` 实例化对象的指针地址指向构造函数的原型 地址相同
+1. `var person = {}` 创建新对象
+2. `Person.call(person)` 构造函数调用完成让this指向实例对象 实例对象拥有构造函数中的属性和方法
+3. `p1.__proto__` 指向 `Person.protoType` 实例化对象的指针地址指向构造函数的原型 地址相同
 
 ```javascript
 function Person(name) {
@@ -178,23 +177,23 @@ Person.prototype.age = 18;
 var person = new Person("小明");
 ```
 
-## 继承
+# 继承
 
-### 原型继承
+## 原型继承
 
-### 构造继承
+## 构造继承
 
-### 拷贝继承
+## 拷贝继承
 
-## 函数
+# 函数
 
-### 调用方式
+## 调用方式
 
 函数名()
 
 `call()`/`apply()`
 
-#### 自调用
+### 自调用
 
 ```javascript
 (function () {
@@ -206,11 +205,11 @@ var xxx = (function () {
 })()
 ```
 
-### 对象中的调用
+## 对象中的调用
 
-### 数组中的调用
+## 数组中的调用
 
-### 函数作为参数调用
+## 函数作为参数调用
 
 ```javascript
 function xxx(x) {
@@ -221,7 +220,7 @@ xxx(function () {
 })
 ```
 
-### 函数作为参数返回
+## 函数作为参数返回
 
 ```javascript
 function xxx(x) {
@@ -232,20 +231,20 @@ xxx(function () {
 })
 ```
 
-## 闭包
+# 闭包
 
 定义在一个函数内部的函数
 
-### 作用 
+## 作用 
 
 - 获取父函数内部的变量
 - 锁住父函数内部的变量
 
-### 本质
+## 本质
 
 让父函数相对于子元素成为永恒作用域
 
-## 正则表达式
+# 正则表达式
 
 - 特定字符
 - 元字符
@@ -254,7 +253,7 @@ xxx(function () {
 
 `var xxx = new RegExp()`
 
-### 元字符
+## 元字符
 
 - `\d` 匹配至少一个数字字符
 - `\D` 匹配至少一个非数字任意字符
@@ -272,16 +271,16 @@ xxx(function () {
 - `?` 匹配重复0次或1次
 - `+` 匹配至少重复1次或无限次
 - `{n}` 匹配至少重复 `n` 次
-  > `^{n}$` 匹配必须重复 `n` 次
+  - `^{n}$` 匹配必须重复 `n` 次
 - `{n,m}` 匹配重复 `n` 到 `m` 次
 
 
-## Web 存储
+# Web 存储
 
 - localStorage 本地存储 永久存储
 - sessionStorage 会话存储 会话存储
 
-### 方法
+## 方法
 
 - `length` 数据长度
 - `setItem(key,value)` 存储数据

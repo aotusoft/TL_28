@@ -1,0 +1,31 @@
+{
+    "name": "知雨",
+    "short_name": "知雨",
+    "theme_color": "#ffe7b3",
+    "background_color": "#edffd3",
+    "display": "standalone",
+    "start_url": "/",
+    "shortcuts": [
+      {
+        "name": "作业",
+        "short_name": "Play Later",
+        "description": "View the list of podcasts you saved for later",
+        "url": "/作业/"
+      },
+      {
+        "name": "小玩意",
+        "short_name": "Subscriptions",
+        "description": "View the list of podcasts you listen to",
+        "url": "/小玩意/"
+      }
+    ],
+    "scope": "/",
+    "icons": [
+        {
+            "src": "https://coor.top/avatar",
+            "sizes": "480x480",
+            "type": "image/png"
+        }
+    ],
+    "splash_pages": null
+}

@@ -5,17 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/notyf.css">
-    <!-- <script src="./js/notyf.js"></script> -->
-    <!-- <script src="./js/notyf.min.js"></script> -->
-    <!-- <script src="./js/notyf.run.js"></script> -->
     <title>Document</title>
 </head>
 
 <body>
-
+    <div id="date"></div>
 </body>
 <script>
+    let ele = document.getElementById("date");
+    function print() {
+        var date = new Date();
+        let now = (date.getFullYear() + "-" + (date.getMonth() + 1).toString().padStart(2, "0") + "-" + date.getDay().toString().padStart(2, "0") + " " +
+            date.getHours().toString().padStart(2, "0") + ":" + date.getMinutes().toString().padStart(2, "0") + ":" + date.getSeconds().toString().padStart(2, "0"));
+        ele.innerText = now;
+    }
+
+    setInterval("print()", 250);
+</script>
+
+<!-- <script>
     // window 浏览器对象 window对象下的属性和方法能直接掉window
     // console 控制台对象 浏览器对象的属性
     // log() 打印方法
@@ -41,5 +49,6 @@
     fn()
     alert(a)//1
 
-</script>
+</script> -->
+
 </html>

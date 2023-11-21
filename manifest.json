@@ -2,7 +2,7 @@
     "name": "知雨",
     "short_name": "知雨",
     "theme_color": "#ffe7b3",
-    "background_color": "#edffd3",
+    "background_color": "#f7ffeb",
     "display": "standalone",
     "start_url": "/",
     "shortcuts": [

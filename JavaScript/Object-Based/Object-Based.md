@@ -99,16 +99,38 @@ Person.prototype.sex = "yyy";
 new Person("aaa");
 new Person("bbb");
 ```
+基于原型拷贝
+
+## Prototype和__proto__关系
+
+### prototype 属性
+
+- prototype 是函数对象特有的属性，它指向一个对象，这个对象就是实例化该构造函数后的对象的原型。
+- 当使用 new 关键字创建一个对象实例时，该对象的 `__proto__` 属性就会指向构造函数的 prototype 属性。
+
+## `__proto__` 属性：
+
+`__proto__` 是每个对象（包括函数对象）都具有的属性，它指向该对象的原型。
+在现代 JavaScript 中，推荐使用 `Object.getPrototypeOf()` 方法或者 `Object.setPrototypeOf()` 方法来访问或设置对象的原型，而不是直接使用 `__proto__`。
+
+虽然 prototype 和 `__proto__` 都涉及原型链，但它们用途不同，一个是函数特有的，用于指定构造函数的原型，而另一个是每个对象实例都具有的，用于指向该对象的原型。在现代 JavaScript 中，更推荐使用 `Object.getPrototypeOf()` 和 `Object.setPrototypeOf()` 来操作原型链，而不是直接操作 `__proto__`。
 
 # 原型链
 
-Object 原型中的 `__proto__` 指向 `null`
+`__proto__` 用于访问对象的原型，是 JavaScript 中的一个非标准属性
 
 ## 查找规则
 
 [//]: # (先从构造函数 -> 原型链 -> undefined)
 
-最终指向 `null`
+对象 -> 原型对象1 -> 原型对象2 -> ... -> Object.prototype -> null
+
+ - **对象**：JavaScript 中的对象实例，拥有自己的属性和方法。
+ - **原型对象1、原型对象2、...**：对象的原型链上的对象，通过 `__proto__` 属性或 `Object.create()` 方法连接起来。每个对象都有一个指向其原型的引用。
+ - **Object.prototype**：所有对象的最终原型，即 Object.prototype。这是原型链的顶端，包含一些通用的属性和方法，如 toString()。
+ - **null**：原型链的终点。当对象在原型链中找不到属性或方法时，查找会一直向上进行，直到达到 Object.prototype，最终到达 null，这意味着没有更多的原型可查找。
+
+**最终指向 `null`**
 
 ## 改变this指向
 

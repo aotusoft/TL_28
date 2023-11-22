@@ -274,6 +274,10 @@ onload
 - `history.forward()` 前进
 - `history.back()` 后退
 
+`window.navigator` 
+`window.navigator.userAgent` 判断当前浏览器信息
+`window.navigator.platform` 判断当前系统平台
+
 # offset
 
 ## offsetWidth/offsetHeight

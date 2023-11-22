@@ -218,7 +218,7 @@ margin > float > 定位
 - 父元素添加 `overflow: hideen`属性
   - 会让多余内容隐藏
 
-**overflow: hidden 作用** **考试**
+**overflow: hidden 作用**
 
 - 隐藏溢出的内容
 - 清除嵌套元素外边距合并所带来的影响

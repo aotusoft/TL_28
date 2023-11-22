@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .containers {
+      /* background-image: url(); */
+      padding: 10px;
+      margin: 20px;
+      width: 992px;
+      background-color: rgb(238, 237, 243);
+      border-radius: 7px;
+      box-shadow: 10px 10px 22px -8px rgba(0, 0, 0, 0.53);
+    }
+
+    input {
+      margin: 5px;
+    }
+  </style>
+
+  <body>
+    <div class="containers">
+      <form class="" action="./tags/form.html" method="post">
+        <label for="name">用户</label>
+        <input type="text" class="form-control" name="name" id="name" />
+        <label for="password">密码</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="password" />
+        <div>
+          <span>性别</span>
+          <input type="radio" name="男" id="male" /><label for="male">男</label>
+          <input type="radio" name="女" id="female" /><label for="female"
+            >女</label
+          >
+        </div>
+        <div>
+          <span>爱好</span>
+          <input type="checkbox" name="hobby" id="swim" /><label for="swim"
+            >游泳</label
+          >
+          <input type="checkbox" name="hobby" id="read" /><label for="read"
+            >读书</label
+          >
+          <input type="checkbox" name="hobby" id="listen" /><label for="listen"
+            >听音乐</label
+          >
+          <input type="checkbox" name="hobby" id="game" /><label for="game"
+            >游戏</label
+          >
+        </div>
+        <div>
+          <span>住址:</span>
+          <select name="location" class="form-select" id="location">
+            <option class="list-group-item" value="">石家庄</option>
+            <option class="list-group-item" value="">保定</option>
+            <option class="list-group-item" value="">秦皇岛</option>
+            <option class="list-group-item" value="">张家口</option>
+          </select>
+        </div>
+        <div class="form">
+          <label for="my-textarea">座右铭:</label>
+          <textarea
+            id="my-textarea"
+            class="form-control"
+            name=""
+            rows="3"></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary" value="提交" />
+        <input type="reset" class="btn btn-primary" disabled />
+      </form>
+    </div>
+  </body>
+</html>

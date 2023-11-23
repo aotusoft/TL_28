@@ -1,6 +1,6 @@
 # 基于对象
 
-![img.png](img.png "面向对象")
+![img.png](images/img.png "面向对象")
 
 **Everything is object.**
 
@@ -15,7 +15,7 @@
 
 ## 秒懂
 
-![img_1.png](img_1.png "面向对象秒懂")
+![img_1.png](images/img_1.png "面向对象秒懂")
 
 ## 特征
 
@@ -71,8 +71,6 @@ JavaScript 拥有自主销毁内存的机制
 - 节省内存空间
 - 实现数据共享(继承)
 
-考试
-
 ## 构造函数 实例对象 原型直接关系 
 
 - 函数有 `prototype` 原型默认属性
@@ -125,10 +123,10 @@ new Person("bbb");
 
 对象 -> 原型对象1 -> 原型对象2 -> ... -> Object.prototype -> null
 
- - **对象**：JavaScript 中的对象实例，拥有自己的属性和方法。
- - **原型对象1、原型对象2、...**：对象的原型链上的对象，通过 `__proto__` 属性或 `Object.create()` 方法连接起来。每个对象都有一个指向其原型的引用。
- - **Object.prototype**：所有对象的最终原型，即 Object.prototype。这是原型链的顶端，包含一些通用的属性和方法，如 toString()。
- - **null**：原型链的终点。当对象在原型链中找不到属性或方法时，查找会一直向上进行，直到达到 Object.prototype，最终到达 null，这意味着没有更多的原型可查找。
+ - **对象：**JavaScript 中的对象实例，拥有自己的属性和方法。
+ - **原型对象1、原型对象2、...：**对象的原型链上的对象，通过 `__proto__` 属性或 `Object.create()` 方法连接起来。每个对象都有一个指向其原型的引用。
+ - **Object.prototype：**所有对象的最终原型，即 Object.prototype。这是原型链的顶端，包含一些通用的属性和方法，如 toString()。
+ - **null：**原型链的终点。当对象在原型链中找不到属性或方法时，查找会一直向上进行，直到达到 Object.prototype，最终到达 null，这意味着没有更多的原型可查找。
 
 **最终指向 `null`**
 

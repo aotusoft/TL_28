@@ -1,0 +1,101 @@
+@keyframes rotation-one {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation-two {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes rotation-thr {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1440deg);
+    }
+}
+
+.one {
+    animation: rotation-one 1s linear infinite;
+}
+
+.two {
+    animation: rotation-two 1s linear infinite;
+}
+
+.thr {
+    animation: rotation-thr 1s linear infinite;
+}
+
+.one-stop {
+    transform: rotate(-720deg);
+    animation: a-one-stop 2s ease-out;
+}
+
+.two-stop {
+    transform: rotate(-1080deg);
+    animation: a-one-stop 2s ease-out;
+}
+
+.thr-stop {
+    transform: rotate(-1440deg);
+    animation: a-one-stop 2s ease-out;
+}
+
+@keyframes a-one-start {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes a-two-start {
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes a-thr-start {
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+@keyframes a-one-stop {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes a-two-stop {
+    100% {
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes a-thr-stop {
+    100% {
+        transform: rotate(-1440deg);
+    }
+}
+
+.one-start {
+    animation: a-one-start 2s ease-in;
+}
+
+.two-start {
+    animation: a-two-start 2s ease-in;
+}
+
+.thr-start {
+    animation: a-thr-start 2s ease-in;
+}

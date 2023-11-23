@@ -1,0 +1,248 @@
+* {
+    outline: none;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+@keyframes rotation-one {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation-two {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes rotation-thr {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1440deg);
+    }
+}
+
+.one {
+    -webkit-animation: rotation-one 1s linear infinite;
+    animation: rotation-one 1s linear infinite;
+    -moz-animation: rotation-one 1s linear infinite;
+    -o-animation: rotation-one 1s linear infinite;
+}
+
+.two {
+    -webkit-animation: rotation-two 1s linear infinite;
+    animation: rotation-two 1s linear infinite;
+    -moz-animation: rotation-two 1s linear infinite;
+    -o-animation: rotation-two 1s linear infinite;
+}
+
+.thr {
+    -webkit-animation: rotation-thr 1s linear infinite;
+    animation: rotation-thr 1s linear infinite;
+    -moz-animation: rotation-thr 1s linear infinite;
+    -o-animation: rotation-thr 1s linear infinite;
+}
+
+.one-stop {
+    transform: rotate(-720deg);
+    animation: a-one-stop 2s ease-out;
+}
+
+.two-stop {
+    transform: rotate(-1080deg);
+    animation: a-one-stop 2s ease-out;
+    -moz-animation: a-one-stop 2s ease-out;
+    -webkit-animation: a-one-stop 2s ease-out;
+    -o-animation: a-one-stop 2s ease-out;
+}
+
+.thr-stop {
+    transform: rotate(-1440deg);
+    animation: a-one-stop 2s ease-out;
+}
+
+@keyframes a-one-start {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes a-two-start {
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes a-thr-start {
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+@keyframes a-one-stop {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes a-two-stop {
+    100% {
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes a-thr-stop {
+    100% {
+        transform: rotate(-1440deg);
+    }
+}
+
+body {
+    background-color: rgb(222, 236, 250);
+}
+
+.demo {
+    text-align: center;
+    clear: both;
+}
+
+.line-progress {
+    -webkit-animation: line-progress 2s linear;
+}
+
+.one-start {
+    animation: a-one-start 2s ease-in;
+}
+
+.two-start {
+    animation: a-two-start 2s ease-in;
+}
+
+.thr-start {
+    animation: a-thr-start 2s ease-in;
+}
+
+.img {
+    position: center;
+    /*margin-top: 40px;*/
+    border-radius: 50%;
+    border: 5px solid rgba(97, 73, 62, 1);
+    background-color: rgb(254, 252, 229);
+    max-height: 450px;
+    max-width: 450px;
+}
+
+.my-btn-group {
+    text-align: center;
+    width: 100%;
+    max-height: 100px;
+    margin-top: 20px;
+}
+
+.btn {
+    height: 70px;
+    border-radius: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 70px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(249, 234, 178, 1);
+    border: 4px solid #61493E;
+}
+
+.btn-word {
+    color: #61493E;
+    font-size: 24px;
+}
+
+.active {
+    box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.2), 0 6px 0 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(235, 174, 144, 1);
+}
+
+.line-progress {
+    -webkit-animation: line-progress 2s linear;
+}
+
+.line {
+    margin: 20px auto;
+    width: 0;
+    max-width: 400px;
+    height: 2px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: #a972cb;
+}
+
+#title {
+    position: absolute;
+    z-index: -1;
+    /*width: 13%;*/
+    max-width: 13%;
+    /*max-height: 60%;*/
+}
+
+#temperature {
+    float: right;
+    background-color: rgba(253, 244, 157, 1);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    color: rgba(97, 73, 62, 1);
+    /*max-width: 200px;*/
+}
+
+.statistic {
+    float: right;
+    margin-top: 20px;
+}
+
+.count {
+    color: rgba(97, 73, 62, 1);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-pay {
+    background-color: rgba(228, 232, 161, 1);
+}
+
+.btn-cartoon {
+    padding: 7px;
+    color: rgba(97, 73, 62, 1);
+    border-radius: 20px;
+    font-size: 15px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(97, 73, 62, 1);
+}
+
+.btn-return {
+    background-color: rgba(254, 252, 229, 1);
+}
+
+.btn-custom-fan {
+    background-color: rgb(235, 254, 233);
+}
+
+btn-reset {
+    background-color: rgb(254, 240, 213);
+}
+
+.custom-fan-form {
+    display: inline;
+}
+
+

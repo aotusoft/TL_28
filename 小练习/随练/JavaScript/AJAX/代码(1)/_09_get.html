@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            // 第一个参数 url 必填
+            // 第二个参数 请求成功的回调函数 , 可选
+            // var obj = $.get('test.txt');
+            // console.log(obj);
+
+            var a;
+            var obj = $.get('test.txt', function (data) {
+                console.log(data);
+                a = data;
+            });
+            // 注意 外部 无法使用ajax内部的数据(异步)
+            console.log(a);
+
+        });
+    });
+</script>
+
+<body>
+    <button id="btn">获取数据</button>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dv {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid;
+            margin: 10px;
+        }
+    </style>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            // 无参是获取 有参是设置
+            // 100  只是宽高
+            console.log($("#dv").width(), $("#dv").height());
+            // 120  宽高+内边距
+            console.log($("#dv").innerWidth(), $("#dv").innerHeight());
+            // 122 宽度+内边距+边框
+            console.log($("#dv").outerWidth(), $("#dv").outerHeight());
+            // 把宽度设置为200
+            $("#dv").width(200);
+            // 242  142 获取时,传入true,则包含外边距
+            console.log($("#dv").outerWidth(true), $("#dv").outerHeight(true));
+        });
+    });
+</script>
+
+<body>
+    <button id="btn">获取</button>
+    <div id="dv"></div>
+</body>
+
+</html>

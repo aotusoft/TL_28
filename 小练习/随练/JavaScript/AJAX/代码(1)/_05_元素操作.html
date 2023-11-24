@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            // append 内部尾部追加(子标签)
+            // $("#dv").append('<p>子节点2</p>');
+            // 也可以把已有标签剪切到内部的尾部(子标签)
+            // $("#dv").append($("h4"));
+
+            // 前插后,把dv剪切,插入到dv2的尾部
+            // $("#dv").appendTo($("#dv2"));
+
+            // prepend 内部的首部追加,用法同上
+            // $("#dv").prepend('<p>子节点2</p>');
+            // $("#dv").prepend($("h4"));
+            // $("#dv").prependTo($("#dv2"));
+
+            // after 平级插入元素后面
+            // 新增,平级后面
+            // $("#dv").after('<p>段落2</p>');
+            // 把dv2剪切到dv后面
+            // $("#dv").after($('#dv2'));
+
+            // before 平级插入元素前面
+            // $("#dv").before('<p>段落2</p>');
+            // $("#dv").before($('#dv2'));
+
+            // 删除,删除这个标签和其子标签
+            // $("#dv").remove();
+
+            // 清空,保留dv标签,所有子内容全部删除
+            // 子标签也会被删除
+            // $("#dv").empty();
+        });
+    });
+</script>
+
+<body>
+    <button id="btn">添加</button>
+    <div id="dv">
+        <p>子节点1</p>
+    </div>
+    <h4>22222</h4>
+    <div id="dv2"></div>
+</body>
+
+</html>

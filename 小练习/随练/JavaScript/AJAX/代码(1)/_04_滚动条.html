@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            position: fixed;
+            right: 10px;
+            bottom: 150px;
+            width: 100px;
+            height: 100px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            color: aliceblue;
+            background-color: pink;
+            line-height: 100px;
+            display: none;
+        }
+    </style>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<script>
+    $(function () {
+        window.onscroll = function () {
+            // 已滚动的高度
+            // console.log($(this).scrollTop());
+            // 窗口高度
+            // console.log($(this).height());
+            // 滑动到3分之2的时候,显示回到顶端
+            if ($(this).scrollTop() >= $(this).height() / 3 * 2) {
+                $("a").show(500);
+            } else {
+                $("a").hide(500);
+            }
+        }
+    });
+</script>
+
+<body>
+    <p id="one">111</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <p>11</p>
+    <a href="#one">回到顶端</a>
+</body>
+
+</html>

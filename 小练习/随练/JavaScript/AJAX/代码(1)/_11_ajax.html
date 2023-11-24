@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./js/jquery-1.11.1.min.js"></script>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            var a;
+            $.ajax({
+                // url请求
+                url: 'test.txt',
+                // 请求方式
+                type: 'POST',
+                // 是否异步 , true 异步 , false 同步
+                async: false,
+                // 传递的数据
+                data: { 'a': 1, 'b': 2 },
+                // 成功的回调函数
+                success: function (data) {
+                    console.log(data);
+                    a = data;
+                },
+                error: function (xhr) {
+                    console.log(xhr.status);
+                }
+            });
+            console.log(a);
+        });
+    });
+</script>
+
+<body>
+    <button id="btn">获取数据</button>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function () {
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            // 1 创建ajax引擎对象
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            // 监听请求状态
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    // xmlhttp.responseText;
+                    console.log(xmlhttp.responseText);
+                    console.log(xmlhttp.responseXML);
+                    var xmlObj = xmlhttp.responseXML;
+                    var users = xmlObj.getElementsByTagName('user');
+
+                    for (let i = 0; i < users.length; i++) {
+                        let user = users[i];
+                        let name = user.getElementsByTagName('name')[0].innerHTML;
+                        let age = user.getElementsByTagName('age')[0].innerHTML;
+                        var p = document.createElement('p');
+                        p.innerHTML = name + " : " + age;
+                        document.getElementById('saveData').appendChild(p);
+                    }
+                }
+            }
+
+            // 配置url
+            // xmlhttp.open("GET", "test1.txt", true);
+            // 如果get请求想要传递数据
+            xmlhttp.open("GET", "test.xml", true);
+            // 发送,没有send是不会执行的
+            xmlhttp.send();
+
+            get("test.xml", true, function () {
+                var xmlObj = xmlhttp.responseXML;
+                var users = xmlObj.getElementsByTagName('user');
+
+                for (let i = 0; i < users.length; i++) {
+                    let user = users[i];
+                    let name = user.getElementsByTagName('name')[0].innerHTML;
+                    let age = user.getElementsByTagName('age')[0].innerHTML;
+                    var p = document.createElement('p');
+                    p.innerHTML = name + " : " + age;
+                    document.getElementById('saveData').appendChild(p);
+                }
+            });
+        }
+    }
+    function get(url, asycn, fn) {
+        // 1 创建ajax引擎对象
+        var xmlhttp;
+        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {// code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        // 监听请求状态
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                // xmlhttp.responseText;
+                fn();
+            }
+        }
+
+        // 配置url
+        // xmlhttp.open("GET", "test1.txt", true);
+        // 如果get请求想要传递数据
+        xmlhttp.open("GET", url, asycn);
+        // 发送,没有send是不会执行的
+        xmlhttp.send();
+    }
+</script>
+
+<body>
+    <button id="btn">获取数据</button>
+    <div id="saveData"></div>
+</body>
+
+</html>

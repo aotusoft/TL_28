@@ -170,10 +170,13 @@ $.each("对象", function (key, value) {
   
 ## 添加
 
-|          | 元素之前 | 元素之后  |
-| -------- | -------- | --------- |
-| **内部** | append() | prepend() |
-| **外部** | before() | after()   |
+|          | 元素之前  | 元素之后 |
+| -------- | --------- | -------- |
+| **内部** | prepend() | append() |
+| **外部** | before()  | after()  |
+
+`$(selector).appendTo()` 剪切添加
+`$(selector).prependTo()` 剪切添加
 
 ## 删除
 

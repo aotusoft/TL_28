@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<script>
+    $(function () {
+        // html() 无参是获取,有参是设置, 等于innerHTML
+        // 识别子标签
+        $('#btn1').click(function () {
+            $("p").html('设置成功<a href="">xxx</a>');
+        });
+        $('#btn2').click(function () {
+            console.log($("p").html());
+        });
+        // text()  无参是获取,有参是设置,等于innerText
+        $('#btn3').click(function () {
+            $("p").text('设置成功<a href="">xxx</a>');
+        });
+        $('#btn4').click(function () {
+            console.log($("p").text());
+        });
+        // val() 无参是获取,有参是设置,等于输入框的value属性
+        $('#btn5').click(function () {
+            $("input").val('设置成功');
+        });
+        $('#btn6').click(function () {
+            console.log($("input").val());
+        });
+    });
+</script>
+
+<body>
+    <button id="btn1">设置内容(html)</button>
+    <button id="btn2">获取内容(html)</button>
+    <button id="btn3">设置内容(text)</button>
+    <button id="btn4">获取内容(text)</button>
+    <button id="btn5">设置输入框内容(val)</button>
+    <button id="btn6">获取输入框内容(val)</button>
+    <p>段落</p>
+    <input type="text">
+</body>
+
+</html>

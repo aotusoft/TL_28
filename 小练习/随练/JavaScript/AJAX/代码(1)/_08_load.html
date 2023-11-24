@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            // 把指定文件中所有内容,插入到content中
+            // $("#content").load('_02_属性操作.html');
+            // 只加载某些数插入到content中
+            // $("#content").load('_02_属性操作.html #all');
+            $("#content").load('_02_属性操作.html', function (data) {
+                // data是加载的文档的所有内容
+                console.log(data);
+            });
+        });
+    }); 
+</script>
+
+<body>
+    <button id="btn">获取数据</button>
+    <div id="content"></div>
+</body>
+
+</html>

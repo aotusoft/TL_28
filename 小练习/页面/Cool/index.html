@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>云风扇，呼啦呼啦~ 心静自然凉</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/animate.css">
 </head>
-
 <body>
 <section class="container">
     <div class="title-area">
@@ -18,19 +18,21 @@
     </div>
     <div class="center">
         <div class="fan-area">
-            <img class="fan two" src="./images/fan.png" alt="">
+            <img class="fan" src="./images/fan.png" alt="">
         </div>
         <div class="control">
-            <button class="default">关</button>
-            <button class="default">1</button>
-            <button class="default">2</button>
-            <button class="default">3</button>
+            <button id="off" class="default btn">关</button>
+            <button id="one" class="default btn">1</button>
+            <button id="two" class="default btn">2</button>
+            <button id="thr" class="default btn">3</button>
         </div>
     </div>
     <div class="info">
-        <p class="temperature">当前温度：℃</p>
+        <p class="temperature">当前温度：<span id="t-value"></span> ℃</p>
     </div>
 </section>
 </body>
 <script src="./scripts/script.js"></script>
+<script src="./scripts/titleChange.js"></script>
+<script src="./scripts/getWeatherInfo.js"></script>
 </html>

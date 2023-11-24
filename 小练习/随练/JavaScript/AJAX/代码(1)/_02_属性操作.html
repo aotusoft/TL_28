@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            // 全选绑定点击事件
+            // 当点击全选时,需要判断全选是否选中
+            // 如果为选中状态,则把上面五个全部全选
+            // 如果是未选中状态,则把上面五个全部取消选中
+            $("#all").click(function () {
+                // 像这种checked 值为true和 false的 需要使用prop获取
+                // attr用于获取和设置其他属性
+                // 当然 prop 可以操作所有标签自带属性,包括true/false这种
+                // 但是attr不能操作true/false这种,但是除了标签自带属性之外,还可以操作自定义属性
+                // console.log($(this).attr('checked'));
+                // console.log($(this).prop('checked'));
+                // console.log($(this).attr('type'));
+                // console.log($(this).prop('type'));
+                // $(this).attr('aa', 1);
+                // $(this).prop('bb', 2);
+                if ($(this).prop('checked')) {
+                    // 如果为选中状态,则把上面五个全部全选
+                    $("input[type='checkbox']").prop('checked', true);
+                } else {
+                    // 如果是未选中状态,则把上面五个全部取消选中 
+                    $("input[type='checkbox']").prop('checked', false);
+                }
+            });
+            // 反选绑定点击事件
+            $('#reverse').click(function () {
+                // 点击反选时,把上面五个的选择状态取反
+                // 得到所有已选择的复选框(不包含全选)
+                var c = $("input[type='checkbox']:not(#all):checked");
+                // 得到所有未选择的复选框(不包含全选)
+                var nc = $("input[type='checkbox']:not(#all):not(:checked)");
+                // console.log(c.length);
+                c.prop('checked', false);
+                nc.prop('checked', true);
+                // c是已选择的,反选后就是未选择的
+                // 如果未选择的个数大于0 , 说明有未选择的
+                // 则把全选设置取消选择
+                // 如果未选择的个数=0  说明 全部选择,则把全选也选中 
+                if (c.length > 0) {
+                    $("#all").prop('checked', false);
+                } else {
+                    $("#all").prop('checked', true);
+                }
+            });
+            // 对非全选的所有复选框绑定点击事件
+            $("input[type='checkbox']:not(#all)").click(function () {
+                // 获取未选择的复选框
+                var nc = $("input[type='checkbox']:not(#all):not(:checked)");
+                if (nc.length > 0) {
+                    $("#all").prop('checked', false);
+                } else {
+                    $("#all").prop('checked', true);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body id="a">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <br>
+    <input type="checkbox" id="all"> <span>全选</span>
+    <input type="button" id="reverse" value="反选">
+</body>
+
+</html>

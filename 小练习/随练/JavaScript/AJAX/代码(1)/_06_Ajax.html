@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1 创建ajax引擎对象
+        var xmlhttp;
+        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {// code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        var a = "{'name': '张','age': 18}"
+        // 监听请求状态
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                // xmlhttp.responseText;
+                console.log(xmlhttp.responseText);
+                console.log(xmlhttp.responseXML);
+            }
+        }
+
+        // 配置url
+        // xmlhttp.open("GET", "test1.txt", true);
+        // 如果get请求想要传递数据
+        xmlhttp.open("GET", "test.txt", true);
+        // 发送,没有send是不会执行的
+        xmlhttp.send();
+
+        // post请求
+        // xmlhttp.open("POST", "url", true);
+        // xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // xmlhttp.send("fname=Bill&lname=Gates");
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

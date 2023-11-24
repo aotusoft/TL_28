@@ -1,12 +1,16 @@
 let btns = document.getElementsByClassName("default");
 let fan = document.getElementsByClassName("fan")[0];
-let element = null;
+let btnOff = document.getElementById("off");
+let btnOne = document.getElementById("one");
+let btnTwo = document.getElementById("two");
+let btnThr = document.getElementById("thr");
+
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function (event) {
-        let element = event.target.innerText;
-        if (element === "关") {
-            fan.removeAttribute("class");
-            fan.setAttribute("class","fan");
+        if (btns[i] === btnOff) {
+
+        } else if (btns[i] === btnOne) {
+            btns[i].classList.add("active")
         }
     })
 }
